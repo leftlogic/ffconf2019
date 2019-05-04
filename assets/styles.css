@@ -8,7 +8,14 @@
 
 
 * {
-  font-family: monospace, sans-serif;
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    Courier,
+    monospace;
+
   font-weight: bold;
 }
 
