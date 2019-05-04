@@ -1,0 +1,15 @@
+{
+  "name": "ffconf2019",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "Remy Sharp (https://remysharp.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.8.2"
+  }
+}

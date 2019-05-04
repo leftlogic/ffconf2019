@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Arber-Vintage-Extended';
+  src: url('/assets/fonts/Arber-Vintage-Extended.otf'),
+       url('/assets/fonts/Arber-Vintage-Extended.woff') format('woff');
+  /* font-weight: 400; */
+  font-style: normal;
+}
+
+
+* {
+  font-family: monospace, sans-serif;
+  font-weight: bold;
+}
+
+h1, h2 {
+  font-family: 'Arber-Vintage-Extended';
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header * {
+  display: inline-block;
+  flex: 0;
+}
+
+h1 {
+  font-size: 8ch;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 0 20px;
+}
+
+p {
+  letter-spacing: 2px;
+  line-height: 1.8;
+}
+
+h2 {
+  text-align: center;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  color: #eee;
+  height: 100%;
+  background: #212121;
+  background: linear-gradient(#666, #000);
+  background-attachment: fixed;
+}
+
+html:before {
+  content: '';
+  background: #212121 url(/assets/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+body {
+  font-size: 24px;
+  max-width: 600px;
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+a {
+  position: relative;
+  color: #212121;
+  background: #eee;
+  text-decoration: none;
+}
+
+ul {
+  margin-top: 80px;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+ul li {
+  flex: 1;
+  text-align: center;
+}
+
+a:before {
+  content: '';
+  display: inline-block;
+  background: #eee;
+  position: absolute;
+  padding: 4px;
+  margin-left: -6px;
+  margin-top: -4px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+a:hover:before,
+a:focus:before {
+  transform: rotate(-1deg);
+}
+
+.word {
+  position: relative;
+}
+
+.word:before {
+  content: '';
+  display: inline-block;
+  background: #212121;
+  position: absolute;
+  padding: 4px;
+  margin-left: -6px;
+  margin-top: -4px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.word:nth-child(2n+2):before,
+h1.word:before{
+  transform: rotate(-1deg);
+}
+
+.word:nth-child(2n+3):before {
+  transform: rotate(1deg);
+}
+
+.word:nth-child(2n+7):before {
+  transform: rotate(-1.3deg);
+}
+
+main {
+  background: #212121;
+  padding: 80px;
+}
