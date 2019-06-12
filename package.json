@@ -4,7 +4,7 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "build": "next build && next export",
+    "build": "NODE_ENV=production next build && next export",
     "dev": "next"
   },
   "repository": {
