@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Arber-Vintage-Extended';
+  src: url('/static/fonts/Arber-Vintage-Extended.otf'),
+       url('/static/fonts/Arber-Vintage-Extended.woff') format('woff');
+  /* font-weight: 400; */
+  font-style: normal;
+}
+
+
+* {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    Courier,
+    monospace;
+
+  font-weight: bold;
+}
+
+h1, h2 {
+  font-family: 'Arber-Vintage-Extended';
+  font-weight: 400;
+}
+
