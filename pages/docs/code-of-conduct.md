@@ -1,7 +1,3 @@
----
-layout: page
----
-
 # Code of Conduct
 
 All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
@@ -18,8 +14,6 @@ If you are being harassed, notice anyone else being harassed, or have any other 
 You can email [Remy](remy@leftlogic.com) or [Julie](julie@leftlogic.com) or [both](mailto:events@leftlogic.com) ahead of the event. We also have open DMs on our [@ffconf](https://twitter.com/ffconf) twitter account.
 
 For the day event, you will also have access to a mobile number that you can send SMS messages if you need to notify us of any issues, along with our staff being in ffconf branded t-shirts. (Please note: this page will be updated closer to the time with additional details).
-
-_Please note that additional contact information will be available on your lanyard during the conference days._
 
 ## Our code of conduct
 
@@ -38,4 +32,4 @@ Conference staff will be happy to help participants contact hotel/venue security
 We expect participants to follow these rules at conference and workshop venues and conference-related social events.
 
 <div>
-<small><em>Original source and credit: <a href="http://2012.jsconf.us/#/about">http://2012.jsconf.us/#/about</a> &amp; <a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy">The Ada Initiative</a><br>This code of conduct is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a></em></small></div>
+<small><em>Original source and credit: <a href="http://2012.jsconf.us/#/about">http://2012.jsconf.us/#/about</a> &amp; <a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy">The Ada Initiative</a><br />This code of conduct is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a></em></small></div>
