@@ -1,0 +1,4 @@
+- [ ] google analytics code
+- [ ] tickets price
+- [ ] workshops
+- [ ] web manifest colors

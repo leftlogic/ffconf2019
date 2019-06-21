@@ -1,0 +1,92 @@
+.workshop__details {
+  color: var(--c-grey);
+  font-family: var(--f-title);
+  text-transform: lowercase;
+}
+
+.workshop__speaker {
+  text-decoration: none;
+}
+
+.workshop__header-content {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  margin-bottom: 1em;
+}
+
+.workshop__topics-title,
+.workshop__description-title {
+  margin-bottom: 1em;
+}
+
+.workshop__topics-list {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+}
+
+.workshop__topic {
+  margin-bottom: 16px;
+}
+
+.workshop__topic-title {
+  font-size: 1.2em;
+}
+
+.workshop__buy-wrapper {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.workshop__image {
+  display: none;
+}
+.workshop__date,
+.workshop__time {
+  font-size: 0.8em;
+}
+
+@media (min-width: 425px) {
+  .workshop__topics-list {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .workshop__topic {
+    width: calc(50% - 8px);
+  }
+}
+
+@media (min-width: 768px) {
+  .workshop__buy-wrapper {
+    text-align: left;
+  }
+
+  .workshop__image {
+    --sb-padding: 8px;
+
+    display: block;
+    flex: 0 0 auto;
+    margin-right: 32px;
+    width: 144px;
+  }
+
+  .workshop__header {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .workshop__header-content {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .workshop__image {
+    margin-right: 48px;
+    width: 200px;
+  }
+}

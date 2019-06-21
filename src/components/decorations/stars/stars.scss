@@ -1,0 +1,59 @@
+.stars {
+  --stars-bottom: auto;
+  --stars-left: auto;
+  --stars-right: auto;
+  --stars-top: auto;
+  --stars-show: none;
+
+  &::before,
+  &::after {
+    background-image: var(--stars-bg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% auto;
+    bottom: var(--stars-bottom);
+    content: var(--stars-content);
+    display: none;
+    left: var(--stars-left);
+    position: absolute;
+    right: var(--stars-right);
+    top: var(--stars-top);
+    width: 100px;
+
+    @media (min-width: 768px) {
+      display: var(--stars-show);
+    }
+  }
+}
+
+.stars--left {
+  --stars-bg: url("/static/images/style/stars-left.png");
+  --stars-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 372 231'%3E%3C/svg%3E");
+  --stars-right: calc(100% - 36px);
+
+  &::before {
+    --stars-top: 200px;
+    --stars-show: block;
+  }
+
+  &::after {
+    --stars-bottom: -30px;
+    --stars-show: block;
+  }
+}
+
+.stars--right {
+  --stars-bg: url("/static/images/style/stars-right.png");
+  --stars-content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 351'%3E%3C/svg%3E");
+  --stars-right: -83px;
+
+  &::before {
+    --stars-top: 35%;
+    --stars-show: block;
+  }
+
+  &::after {
+    --stars-bottom: 200px;
+    --stars-show: block;
+  }
+}

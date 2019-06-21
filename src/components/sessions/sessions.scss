@@ -1,0 +1,138 @@
+.sessions__item {
+  margin-bottom: 8px;
+}
+
+.sessions__item--talk + .sessions__item--talk {
+  padding-top: 16px;
+}
+
+:root {
+  --i-avatar-width: 35vw;
+  --i-avatar-mr: 32px;
+}
+
+.speaker__image {
+  --sb-border-color: var(--c-white);
+
+  margin-bottom: 8px;
+  width: var(--i-avatar-width);
+}
+
+.speaker__bio {
+  margin-top: 26px;
+
+  strong {
+    font-family: var(--f-title);
+    padding-right: 5px;
+    font-weight: 100;
+  }
+}
+
+.sessions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.break__icon {
+  --sb-border-color: var(--c-pink);
+
+  display: none;
+  width: 62px;
+
+  svg {
+    background: var(--c-pink);
+    width: calc(100% - var(--sb-border-width) - var(--sb-padding));
+  }
+}
+
+.talk__header,
+.break__header {
+  font-family: var(--f-title);
+  font-size: 2.2rem;
+  line-height: 4rem;
+}
+
+.talk__header {
+  align-self: center;
+  margin-bottom: 8px;
+}
+
+.speaker__name,
+.talk__time,
+.break__time {
+  color: var(--c-grey);
+  display: inline-block;
+}
+
+.talk__time,
+.break__time {
+  padding-right: 1em;
+}
+
+.speaker__twitter {
+  text-decoration: none;
+}
+
+.talk__link {
+  margin-right: 8px;
+}
+
+.talk__content {
+  padding-bottom: 16px;
+
+  p {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.talk__material {
+  margin-top: 16px;
+  padding-bottom: 24px;
+}
+
+.talk__buy {
+  font-size: 0.6em;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --i-avatar-width: 194px;
+  }
+  .sessions__item {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .speaker__image,
+  .break__icon {
+    flex: 0 0 auto;
+    margin-right: var(--i-avatar-mr);
+  }
+  .break__icon {
+    display: block;
+  }
+
+  .talk__header,
+  .break__header {
+    margin-bottom: 0;
+    width: calc(100% - var(--i-avatar-mr) - var(--i-avatar-width));
+  }
+
+  .talk__content {
+    flex: 0 0 100%;
+    padding-bottom: 16px;
+    padding-top: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .talk__header,
+  .break__header {
+    font-size: 3.2rem;
+  }
+}

@@ -1,0 +1,80 @@
+.duke-of-yorks {
+  align-items: flex-end;
+  display: flex;
+  min-height: 100vh;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 48px;
+  right: 50%;
+  position: relative;
+  width: 100vw;
+
+  &::before {
+    background: url("/static/images/style/curtains-tile-@2x.png") repeat-x;
+    background-position: 50% bottom;
+    background-size: auto 10vh;
+    content: "";
+    height: 200px;
+    left: 50%;
+    margin: 0 -50vw;
+    position: absolute;
+    right: 50%;
+    z-index: 0;
+    width: 100vw;
+  }
+
+  &::after {
+    background: url("/static/images/style/duke-of-yorks-small.png") no-repeat;
+    background-size: auto 100%;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1586 1234'%3E%3C/svg%3E");
+    display: block;
+    flex: 0 0 auto;
+    width: 100%;
+    z-index: 0;
+  }
+
+  @media (min-width: 768px) {
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 96px;
+    max-width: 800px;
+    right: auto;
+    width: 100%;
+
+    &::after {
+      background-image: url("/static/images/style/duke-of-yorks-big.png");
+    }
+  }
+}
+
+.duke-of-yorks__curtains {
+  left: 50%;
+  margin: 0 -50vw;
+  position: absolute;
+  right: 50%;
+  width: 100vw;
+
+  &::before,
+  &::after {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    content: "";
+    bottom: 0;
+    position: absolute;
+    width: 25%;
+  }
+
+  &::before {
+    background-image: url("/static/images/style/curtains-front-left-@2x.png");
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 445 561'%3E%3C/svg%3E");
+    left: 0;
+  }
+
+  &::after {
+    background-image: url("/static/images/style/curtains-front-right-@2x.png");
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 441 660'%3E%3C/svg%3E");
+    right: 0;
+  }
+}

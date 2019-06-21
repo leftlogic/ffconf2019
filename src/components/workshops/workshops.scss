@@ -1,0 +1,62 @@
+.workshops__intro {
+  margin: 0 0 16px;
+}
+
+.workshops__header {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.workshops__header-content {
+  flex: 1;
+  font-family: var(--f-title);
+  font-size: 2.4rem;
+  line-height: 4rem;
+  text-align: center;
+}
+
+.workshops__details {
+  margin-bottom: 24px;
+}
+
+.workshops__speaker {
+  color: var(--c-grey);
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.workshops__image {
+  --sb-border-color: var(--c-white);
+  --sb-padding: 4px;
+
+  display: none;
+  flex: 0 0 auto;
+  width: 62px;
+}
+
+@media (min-width: 768px) {
+  .workshops__header-content {
+    font-size: 3.2rem;
+    text-align: left;
+  }
+
+  .workshops__image {
+    --sb-padding: 8px;
+
+    display: block;
+    margin-right: 32px;
+    width: 144px;
+  }
+
+  .workshops__intro {
+    margin-bottom: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .workshops__image {
+    margin-right: 48px;
+    width: 200px;
+  }
+}

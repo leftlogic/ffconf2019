@@ -1,0 +1,18 @@
+.nav-previous-years,
+.nav-previous-years__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-previous-years__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-previous-years__title,
+.nav-previous-years__item {
+  padding: 0 0.4em;
+}

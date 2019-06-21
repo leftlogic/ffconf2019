@@ -1,0 +1,251 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --c-green: #1e81a0;
+  --c-yellow: #f7ff8f;
+  --c-cyan: #bbf8ff;
+  --c-white: #fff;
+  --c-purple: #57004b;
+  --c-grey: #7bb1b9;
+  --c-pink: #ec65a5;
+  --c-gradient-start: #9cfafb;
+  --c-gradient-middle: #22a5cc;
+  --c-gradient-end: #1e3c43;
+
+  --f-title: "FF Lollipop";
+  --f-main: "FF Lato", sans-serif;
+
+  font-size: 10px;
+}
+
+body {
+  color: var(--c-purple);
+  font-family: var(--f-main);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  --content-general-padding: 40px;
+
+  @media (min-width: 1024px) {
+    --content-general-padding: 80px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--f-title);
+  font-weight: normal;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+h3 {
+  margin: 24px 0 16px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+a {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: var(--c-pink);
+  }
+}
+
+/* === Show dynamic background image as if it was a proper photo */
+.dynamic-image::before,
+.dynamic-image::after {
+  background: var(--bg-photo) no-repeat;
+  background-size: cover;
+  display: block;
+  line-height: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.dynamic-image--square::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E");
+}
+
+.cursor-help {
+  cursor: help;
+}
+
+/* === Draw the offset border and background */
+.special-box-border {
+  --sb-padding: 4px;
+  --sb-border-width: 1px;
+  --sb-border-color: transparent;
+
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    background: var(--sb-bg-color, transparent);
+    bottom: calc(var(--sb-border-width) + var(--sb-padding));
+    content: "";
+    left: 0;
+    position: absolute;
+    right: calc(var(--sb-border-width) + var(--sb-padding));
+    top: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    border: 1px solid #fff; // this is just to activate the border image on all the browsers
+    border-image-slice: 91 91 91 91;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0;
+    border-image-repeat: repeat repeat;
+    border-image-source: url(/static/images/style/border-1-light-@2x.png);
+    bottom: calc(-1 * var(--sb-border-width));
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: var(--sb-pos, 0);
+  }
+}
+
+/* === Draw the offset border behind the image */
+.special-image-border {
+  --sb-padding: 4px;
+  --sb-border-width: 2px;
+
+  padding-bottom: calc(var(--sb-border-width) + var(--sb-padding));
+  position: relative;
+
+  transition: transform 200ms ease-out;
+  transform-origin: 50%;
+
+  &::before {
+    transition: opacity 200ms ease-out;
+  }
+
+  &.speaker__image {
+    &:hover {
+      transform: rotate(725deg);
+
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        transform: rotate(360deg);
+      }
+    }
+
+    &::before,
+    &::after {
+      border-radius: 100%;
+      border: 10px solid rgb(255, 255, 255);
+    }
+
+    &::after {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E");
+      background: url(/static/images/speakers/mod/who.gif) no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+  }
+
+  &::before,
+  &::after {
+    width: calc(100% - var(--sb-border-width) - var(--sb-padding));
+  }
+
+  &::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E");
+    background: url(/static/images/speakers/mod/who.gif) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.button-box {
+  display: block;
+  text-align: center;
+  padding: 20px;
+}
+
+/* === Button */
+.button {
+  --sb-padding: 4px;
+  --sb-border-width: 2px;
+  --sb-border-color: var(--c-purple);
+
+  color: var(--c-white);
+  display: inline-block;
+  font-family: var(--f-title);
+  font-size: 1.8rem;
+  line-height: 1.6;
+  padding: 8px 24px 4px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  z-index: 0;
+
+  &::before {
+    background: url("/static/images/style/button-bg.png");
+    bottom: var(--sb-padding);
+    content: "";
+    left: var(--sb-padding);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    border: 1px solid #fff; // this is just to activate the border image on all the browsers
+    border-image-slice: 15 17 19 17 fill;
+    border-image-width: 8px 8px 8px 8px;
+    border-image-outset: 0px 3px 3px 3px;
+    border-image-repeat: repeat repeat;
+
+    border-image-source: url(/static/images/style/border-1-dark-@2x.png);
+
+    bottom: 0;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: calc(var(--sb-padding) - var(--sb-border-width));
+    top: calc(var(--sb-padding) - var(--sb-border-width));
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--c-purple);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 2.4rem;
+  }
+}

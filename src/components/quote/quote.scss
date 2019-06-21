@@ -1,0 +1,55 @@
+.quote {
+  padding-top: 96px;
+}
+
+.quote__wrapper {
+  --sb-bg-color: var(--c-purple);
+  --sb-border-color: var(--c-pink);
+
+  margin: 0;
+  padding: 40px var(--content-general-padding) 48px;
+  text-align: center;
+}
+
+.quote__image {
+  margin: 0 auto;
+  width: 56px;
+}
+
+.quote__text {
+  color: var(--c-white);
+  font-family: var(--f-title);
+  font-size: 2.4rem;
+  line-height: 4rem;
+  margin: 1em 0;
+}
+
+.quote__author {
+  color: var(--c-pink);
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.quote__link {
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .quote__wrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: left;
+  }
+
+  .quote__image {
+    flex: 0 0 auto;
+    margin-left: 0;
+    margin-right: 40px;
+    width: 104px;
+  }
+
+  .quote__text {
+    margin: 0;
+  }
+}

@@ -1,0 +1,66 @@
+.divider {
+  overflow: hidden;
+  background: url(/static/images/style/tiny-stars-white-@2x.png) repeat-x;
+  background-size: contain;
+  margin: 32px 0;
+  width: 100%;
+}
+
+/* === Header */
+.divider--header {
+  padding: 4px 0 0 0;
+}
+
+/* === Sessions */
+.divider--sessions {
+  padding: 8px 0 0 0;
+  background-image: url(/static/images/style/tiny-stars-pink-@2x.png);
+
+  @media (min-width: 768px) {
+    // padding: 48px 0 24px;
+  }
+}
+
+.sessions--schedule {
+  .sessions__item--break .divider--sessions,
+  .sessions__item--talk .divider--sessions {
+    display: none;
+  }
+
+  .sessions__item--break + .sessions__item--break .divider--sessions,
+  .sessions__item--talk + .sessions__item--break .divider--sessions,
+  .sessions__item--talk + .sessions__item--talk .divider--sessions {
+    display: block;
+  }
+
+  .sessions__item--break:nth-last-child(2) .divider--sessions {
+    display: none;
+  }
+}
+
+.sessions__item:last-child .divider.divider--sessions {
+  display: none;
+}
+
+/* === Workshops */
+.divider--workshops {
+  background-image: url(/static/images/style/tiny-stars-pink-@2x.png);
+  padding: 8px 0 0 0;
+
+  .workshops__item:last-child & {
+    display: none;
+  }
+}
+
+/* === Locations */
+.divider--locations {
+  padding: 8px 0 0 0;
+
+  .locations__category:last-child & {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}

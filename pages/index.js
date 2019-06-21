@@ -1,15 +1,38 @@
+/*eslint no-unused-vars: ["error", { "varsIgnorePattern": "Hack" }]*/
 import fetch from 'isomorphic-unfetch';
-import Session from '../components/Session';
-import data from '../data/data';
 
-const Page = ({ sessions }) => <><h1>Event data: {data.date}</h1>
-{ sessions.map(_ => <Session key={_.slug} {..._}></Session>)}
-</>
+import Hack from '../src/components/hack';
+import Layout from '../src/components/layout';
+import Sessions from '../src/components/sessions';
+import Workshops from '../src/components/workshops';
+import Locations from '../src/components/locations';
+import Diversity from '../src/components/diversity';
+import Quote from '../src/components/quote';
+import Welcome from '../src/components/welcome';
 
-Page.getInitialProps = async () => {
-  const res = await fetch('https://ffconf.org/api/event/2018');
-  const sessions = await res.json();
-  return { sessions }
-}
+import config from '../src/config';
 
-export default Page;
+const { year } = config;
+
+const PageIndex = ({ schedule }) => {
+  return (
+    <Layout>
+      <Welcome />
+      <Sessions schedule={schedule} />
+      <Quote />
+      <Workshops />
+      <Quote />
+      <Locations />
+      <Quote />
+      <Diversity />
+    </Layout>
+  );
+};
+
+PageIndex.getInitialProps = async () => {
+  const res = await fetch(`https://ffconf.org/api/event/${year - 1}`);
+  const data = await res.json();
+  return { schedule: data };
+};
+
+export default PageIndex;
