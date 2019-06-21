@@ -19,13 +19,29 @@
   },
   "homepage": "https://github.com/leftlogic/ffconf2019#readme",
   "dependencies": {
+    "classnames": "^2.2.6",
     "isomorphic-unfetch": "^3.0.0",
+    "moment": "^2.24.0",
     "next": "^8.1.1-canary.51",
+    "raw-loader": "^3.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.0.20",
-    "@next/mdx": "^8.1.0"
+    "@next/mdx": "^8.1.0",
+    "@remy/eslint": "^3.2.2",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-flowtype": "^3.10.3",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^8.8.2"
   }
 }
