@@ -5,10 +5,11 @@ import { Main } from 'next/document';
 class MyMain extends Main {
   render() {
     const { html, errorHtml } = this.context._documentProps;
+    const id = process.env.NODE_ENV !== 'production' ? '__next' : false;
 
     return (
       <>
-        <div id="__next" dangerouslySetInnerHTML={{ __html: html }} />
+        <div id={id} dangerouslySetInnerHTML={{ __html: html }} />
         {process.env.NODE_ENV !== 'production' && (
           <div
             id="__next-error"

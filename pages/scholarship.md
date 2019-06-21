@@ -1,3 +1,5 @@
+# Scholarship
+
 This post outlines our diversity scholarships programme. It's entirely possible that this does not apply to you, my dear reader, but you still have an important role to play: please pass on the message and this link to help seek those out who can make use of the scholarships.
 
 <div class="button-box">
@@ -22,7 +24,7 @@ We ask a few questions, but don't have to explain your personal situation to us 
 
 Please note that your application will be treated with the utmost privacy, and we will not publicly announce who the diversity scholarships go to (though you're welcome to say so yourself).
 
-**Deadline for applications: Second Monday of September, 2019.**
+**Deadline for applications: Second Monday of September, 2018.**
 
 <div class="button-box">
 <a class="button" href="https://ffconf.org/scholarship-apply" target="_blank" rel="noopener">Apply now</a>

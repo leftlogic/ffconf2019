@@ -20,7 +20,7 @@ module.exports = {
       day1: false,
       workshops: false,
       vue: false,
-      next: false
+      next: false,
     },
     comments: {
       'phase-options': {
@@ -29,8 +29,8 @@ module.exports = {
         '1': 'first batch of tickets',
         '2': 'second batch of tickets',
         '3': 'release of the full sessions',
-        '4': 'after the conference'
-      }
-    }
-  }
+        '4': 'after the conference',
+      },
+    },
+  },
 };

@@ -1,29 +1,16 @@
-import React from 'react'
-import App, { Container } from 'next/app'
-import Layout from '../components/Layout';
+import App, { Container } from 'next/app';
 
-class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
-    let pageProps = {}
+import '../src/css/index.scss';
 
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
-
-    return { pageProps }
-  }
-
+class FFApp extends App {
   render() {
-    const { Component, pageProps } = this.props
-
+    const { Component, pageProps } = this.props;
     return (
       <Container>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </Container>
-    )
+    );
   }
 }
 
-export default MyApp
+export default FFApp;

@@ -1,16 +1,32 @@
-import Document, { Head, NextScript, Main } from '../components/NoNext';
-// import Document, { Head, NextScript, Main } from 'next/document';
+import Document, { Head, NextScript, Main } from '../src/components/NoNext';
+import Meta from '../src/components/meta';
+
+import config from '../src/config';
 
 export default class MyDocument extends Document {
   render() {
+    const { id, version } = config;
+
     return (
-      <html>
+      <html lang="en" id={id} data-version={version}>
         <Head>
-          <meta name="viewport" content="width=device-width" />
+          <Meta />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <script src="/static/js/script.js" />
+          {process.env.NODE_ENV === 'production' && (
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js', { scope: '/' });
+}
+`,
+              }}
+            />
+          )}
         </body>
       </html>
     );
