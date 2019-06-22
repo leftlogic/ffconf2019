@@ -1,7 +1,5 @@
 import classnames from 'classnames';
 
-import Divider from '../decorations/divider';
-
 const Session = ({ date1, date2, slug, type, children }) => {
   const wrapperClasses = classnames({
     sessions__item: true,
@@ -18,7 +16,6 @@ const Session = ({ date1, date2, slug, type, children }) => {
       data-slug={slug}
     >
       {children}
-      <Divider cssModifier="sessions" />
     </li>
   );
 };

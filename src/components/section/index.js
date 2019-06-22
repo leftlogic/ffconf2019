@@ -1,18 +1,16 @@
 import classnames from 'classnames';
 
-import Stars from '../decorations/stars';
-
-import './section.scss';
+// import './section.scss';
 
 const Section = ({ id, title, children }) => {
   const sectionClasses = classnames({
     section: true,
-    [`section--${id}`]: !!id
+    [`section--${id}`]: !!id,
   });
 
   const wrapperClasses = classnames({
     section__wrapper: true,
-    'special-box-border': true
+    'special-box-border': true,
   });
 
   return (
@@ -22,7 +20,6 @@ const Section = ({ id, title, children }) => {
       role="region"
       aria-labelledby={id}
     >
-      <Stars cssModifier={id} />
       {title && (
         <h2 className="section__title" role="heading" aria-level="2">
           {title}

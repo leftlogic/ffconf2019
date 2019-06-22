@@ -1,12 +1,12 @@
 import Nav from '../nav';
 import Tickets from '../tickets';
-import './nav-main.scss';
+// import './nav-main.scss';
 
 const data = [
   { title: 'sessions', url: '/#sessions' },
   { title: 'workshops', url: '/#workshops' },
   { title: 'locations', url: '/#locations' },
-  { title: 'scholarships', url: '/scholarships#scholarship' },
+  { title: 'scholarship', url: '/scholarship#scholarship' },
   { title: 'sponsors', url: '/#sponsors' },
 ];
 

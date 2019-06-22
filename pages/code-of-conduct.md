@@ -4,7 +4,6 @@ All attendees, speakers, sponsors and volunteers at our conference are required 
 
 ## Introduction
 
-
 We want ffconf to be the forever friends conference. Please treat each other with respect. Make new friends. Learn new things. Be kind to each other.
 
 If you are being harassed, notice anyone else being harassed, or have any other concerns, please contact us.
@@ -32,4 +31,4 @@ Conference staff will be happy to help participants contact hotel/venue security
 We expect participants to follow these rules at conference and workshop venues and conference-related social events.
 
 <div>
-<small><em>Original source and credit: <a href="http://2012.jsconf.us/#/about">http://2012.jsconf.us/#/about</a> &amp; <a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy">The Ada Initiative</a><br />This code of conduct is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a></em></small></div>
+<small><em>Original source and credit: <a href="http://2012.jsconf.us/#/about">http://2012.jsconf.us/#/about</a> &amp; <a href="https://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy">The Ada Initiative</a><br />This code of conduct is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a></em></small></div>

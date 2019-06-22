@@ -2,11 +2,10 @@ import Link from 'next/link';
 import moment from 'moment';
 
 import Tickets from '../tickets';
-import Divider from '../decorations/divider';
 
 import config from '../../config';
 
-import './header.scss';
+// import './header.scss';
 
 const { dates, year, videos } = config;
 const [date1, date2] = dates;
@@ -77,7 +76,6 @@ const Header = () => {
         />
         <VideoButton />
       </div>
-      <Divider cssModifier="header" />
     </header>
   );
 };

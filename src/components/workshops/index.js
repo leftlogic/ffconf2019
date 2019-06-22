@@ -2,12 +2,11 @@ import moment from 'moment';
 import Link from 'next/link';
 
 import Section from '../section';
-import Divider from '../decorations/divider';
 
 import config from '../../config';
 import data from './data';
 
-import './workshops.scss';
+// import './workshops.scss';
 
 const [date1] = config.dates;
 const [generalWorkshop] = data;
@@ -65,8 +64,6 @@ const WorkshopsItem = ({ title, speaker, slug }) => {
 
         <WorkshopsImage photo={photo} />
       </header>
-
-      <Divider cssModifier="workshops" />
     </section>
   );
 };
@@ -77,7 +74,9 @@ const Workshops = () => (
       All workshops are run on {dateWorkshops} and include a conference pass for
       the {dateConference} for £{price}+VAT.
     </p>
-    {data.map(workshop => <WorkshopsItem key={workshop.slug} {...workshop} />)}
+    {data.map(workshop => (
+      <WorkshopsItem key={workshop.slug} {...workshop} />
+    ))}
   </Section>
 );
 

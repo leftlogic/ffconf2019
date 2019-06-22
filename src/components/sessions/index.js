@@ -11,7 +11,7 @@ import config from '../../config';
 
 const { phase } = config.config;
 
-import './sessions.scss';
+// import './sessions.scss';
 
 const WhichSession = ({ isBreak, ...session }) => {
   const Which = isBreak ? Break : Talk;

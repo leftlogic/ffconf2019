@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import config from '../../config';
 import data from './data';
 
-import './sponsors.scss';
+// import './sponsors.scss';
 
 const { sponsorUrl, sponsorAvailable } = config;
 
@@ -32,7 +32,7 @@ const SponsorsAvailable = () => {
 const Sponsor = ({ name, url, img, slug, total }) => {
   const wrapperClasses = classnames({
     sponsor: true,
-    [`sponsor--${slug}`]: !!slug
+    [`sponsor--${slug}`]: !!slug,
   });
 
   return (
@@ -61,7 +61,7 @@ const SponsorsCategory = ({ slug, title, list, total }) => {
 
   const wrapperClasses = classnames({
     'sponsors-category': true,
-    [`sponsors-category--${slug}`]: !!slug
+    [`sponsors-category--${slug}`]: !!slug,
   });
 
   return (
@@ -81,7 +81,9 @@ const SponsorsCategory = ({ slug, title, list, total }) => {
 const Sponsors = () => {
   return (
     <div className="sponsors" id="sponsors">
-      {data.map(cat => <SponsorsCategory key={cat.slug} {...cat} />)}
+      {data.map(cat => (
+        <SponsorsCategory key={cat.slug} {...cat} />
+      ))}
 
       <SponsorsAvailable />
     </div>

@@ -2,10 +2,13 @@ const Welcome = () => (
   <div className="welcome-text section__wrapper">
     <ul>
       <li className="button">
-        Single track<br />single day - repeated
+        Single track
+        <br />
+        single day
       </li>
       <li className="button">
-        8 diverse speakers<br />8 diverse sessions
+        8 diverse speakers
+        <br />8 diverse sessions
       </li>
       <li className="button">278 like-minded web developers</li>
       <li className="button">10 years of education & inspiration</li>

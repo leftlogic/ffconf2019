@@ -1,6 +1,6 @@
 import App, { Container } from 'next/app';
 
-import '../src/css/index.scss';
+// import '../src/css/index.scss';
 
 class FFApp extends App {
   render() {

@@ -2,15 +2,9 @@ import { Fragment } from 'react';
 
 import data from './data';
 
-const QuotesTemplatesSingle = ({ text, author, url, photo }) => {
+const QuotesTemplatesSingle = ({ text, author, url }) => {
   return (
     <template className="quote-template js-quote-template" type="text/template">
-      <div
-        className="quote__image dynamic-image dynamic-image--square special-image-border"
-        style={{
-          '--bg-photo': `url(/static/images/quotes/${photo})`
-        }}
-      />
       <div className="quote__content">
         <p className="quote__text">{text}</p>
         <footer className="quote__footer">

@@ -33,7 +33,7 @@ module.exports = [
       },
       {
         name: 'Mozilla',
-        url: 'http://mozilla.com/',
+        url: 'https://mozilla.com/',
         img: 'mozilla.svg',
       },
     ],
@@ -84,7 +84,7 @@ module.exports = [
       },
       {
         name: 'JS Bin',
-        url: 'http://jsbin.com/',
+        url: 'https://jsbin.com/',
         img: 'jsbin.png',
       },
     ],

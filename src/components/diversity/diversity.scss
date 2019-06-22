@@ -1,0 +1,12 @@
+$colors-list: #f00 #ff7f00 #ff0 #0f0 #0ff #00f #e45dff;
+
+abbr[title="proudly"] {
+  text-decoration: none;
+
+  @each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+    span:nth-child(#{$i}) {
+      color: $current-color;
+    }
+  }
+}

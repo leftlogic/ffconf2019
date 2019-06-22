@@ -1,9 +1,7 @@
-import Markdown from '../markdown';
-
-import data from 'raw-loader!./data.md';
+import Data from './data.md';
 
 const Thanks = () => {
-  return <Markdown>{data}</Markdown>;
+  return <Data />;
 };
 
 export default Thanks;

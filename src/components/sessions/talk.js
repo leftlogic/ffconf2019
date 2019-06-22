@@ -2,6 +2,7 @@ import classnames from 'classnames';
 
 import Session from './session';
 import Markdown from '../markdown';
+// import mdx from '@mdx-js/mdx';
 
 import config from '../../config';
 
@@ -11,10 +12,16 @@ const { phase, soldout } = config.config;
 const SpeakerImage = ({ name, photo, slug = 'soon-0' }) => {
   const title = phase >= 3 ? name : 'Speakers revealed soon!';
   const url = phase >= 3 ? photo : `/static/images/speakers/mod/${slug}.gif`;
+  const imgClasses = classnames({
+    speaker__image: true,
+    'dynamic-image': true,
+    'dynamic-image--square': true,
+    'cursor-help': phase < 3,
+  });
 
   return (
     <div
-      className="speaker__image dynamic-image dynamic-image--square special-image-border cursor-help"
+      className={imgClasses}
       style={{ '--bg-photo': `url(${url})` }}
       title={title}
     />
@@ -22,20 +29,17 @@ const SpeakerImage = ({ name, photo, slug = 'soon-0' }) => {
 };
 
 const SpeakerBio = ({ bio }) => {
-  if (phase >= 4) {
-    return null;
-  }
-
   if (!bio) {
     return null;
   }
 
   return (
-    <p className="speaker__bio">
-      <em>
-        <strong>Speaker origin story:</strong> {bio || 'Coming soon…'}
-      </em>
-    </p>
+    <>
+      <h4 className="speaker__bio-title" role="heading" aria-level="4">
+        My origin
+      </h4>
+      <p className="speaker__bio">{bio || 'Coming soon…'}</p>
+    </>
   );
 };
 
@@ -78,7 +82,14 @@ const TalkDescription = ({ description }) => {
     return null;
   }
 
-  return <Markdown className="talk__description">{description}</Markdown>;
+  return (
+    <>
+      <h4 className="talk__description-title" role="heading" aria-level="4">
+        My talk
+      </h4>
+      <Markdown className="talk__description">{description}</Markdown>
+    </>
+  );
 };
 
 const TalkLink = ({ type, link }) => {
@@ -133,20 +144,18 @@ const Talk = ({ talk, start, end, date1, date2 }) => {
           {title}
         </h3>
 
-        {phase >= 1 &&
-          phase <= 3 &&
-          !soldout.conference && (
-            <p>
-              <a
-                href={ticketUrl}
-                className="button talk__buy"
-                target="_blank"
-                rel="noopener"
-              >
-                Get your ticket now @ £{ticketPrice}+VAT
-              </a>
-            </p>
-          )}
+        {phase >= 1 && phase <= 3 && !soldout.conference && (
+          <p>
+            <a
+              href={ticketUrl}
+              className="button talk__buy"
+              target="_blank"
+              rel="noopener"
+            >
+              Get your ticket now @ £{ticketPrice}+VAT
+            </a>
+          </p>
+        )}
 
         <TalkTime start={start} end={end} />
         <SpeakerName name={name} twitter={twitter} />

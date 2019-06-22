@@ -1,19 +1,10 @@
 import Section from '../section';
-import Divider from '../decorations/divider';
 
 import data from './data';
 
-import './locations.scss';
+// import './locations.scss';
 
-const { map, locations } = data;
-
-const Map = () => {
-  return (
-    <a href={map} target="_blank" rel="noopener" className="locations__map">
-      <img src="/static/images/map.png" className="locations__map-image" />
-    </a>
-  );
-};
+const { locations } = data;
 
 const Location = ({ location }) => {
   const { url, name, detail, extra } = location;
@@ -49,16 +40,16 @@ const LocationsCategory = ({ type, location }) => {
           </li>
         ))}
       </ul>
-      <Divider cssModifier="locations" />
     </li>
   );
 };
 
 const Locations = () => (
   <Section id="locations" title="Locations">
-    {/* <Map /> */}
     <ul className="locations">
-      {locations.map(item => <LocationsCategory key={item.type} {...item} />)}
+      {locations.map(item => (
+        <LocationsCategory key={item.type} {...item} />
+      ))}
     </ul>
   </Section>
 );

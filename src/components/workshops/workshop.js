@@ -7,7 +7,7 @@ import Section from '../section';
 import config from '../../config';
 import data from './data';
 
-import './workshop.scss';
+// import './workshop.scss';
 
 const { onSaleDate } = config;
 const { phase } = config.config;
