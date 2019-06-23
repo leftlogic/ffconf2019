@@ -2,7 +2,6 @@ import classnames from 'classnames';
 
 import Session from './session';
 import Markdown from '../markdown';
-// import mdx from '@mdx-js/mdx';
 
 import config from '../../config';
 
