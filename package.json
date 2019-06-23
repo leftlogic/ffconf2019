@@ -5,7 +5,10 @@
   "main": ".eleventy.js",
   "scripts": {
     "build": "NODE_ENV=production next build && next export",
-    "dev": "next"
+    "dev": "next",
+    "storybook": "start-storybook -p 3001 --ci",
+    "storybook:build": "build-storybook -o .storybook-static",
+    "storybook:static": "npm run storybook:build && npx http-server .storybook-static"
   },
   "repository": {
     "type": "git",
@@ -34,7 +37,13 @@
     "@mdx-js/loader": "^1.0.20",
     "@next/mdx": "^8.1.0",
     "@remy/eslint": "^3.2.2",
+    "@storybook/addon-a11y": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/addon-viewport": "^5.1.9",
+    "@storybook/react": "^5.1.9",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-react-require": "^3.1.1",
+    "copy-webpack-plugin": "^5.0.3",
     "eslint": "^5.16.0",
     "eslint-config-react-app": "^4.0.1",
     "eslint-plugin-flowtype": "^3.10.3",
