@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = async ({ config }) => {
   // avoid having to import React in all the components
   config.module.rules[0].use[0].options.plugins.unshift('react-require');
+  config.module.rules[0].use[0].options.plugins.push('babel-plugin-rewire');
   return {
     ...config,
     module: {

@@ -1,5 +1,8 @@
 import { storiesOf } from '@storybook/react';
-import Talk from './talk';
+
+import Talk, { __RewireAPI__ as Rewire } from './talk';
+
+Rewire.__set__('phase', 1);
 
 import './sessions.scss';
 
@@ -23,4 +26,6 @@ const props = {
   date2: '',
 };
 
-storiesOf('Talk', module).add('xxx', () => <Talk {...props} />);
+const stories = storiesOf('Talk', module);
+
+stories.add('default', () => <Talk {...props} />);
