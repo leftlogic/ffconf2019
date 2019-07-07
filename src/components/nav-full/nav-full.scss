@@ -11,20 +11,12 @@
     flex-direction: row;
     justify-content: center;
   }
-
-  // @media (min-width: 1024px) {
-  //   flex-direction: row;
-  //   justify-content: space-between;
-  // }
 }
 
 .nav-full__item {
-  @media (min-width: 768px) {
-    padding: 0 8px 16px;
-  }
+  padding: 0.4em;
 }
 
 .nav-full__link {
-  font-family: var(--f-title);
   text-decoration: none;
 }

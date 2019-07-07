@@ -11,7 +11,7 @@ import config from '../../config';
 
 const { phase } = config.config;
 
-// import './sessions.scss';
+import './sessions.scss';
 
 const WhichSession = ({ isBreak, ...session }) => {
   const Which = isBreak ? Break : Talk;
@@ -28,7 +28,7 @@ const Sessions = ({ schedule }) => {
   });
 
   return (
-    <Section id="sessions" title="Sessions">
+    <Section id="sessions">
       <ol className={wrapperClasses}>
         {sessions.map((session, index) => (
           <WhichSession key={`session-${index}`} {...session} />

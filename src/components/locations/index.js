@@ -2,7 +2,7 @@ import Section from '../section';
 
 import data from './data';
 
-// import './locations.scss';
+import './locations.scss';
 
 const { locations } = data;
 
@@ -45,7 +45,7 @@ const LocationsCategory = ({ type, location }) => {
 };
 
 const Locations = () => (
-  <Section id="locations" title="Locations">
+  <Section id="locations">
     <ul className="locations">
       {locations.map(item => (
         <LocationsCategory key={item.type} {...item} />

@@ -33,12 +33,12 @@ const Tickets = ({ className, namespace }) => {
     [namespace]: namespace,
     [`${namespace}--enabled`]: namespace && buy,
     [`${namespace}--disabled`]: namespace && !buy,
-    [className]: !!className
+    [className]: !!className,
   });
 
   const textClasses = classnames({
     tickets__text: true,
-    [`${namespace}__text`]: namespace
+    [`${namespace}__text`]: namespace,
   });
 
   if (buy) {

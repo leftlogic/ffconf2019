@@ -1,16 +1,11 @@
 import classnames from 'classnames';
 
-// import './section.scss';
+import './section.scss';
 
 const Section = ({ id, title, children }) => {
   const sectionClasses = classnames({
     section: true,
     [`section--${id}`]: !!id,
-  });
-
-  const wrapperClasses = classnames({
-    section__wrapper: true,
-    'special-box-border': true,
   });
 
   return (
@@ -25,7 +20,7 @@ const Section = ({ id, title, children }) => {
           {title}
         </h2>
       )}
-      <div className={wrapperClasses}>{children}</div>
+      <div className="section__wrapper">{children}</div>
     </section>
   );
 };

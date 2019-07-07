@@ -1,7 +1,7 @@
 import Nav from '../nav';
 import { sponsorUrl } from '../../config';
 import config from '../../config';
-// import './nav-full.scss';
+import './nav-full.scss';
 
 const data = [
   { title: 'tickets', url: config.ticketUrl },

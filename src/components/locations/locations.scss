@@ -1,6 +1,4 @@
 .locations {
-  font-family: var(--f-title);
-  font-size: 2rem;
   text-transform: lowercase;
 }
 
@@ -12,20 +10,42 @@
 }
 
 .locations-category__title {
-  font-size: 2.4rem;
+  font-size: 3.2rem;
+  font-weight: 500;
   margin-bottom: 32px;
 }
 
 .locations-category__item {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+
+  &:after {
+    border-bottom: 2px solid var(--c-grey1);
+    content: "";
+    display: block;
+    margin-top: 24px;
+    width: 42px;
+  }
+
+  &:last-child:after {
+    border-bottom-color: var(--c-black);
+    margin-top: 36px;
+    width: 100%;
+
+    .locations__category:last-child & {
+      border-bottom-color: transparent;
+    }
+  }
 }
 
 .location__link {
+  color: inherit;
+  font-weight: 600;
   text-decoration: none;
-}
 
-.location__description {
-  opacity: 0.4;
+  &:hover,
+  &:focus {
+    color: var(--c-red4);
+  }
 }
 
 .location__detail,
@@ -33,54 +53,34 @@
   margin: 0;
 }
 
-.locations__map {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-  margin-left: calc(-1 * var(--content-general-padding));
-  margin-top: calc(-1 * var(--content-general-padding));
-  overflow: hidden;
-  position: relative;
-  width: calc(100% + var(--content-general-padding) * 2);
-}
-
-.locations__map-image {
-  display: block;
-}
-
 @media (min-width: 768px) {
   .locations {
-    align-items: flex-start;
-    display: flex;
-    font-size: 2.4rem;
-    justify-content: space-between;
-  }
-
-  .locations__category {
-    flex: 0 0 auto;
-    width: calc((100% - 32px * 2) / 3);
-  }
-
-  .locations__category:nth-child(2) {
+    background: var(--bg-black);
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    grid-column-gap: 32px;
     text-align: center;
   }
 
-  .locations__category:nth-child(3) {
-    text-align: right;
+  .locations__category {
+    background: var(--bg-white);
+    padding: 0 24px;
   }
 
   .locations-category__title {
-    font-size: 3.2rem;
+    font-size: 4rem;
     margin-bottom: 48px;
   }
 
   .locations-category__item {
-    margin-bottom: 32px;
-  }
-}
+    &:after {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-@media (min-width: 1024px) {
-  .locations__map {
-    margin-bottom: 48px;
+    &:last-child:after {
+      border-bottom-color: transparent;
+    }
   }
 }

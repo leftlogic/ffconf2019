@@ -5,60 +5,41 @@
 }
 
 :root {
-  --c-grey: #d8d8d8;
+  --c-grey: rgb(216, 216, 216);
+  --c-grey1: rgba(216, 216, 216, 0.5);
+  --c-grey2: rgba(216, 216, 216, 0.25);
   --c-black: #111;
   --c-white: #fff;
+  --c-white1: rgba(255, 255, 255, 0.5);
   --c-red: #cc635f;
   --c-red2: #cb4d4d;
   --c-red3: #c6524d;
   --c-red4: #d85252;
 
-  --f-special: "FF Arber-Vintage-Extended";
+  --f-special: "FF ArberVintageExtended";
   --f-normal: "FF Barlow", sans-serif;
+
+  --bg-white: var(--c-white) url("/static/images/style/bg-light.jpg") repeat-x;
+  --bg-black: var(--c-black) url("/static/images/style/bg-dark.jpg");
 
   font-size: 10px;
 }
 
 body {
-  color: var(--c-purple);
-  font-family: var(--f-main);
-  font-size: 1.4rem;
-  line-height: 2.4rem;
+  background: var(--bg-black);
+  color: var(--c-white);
+  font-family: var(--f-normal);
+  font-size: 1.7rem;
+  line-height: 1.41;
   margin: 0;
-  overflow-x: hidden;
-  padding: 0;
-
-  @media (min-width: 768px) {
-    font-size: 1.6rem;
-  }
-
-  --content-general-padding: 40px;
-
-  @media (min-width: 1024px) {
-    --content-general-padding: 80px;
-  }
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--f-title);
-  font-weight: normal;
-  margin: 0;
-  text-transform: lowercase;
-}
-
-h3 {
-  margin: 24px 0 16px 0;
 }
 
 a {
-  color: inherit;
+  color: var(--c-red4);
 
   &:hover,
   &:focus {
-    color: var(--c-pink);
+    color: inherit;
   }
 }
 
@@ -79,60 +60,4 @@ a {
 
 .dynamic-image--square::before {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E");
-}
-
-/* === Button */
-.button {
-  --sb-padding: 4px;
-  --sb-border-width: 2px;
-  --sb-border-color: var(--c-purple);
-
-  color: var(--c-white);
-  display: inline-block;
-  font-family: var(--f-title);
-  font-size: 1.8rem;
-  line-height: 1.6;
-  padding: 8px 24px 4px;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  z-index: 0;
-
-  &::before {
-    background: url("/static/images/style/button-bg.png");
-    bottom: var(--sb-padding);
-    content: "";
-    left: var(--sb-padding);
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-  }
-
-  &::after {
-    border: 1px solid #fff; // this is just to activate the border image on all the browsers
-    border-image-slice: 15 17 19 17 fill;
-    border-image-width: 8px 8px 8px 8px;
-    border-image-outset: 0px 3px 3px 3px;
-    border-image-repeat: repeat repeat;
-
-    border-image-source: url(/static/images/style/border-1-dark-@2x.png);
-
-    bottom: 0;
-    content: "";
-    left: 0;
-    pointer-events: none;
-    position: absolute;
-    right: calc(var(--sb-padding) - var(--sb-border-width));
-    top: calc(var(--sb-padding) - var(--sb-border-width));
-  }
-
-  &:hover,
-  &:focus {
-    color: var(--c-purple);
-  }
-
-  @media (min-width: 768px) {
-    font-size: 2.4rem;
-  }
 }

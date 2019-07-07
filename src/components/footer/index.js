@@ -3,7 +3,7 @@ import Link from 'next/link';
 import NavFull from '../nav-full';
 import NavPreviousYears from '../nav-previous-years';
 
-// import './footer.scss';
+import './footer.scss';
 
 const Footer = () => {
   return (
@@ -25,8 +25,6 @@ const Footer = () => {
         based applications and bleeding edge front end technology.
       </p>
 
-      <NavFull />
-
       <p className="footer__content">
         By attending any of our events (workshops & conference & fringe events)
         you are agreeing to our{' '}
@@ -35,6 +33,8 @@ const Footer = () => {
         </Link>
         .
       </p>
+
+      <NavFull />
 
       <NavPreviousYears />
     </footer>

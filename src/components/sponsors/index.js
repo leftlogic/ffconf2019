@@ -1,9 +1,12 @@
 import classnames from 'classnames';
 
+import Section from '../section';
+import Button from '../button';
+
 import config from '../../config';
 import data from './data';
 
-// import './sponsors.scss';
+import './sponsors.scss';
 
 const { sponsorUrl, sponsorAvailable } = config;
 
@@ -14,29 +17,29 @@ const SponsorsAvailable = () => {
 
   return (
     <section className="sponsors-category sponsors-category--available">
-      <h3 className="sponsors-category__title" role="heading" aria-level="3">
-        Become a sponsor
-      </h3>
-      <a
-        className="sponsor__link sponsor__link--available button"
+      <p className="sponsor__intro">
+        To become a sponsor please contact Remy & Julie at{' '}
+        <a href="mailto:events@leftlogic.com">events@leftlogic.com</a> or call{' '}
+        <a href="tel:+441273557744">+44 (0)1273 557744</a>
+      </p>
+      <Button
+        className="sponsor__link sponsor__link--available"
         href={sponsorUrl}
-        target="_blank"
-        rel="noopener"
       >
-        See our sponsorship pack &amp; get in touch today
-      </a>
+        Sponsorship pack
+      </Button>
     </section>
   );
 };
 
-const Sponsor = ({ name, url, img, slug, total }) => {
+const Sponsor = ({ name, url, img, slug }) => {
   const wrapperClasses = classnames({
     sponsor: true,
     [`sponsor--${slug}`]: !!slug,
   });
 
   return (
-    <figure className={wrapperClasses} style={{ '--total': total }}>
+    <figure className={wrapperClasses}>
       <a
         className="sponsor__link sponsor__link--image"
         href={url}
@@ -71,7 +74,7 @@ const SponsorsCategory = ({ slug, title, list, total }) => {
       </h3>
       <div className="sponsors-category__list">
         {list.map(sponsor => (
-          <Sponsor key={sponsor.name} slug={slug} total={total} {...sponsor} />
+          <Sponsor key={sponsor.name} slug={slug} {...sponsor} />
         ))}
       </div>
     </section>
@@ -80,13 +83,13 @@ const SponsorsCategory = ({ slug, title, list, total }) => {
 
 const Sponsors = () => {
   return (
-    <div className="sponsors" id="sponsors">
+    <Section id="sponsors" title="Our sponsors">
+      <SponsorsAvailable />
+
       {data.map(cat => (
         <SponsorsCategory key={cat.slug} {...cat} />
       ))}
-
-      <SponsorsAvailable />
-    </div>
+    </Section>
   );
 };
 

@@ -2,7 +2,7 @@ import Nav from '../nav';
 
 import config from '../../config';
 
-// import './nav-previous-years.scss';
+import './nav-previous-years.scss';
 
 const { year } = config;
 const start = 2009;

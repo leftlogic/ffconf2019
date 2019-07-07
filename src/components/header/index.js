@@ -70,10 +70,7 @@ const Header = () => {
       <div className="header__top">
         <Logo />
         <Intro />
-        <Tickets
-          namespace="button-buy"
-          className={`dynamic-image dynamic-image--square phase-${phase}`}
-        />
+        <Tickets namespace="button-buy" className={`phase-${phase}`} />
         <VideoButton />
       </div>
     </header>

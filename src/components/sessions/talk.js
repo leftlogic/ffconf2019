@@ -10,7 +10,8 @@ const { phase, soldout } = config.config;
 
 const SpeakerImage = ({ name, photo, slug = 'soon-0' }) => {
   const title = phase >= 3 ? name : 'Speakers revealed soon!';
-  const url = phase >= 3 ? photo : `/static/images/speakers/mod/${slug}.gif`;
+  const url =
+    phase >= 3 ? `/static${photo}` : `/static/images/speakers/mod/${slug}.gif`;
   const imgClasses = classnames({
     speaker__image: true,
     'dynamic-image': true,
