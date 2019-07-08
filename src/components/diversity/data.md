@@ -1,4 +1,4 @@
-### Our diversity statement
+# Our diversity statement
 
 ffconf takes diversity seriously. We know that a diverse line-up is important for the inclusion of marginalised people in the tech community.
 

@@ -83,7 +83,14 @@ const SponsorsCategory = ({ slug, title, list, total }) => {
 
 const Sponsors = () => {
   return (
-    <Section id="sponsors" title="Our sponsors">
+    <Section id="sponsors">
+      <h2
+        className="sponsors__title section__title"
+        role="heading"
+        aria-level="2"
+      >
+        Our sponsors
+      </h2>
       <SponsorsAvailable />
 
       {data.map(cat => (

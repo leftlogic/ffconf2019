@@ -98,6 +98,10 @@
 }
 
 @media (min-width: 768px) {
+  .sponsors__title {
+    text-align: center;
+  }
+
   .sponsors-category__list {
     // padding-left: var(--content-general-padding);
     // padding-right: var(--content-general-padding);

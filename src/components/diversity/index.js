@@ -7,7 +7,7 @@ import './diversity.scss';
 
 const Diversity = () => {
   return (
-    <Section id="diversity" title="Diversity">
+    <Section id="diversity" mdx={true}>
       <Data />
       <Thanks />
     </Section>

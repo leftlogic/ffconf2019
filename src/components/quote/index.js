@@ -1,4 +1,4 @@
-// import './quote.scss';
+import './quote.scss';
 
 const Quote = () => {
   return (
