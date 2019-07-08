@@ -2,7 +2,6 @@
 import fetch from 'isomorphic-unfetch';
 
 import Hack from '../src/components/hack';
-import Layout from '../src/components/layout';
 import Sessions from '../src/components/sessions';
 import Workshops from '../src/components/workshops';
 import Locations from '../src/components/locations';
@@ -16,7 +15,7 @@ const { year } = config;
 
 const PageIndex = ({ schedule }) => {
   return (
-    <Layout>
+    <>
       <Welcome />
       <Sessions schedule={schedule} />
       <Quote />
@@ -25,7 +24,7 @@ const PageIndex = ({ schedule }) => {
       <Locations />
       <Quote />
       <Diversity />
-    </Layout>
+    </>
   );
 };
 

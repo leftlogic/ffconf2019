@@ -2,10 +2,11 @@ import classnames from 'classnames';
 
 import './section.scss';
 
-const Section = ({ id, title, children }) => {
+const Section = ({ id, title, children, mdx }) => {
   const sectionClasses = classnames({
     section: true,
     [`section--${id}`]: !!id,
+    'section--mdx': !!mdx,
   });
 
   return (

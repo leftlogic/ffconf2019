@@ -11,26 +11,24 @@ import QuotesTemplates from '../quote/quotes-templates';
 
 const Layout = ({ children }) => (
   <Fragment>
-    <div className="gradient">
-      <div className="wrapper">
-        <Header />
+    <div className="wrapper">
+      <Header />
 
-        <div className="lighrays">
-          <NavMain />
+      <div>
+        <NavMain />
 
-          <main className="main">
-            {children}
+        <main className="main">
+          {children}
 
-            <Quote />
+          <Quote />
 
-            <Sponsors />
-          </main>
-        </div>
-
-        <Footer />
-
-        <QuotesTemplates />
+          <Sponsors />
+        </main>
       </div>
+
+      <Footer />
+
+      <QuotesTemplates />
     </div>
   </Fragment>
 );
