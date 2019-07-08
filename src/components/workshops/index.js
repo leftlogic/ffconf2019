@@ -8,13 +8,12 @@ import data from './data';
 
 // import './workshops.scss';
 
-const [date1] = config.dates;
+const [date] = config.dates;
 const [generalWorkshop] = data;
 const { price } = generalWorkshop.ticket;
-const { date } = generalWorkshop.details;
 
-const dateWorkshops = moment(date).format('D MMMM');
-const dateConference = moment(date1).format('D MMMM');
+const dateWorkshops = moment(generalWorkshop.details.date).format('D MMMM');
+const dateConference = moment(date).format('D MMMM');
 
 const WorkshopsDetails = ({ twitter, name }) => {
   return (

@@ -8,10 +8,9 @@ import config from '../../config';
 // import './header.scss';
 
 const { dates, year, videos } = config;
-const [date1, date2] = dates;
-const momentDate1 = moment(date1);
-const momentDate2 = moment(date2);
-const when = `${momentDate1.format('Do')} & ${momentDate2.format('Do MMMM')}`;
+const [date] = dates;
+const momentDate = moment(date);
+const when = `${momentDate.format('Do MMMM')}`;
 const { phase } = config.config;
 
 const Logo = () => {

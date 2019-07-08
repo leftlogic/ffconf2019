@@ -2,6 +2,7 @@ import classnames from 'classnames';
 
 import Session from './session';
 import Markdown from '../markdown';
+import Button from '../button';
 
 import config from '../../config';
 
@@ -13,7 +14,7 @@ const SpeakerImage = ({ name, photo, slug = 'soon-0' }) => {
   const url =
     phase >= 3 ? `/static${photo}` : `/static/images/speakers/mod/${slug}.gif`;
   const imgClasses = classnames({
-    speaker__image: true,
+    'speaker-image': true,
     'dynamic-image': true,
     'dynamic-image--square': true,
     'cursor-help': phase < 3,
@@ -34,12 +35,12 @@ const SpeakerBio = ({ bio }) => {
   }
 
   return (
-    <>
-      <h4 className="speaker__bio-title" role="heading" aria-level="4">
+    <div className="speaker-bio">
+      <h4 className="speaker-bio__title" role="heading" aria-level="4">
         My origin
       </h4>
-      <p className="speaker__bio">{bio || 'Coming soon…'}</p>
-    </>
+      <p className="speaker-bio__text">{bio || 'Coming soon…'}</p>
+    </div>
   );
 };
 
@@ -48,20 +49,19 @@ const SpeakerName = ({ name, twitter }) => {
     return null;
   }
 
+  if (!twitter) {
+    return <div className="speaker__name">{name}</div>;
+  }
+
   return (
-    <div className="speaker__name">
-      {!twitter && <span>{name}</span>}
-      {twitter && (
-        <a
-          href={`https://twitter.com/${twitter}`}
-          className="speaker__twitter"
-          target="_blank"
-          rel="noopener"
-        >
-          {name}
-        </a>
-      )}
-    </div>
+    <a
+      href={`https://twitter.com/${twitter}`}
+      className="speaker__name"
+      target="_blank"
+      rel="noopener"
+    >
+      {name}
+    </a>
   );
 };
 
@@ -77,18 +77,18 @@ const TalkTime = ({ start, end }) => {
   );
 };
 
-const TalkDescription = ({ description }) => {
-  if (!description) {
+const TalkContent = ({ content }) => {
+  if (!content) {
     return null;
   }
 
   return (
-    <>
-      <h4 className="talk__description-title" role="heading" aria-level="4">
+    <div className="talk-content">
+      <h4 className="talk-content__title" role="heading" aria-level="4">
         My talk
       </h4>
-      <Markdown className="talk__description">{description}</Markdown>
-    </>
+      <Markdown className="talk-content__text">{content}</Markdown>
+    </div>
   );
 };
 
@@ -98,7 +98,6 @@ const TalkLink = ({ type, link }) => {
   }
 
   const linkClasses = classnames({
-    button: true,
     talk__link: true,
     [`talk__link--${type}`]: !!type,
   });
@@ -124,7 +123,7 @@ const TalkMaterial = ({ slides, audio, video }) => {
   );
 };
 
-const Talk = ({ talk, start, end, date1, date2 }) => {
+const Talk = ({ talk, start, end, date }) => {
   const {
     slug,
     title = 'To be announced soon!',
@@ -137,31 +136,23 @@ const Talk = ({ talk, start, end, date1, date2 }) => {
   const { name, photo, twitter, bio } = speaker || {};
 
   return (
-    <Session date1={date1} date2={date2} slug={slug} type="talk">
+    <Session date={date} slug={slug} type="talk">
       <SpeakerImage name={name} photo={photo} slug={slug} />
       <header className="talk__header">
+        <TalkTime start={start} end={end} />
+        <SpeakerName name={name} twitter={twitter} />
         <h3 className="talk__title" role="heading" aria-level="3">
           {title}
         </h3>
 
         {phase >= 1 && phase <= 3 && !soldout.conference && (
-          <p>
-            <a
-              href={ticketUrl}
-              className="button talk__buy"
-              target="_blank"
-              rel="noopener"
-            >
-              Get your ticket now @ £{ticketPrice}+VAT
-            </a>
-          </p>
+          <Button className="talk__buy" href={ticketUrl}>
+            Get your ticket now @ £{ticketPrice}+VAT
+          </Button>
         )}
-
-        <TalkTime start={start} end={end} />
-        <SpeakerName name={name} twitter={twitter} />
       </header>
-      <div className="talk__content">
-        <TalkDescription description={description} />
+      <div className="talk__info">
+        <TalkContent content={description} />
         <SpeakerBio bio={bio} />
       </div>
       <TalkMaterial slides={slides} audio={audio} video={video} />

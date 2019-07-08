@@ -13,14 +13,14 @@ const {
   version,
   onSaleDate,
 } = config;
-const [date2] = dates;
-const momentDate2 = moment(date2);
-const formattedDate2 = momentDate2.format('Do MMMM YYYY');
-const twitterDates = `${momentDate2.format('D-MMM')}`;
+const [date] = dates;
+const momentDate = moment(date);
+const formattedDate = momentDate.format('Do MMMM YYYY');
+const twitterDates = `${momentDate.format('D-MMM')}`;
 const twitterOnSaleDate = moment(onSaleDate).format('D-MMMM ha');
 
 const Meta = () => {
-  const inlineScript = `(${script})(['${date2}']);`;
+  const inlineScript = `(${script})(['${date}']);`;
 
   return (
     <Fragment>
@@ -33,14 +33,14 @@ const Meta = () => {
       <meta name="mobile-web-app-capable" content="yes" />
       <meta
         name="description"
-        content={`ffconf ${year} is a one day JavaScript Conference at the Duke of York’s Picturehouse in Brighton, UK run on ${formattedDate2}`}
+        content={`ffconf ${year} is a one day JavaScript Conference at the Duke of York’s Picturehouse in Brighton, UK run on ${formattedDate}`}
       />
       <meta name="format-detection" content="telephone=no" />
       <meta name="theme-color" content={themeColor} />
       <meta name="apple-mobile-web-app-title" content={`ffconf ${year}`} />
       <meta name="application-name" content={`ffconf ${year}`} />
 
-      <title>ffconf :: JavaScript Conference :: {formattedDate2}</title>
+      <title>ffconf :: JavaScript Conference :: {formattedDate}</title>
 
       {/* facebook open graph tags */}
       <meta property="og:type" content="website" />

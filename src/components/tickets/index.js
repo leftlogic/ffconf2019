@@ -1,6 +1,8 @@
 import classnames from 'classnames';
 import moment from 'moment';
 
+import Button from '../button';
+
 import config from '../../config';
 
 const { ticketUrl, onSaleDate } = config;
@@ -36,29 +38,15 @@ const Tickets = ({ className, namespace }) => {
     [className]: !!className,
   });
 
-  const textClasses = classnames({
-    tickets__text: true,
-    [`${namespace}__text`]: namespace,
-  });
-
   if (buy) {
     return (
-      <a
-        href={ticketUrl}
-        target="_blank"
-        rel="noopener"
-        className={buttonClasses}
-      >
-        <strong className={textClasses}>{buttonText}</strong>
-      </a>
+      <Button href={ticketUrl} className={buttonClasses}>
+        {buttonText}
+      </Button>
     );
   }
 
-  return (
-    <span className={buttonClasses}>
-      <strong className={textClasses}>{buttonText}</strong>
-    </span>
-  );
+  return <span className={buttonClasses}>{buttonText}</span>;
 };
 
 export default Tickets;

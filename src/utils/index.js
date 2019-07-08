@@ -25,8 +25,8 @@ const formatTalksById = api => {
 };
 
 const formatSessions = ({ data, api }) => {
-  const [date1, date2] = config.dates;
-  const startTime = moment(`${date1} ${config.startTime}`);
+  const [date] = config.dates;
+  const startTime = moment(`${date} ${config.startTime}`);
 
   if (api.length < 8) {
     // push in the missing talks and randomise
@@ -48,8 +48,7 @@ const formatSessions = ({ data, api }) => {
       ...session,
       start,
       end,
-      date1: `${date1}T${start}Z`,
-      date2: `${date2}T${start}Z`,
+      date: `${date}T${start}Z`,
       talk: id ? { ...talksById[id] } : undefined,
       slug: isBreak ? slug : undefined,
     };
