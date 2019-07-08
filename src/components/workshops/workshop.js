@@ -3,14 +3,32 @@ import { Fragment } from 'react';
 
 import Markdown from '../markdown';
 import Section from '../section';
+import Button from '../button';
 
 import config from '../../config';
 import data from './data';
 
-// import './workshop.scss';
+import './workshop.scss';
 
 const { onSaleDate } = config;
 const { phase } = config.config;
+
+const WorkshopSpeaker = ({ name, twitter }) => {
+  if (!twitter) {
+    return <div className="workshop__speaker">{name}</div>;
+  }
+
+  return (
+    <a
+      href={`https://twitter.com/${twitter}`}
+      className="workshop__speaker"
+      target="_blank"
+      rel="noopener"
+    >
+      {name}
+    </a>
+  );
+};
 
 const WorkshopTopic = ({ title, description }) => {
   return (
@@ -23,22 +41,14 @@ const WorkshopTopic = ({ title, description }) => {
   );
 };
 
-const WorkshopDetails = ({ twitter, name, date, time }) => {
+const WorkshopDetails = ({ date, time }) => {
   const formattedDate = moment(date).format('D MMMM YYYY');
 
   return (
-    <div className="workshop__details">
-      <a
-        className="workshop__speaker"
-        target="_blank"
-        rel="noopener"
-        href={`https://twitter.com/${twitter}`}
-      >
-        {name}
-      </a>
+    <>
       <div className="workshop__date">{formattedDate}</div>
       <div className="workshop__time">{time}</div>
-    </div>
+    </>
   );
 };
 
@@ -91,27 +101,17 @@ const WorkshopBuy = ({ slug, url, children }) => {
   }
 
   if (phase < 1) {
-    return (
-      <div className="workshop__buy-wrapper">
-        <span className="button">On sale {formattedDate}</span>
-      </div>
-    );
+    return <Button className="workshop__buy">On sale {formattedDate}</Button>;
   }
 
   if (soldout) {
-    return (
-      <div className="workshop__buy-wrapper">
-        <span className="button">Sold Out</span>
-      </div>
-    );
+    return <Button className="workshop__buy">Sold Out</Button>;
   }
 
   return (
-    <div className="workshop__buy-wrapper">
-      <a href={url} target="_blank" rel="noopener" className="button">
-        {children}
-      </a>
-    </div>
+    <Button className="workshop__buy" href={url}>
+      {children}
+    </Button>
   );
 };
 
@@ -143,43 +143,39 @@ const Workshop = ({ selectedSlug }) => {
   const { url } = ticket;
 
   return (
-    <Section id="workshop" title="workshop">
-      <header className="workshop__header">
-        <div className="workshop__header-content">
+    <Section id="workshop">
+      <section className="workshop">
+        <header className="workshop__header">
+          <div className="workshop__tag">Workshop</div>
+          <WorkshopSpeaker twitter={twitter} name={name} />
           <h3 className="workshop__title" role="heading" aria-level="3">
             {title}
           </h3>
 
-          <WorkshopDetails
-            twitter={twitter}
-            name={name}
-            date={date}
-            time={time}
-          />
+          <WorkshopDetails date={date} time={time} />
 
-          <p style={{ marginTop: 0, fontSize: '1.8rem' }}>
+          <p className="workshop__intro">
             <em>All workshop tickets also include a Thursday ffconf pass.</em>
           </p>
 
           <WorkshopBuy slug={slug} url={url}>
             Buy tickets @ £{config.workshopPrice}+VAT
           </WorkshopBuy>
+        </header>
+
+        <div className="workshop__content">
+          <WorkshopTopics topics={topics} />
+          <WorkshopDescription
+            description={description}
+            extendedDescription={extendedDescription}
+          />
+          <WorkshopBuy slug={slug} url={url}>
+            Get your ticket now @ £{config.workshopPrice}+VAT
+          </WorkshopBuy>
         </div>
 
         <WorkshopImage photo={photo} />
-      </header>
-
-      <div className="workshop__content">
-        <WorkshopTopics topics={topics} />
-        <WorkshopDescription
-          description={description}
-          extendedDescription={extendedDescription}
-        />
-      </div>
-
-      <WorkshopBuy slug={slug} url={url}>
-        Get your ticket now @ £{config.workshopPrice}+VAT
-      </WorkshopBuy>
+      </section>
     </Section>
   );
 };

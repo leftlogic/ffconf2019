@@ -1,32 +1,37 @@
-import moment from 'moment';
-import Link from 'next/link';
+// import moment from 'moment';
 
 import Section from '../section';
+import Button from '../button';
 
 import config from '../../config';
 import data from './data';
 
-// import './workshops.scss';
+import './workshops.scss';
 
-const [date] = config.dates;
-const [generalWorkshop] = data;
-const { price } = generalWorkshop.ticket;
+const { ticketUrl } = config;
+const { phase, soldout } = config.config;
 
-const dateWorkshops = moment(generalWorkshop.details.date).format('D MMMM');
-const dateConference = moment(date).format('D MMMM');
+// const [date] = config.dates;
+// const [generalWorkshop] = data;
+// const { price } = generalWorkshop.ticket;
 
-const WorkshopsDetails = ({ twitter, name }) => {
+// const dateWorkshops = moment(generalWorkshop.details.date).format('D MMMM');
+// const dateConference = moment(date).format('D MMMM');
+
+const WorkshopsSpeaker = ({ name, twitter }) => {
+  if (!twitter) {
+    return <div className="workshops__speaker">{name}</div>;
+  }
+
   return (
-    <div className="workshops__details">
-      <a
-        className="workshops__speaker"
-        target="_blank"
-        rel="noopener"
-        href={`https://twitter.com/${twitter}`}
-      >
-        {name}
-      </a>
-    </div>
+    <a
+      href={`https://twitter.com/${twitter}`}
+      className="workshops__speaker"
+      target="_blank"
+      rel="noopener"
+    >
+      {name}
+    </a>
   );
 };
 
@@ -41,38 +46,47 @@ const WorkshopsImage = ({ photo }) => {
   );
 };
 
-const WorkshopsItem = ({ title, speaker, slug }) => {
+const WorkshopsItem = ({ title, description, speaker, slug }) => {
   const { name, twitter, photo } = speaker;
 
   return (
     <section className="workshops__item">
       <header className="workshops__header">
-        <div className="workshops__header-content">
-          <h3 className="workshop-title" role="heading" aria-level="3">
-            {title}
-          </h3>
-
-          <WorkshopsDetails twitter={twitter} name={name} />
-
-          <div>
-            <Link href={`/workshop?slug=${slug}`} as={`/workshop/${slug}`}>
-              <a className="button">Details</a>
-            </Link>
-          </div>
-        </div>
-
-        <WorkshopsImage photo={photo} />
+        <div className="workshops__tag">Workshop</div>
+        <WorkshopsSpeaker twitter={twitter} name={name} />
+        <h3 className="workshops__title" role="heading" aria-level="3">
+          {title}
+        </h3>
       </header>
+      <div className="workshops__info">
+        <p className="workshops__description">{description}</p>
+
+        <Button
+          href={`/workshop?slug=${slug}`}
+          as={`/workshop/${slug}`}
+          className="workshops__link"
+        >
+          Full details
+        </Button>
+
+        {phase >= 1 && phase <= 3 && !soldout[slug] && (
+          <Button outline={true} className="workshops__buy" href={ticketUrl}>
+            Buy tickets
+          </Button>
+        )}
+
+        <p className="workshops__intro">
+          Workshop tickets include a ffconf pass ticket for the conference on
+          Friday.
+        </p>
+      </div>
+      <WorkshopsImage photo={photo} />
     </section>
   );
 };
 
 const Workshops = () => (
   <Section id="workshops">
-    <p className="workshops__intro">
-      All workshops are run on {dateWorkshops} and include a conference pass for
-      the {dateConference} for £{price}+VAT.
-    </p>
     {data.map(workshop => (
       <WorkshopsItem key={workshop.slug} {...workshop} />
     ))}

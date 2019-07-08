@@ -115,8 +115,8 @@ a.speaker__name,
   .speaker-image {
     grid-area: si-pic;
     display: block;
-    max-width: 384px;
-    width: 40vw;
+    max-width: var(--bg-photo-max-width);
+    width: var(--bg-photo-width);
   }
 
   .talk__header {

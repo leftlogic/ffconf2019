@@ -1,22 +1,34 @@
-import { Fragment } from 'react';
 import App, { Container } from 'next/app';
 import Layout from '../src/components/layout';
 import Section from '../src/components/section';
 
-// import '../src/css/index.scss';
+const Wrapper = ({ pathname, children }) => {
+  const isMdx = pathname !== '/' && pathname !== '/workshop';
+
+  if (!isMdx) {
+    return children;
+  }
+
+  const id = pathname.replace('/', '');
+
+  return (
+    <Section id={id} mdx={isMdx}>
+      {children}
+    </Section>
+  );
+};
+
+import '../src/css/index.scss';
 
 class FFApp extends App {
   render() {
     const { pathname } = this.props.router;
-    const isMdx = pathname !== '/' && pathname !== '/workshop';
-    const Wrapper = isMdx ? Section : Fragment;
-    const id = pathname.replace('/', '');
 
     const { Component, pageProps } = this.props;
     return (
       <Container>
         <Layout>
-          <Wrapper id={id} mdx={isMdx}>
+          <Wrapper pathname={pathname}>
             <Component {...pageProps} />
           </Wrapper>
         </Layout>
