@@ -1,6 +1,8 @@
 import Nav from '../nav';
 import Tickets from '../tickets';
-// import './nav-main.scss';
+import Videos from '../videos';
+
+import './nav-main.scss';
 
 const data = [
   { title: 'sessions', url: '/#sessions' },
@@ -13,18 +15,17 @@ const data = [
 const NavMain = () => {
   return (
     <nav className="nav-main">
-      <button
-        id="nav-main-open"
-        aria-expanded="false"
-        className="nav-main__link nav-main__link--button js-button-expand"
-      >
-        Open Menu
-      </button>
       <div className="nav-main__content">
+        <button
+          id="nav-main-open"
+          aria-expanded="false"
+          className="nav-main__link nav-main__link--button js-button-expand"
+        >
+          Open Menu
+        </button>
+        <Tickets namespace="nav-main__button" />
+        <Videos className="nav-main__button" />
         <Nav data={data} className="nav-main" />
-        <div>
-          <Tickets namespace="nav-main-buy" />
-        </div>
       </div>
     </nav>
   );

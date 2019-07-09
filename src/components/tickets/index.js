@@ -46,7 +46,7 @@ const Tickets = ({ className, namespace }) => {
     );
   }
 
-  return <span className={buttonClasses}>{buttonText}</span>;
+  return <Button className={buttonClasses}>{buttonText}</Button>;
 };
 
 export default Tickets;

@@ -1,28 +1,24 @@
 .nav-main {
-  padding-bottom: 64px;
-  padding-top: 24px;
+  background: var(--bg-black);
+  font-family: var(--f-special);
+  // padding-bottom: 64px;
+  // padding-top: 24px;
   position: -webkit-sticky; // Safari
   position: sticky;
-  text-align: center;
-  text-transform: uppercase;
+  // text-align: center;
   top: 0;
-  z-index: 1;
-  width: 100%;
+  z-index: 2;
+  // width: 100%;
+}
 
-  &::before {
-    background: url("/static/images/style/front-cloud-tile-@2x.png") repeat-x;
-    background-position: bottom;
-    background-size: 450px;
-    bottom: 0;
-    content: "";
-    left: 50%;
-    margin: 0 -50vw 0;
-    position: absolute;
-    right: 50%;
-    top: -100vh;
-    width: 100vw;
-    z-index: -1;
-  }
+.nav-main__content {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "list list"
+    "ticket menu";
 }
 
 .nav-main__list {
@@ -32,69 +28,96 @@
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 24px 0;
+  grid-area: list;
 }
 
-.nav-main__link,
-.nav-main-buy {
-  color: var(--c-cyan);
-  font-family: var(--f-title);
-  font-size: 2.2rem;
-  line-height: 4rem;
+.nav-main__item {
+  padding: 12px 0;
+}
+
+.nav-main__link {
+  border-bottom: 2px solid transparent;
+  color: var(--c-white);
+  font-size: 3.2rem;
+  line-height: 1.25;
+  padding-bottom: 4px;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    border-bottom-color: var(--c-red2);
+  }
 }
 
-.nav-main-buy__text {
-  font-weight: normal;
+.nav-main__button {
+  grid-area: ticket;
 }
+
+// .nav-main-buy__text {
+//   font-weight: normal;
+// }
 
 .nav-main__link--button {
   background: transparent;
   border: 0 none;
   cursor: pointer;
   display: none;
-  padding: 0;
-  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 2.6rem;
+  padding: 18px 31px 17px;
+  grid-area: menu;
 
   &:hover,
   &:focus {
-    color: var(--c-pink);
+    color: var(--c-red2);
   }
 }
 
 .🦄 {
   .nav-main__link--button {
-    display: inline;
+    display: block;
   }
 
-  .nav-main__link--button[aria-expanded="false"] + .nav-main__content {
+  .nav-main__link--button[aria-expanded="false"] ~ .nav-main__list {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
+  .nav-main__content {
+    grid-template-columns: auto;
+    grid-template-areas: "ticket list";
+  }
+
   .nav-main__list {
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
   }
 
-  .nav-main-buy {
-    display: none;
+  .nav-main__link {
+    font-size: 2.6rem;
+    line-height: 1;
   }
+
+  //   .nav-main-buy {
+  //     display: none;
+  //   }
 
   .🦄 {
     .nav-main__link--button {
       display: none;
     }
 
-    .nav-main__content.nav-main__content.nav-main__content {
-      display: block;
+    .nav-main__list.nav-main__list.nav-main__list {
+      display: flex;
     }
   }
 }
 
-@media (min-width: 1024px) {
-  .nav-main__link {
-    font-size: 2.8rem;
-  }
-}
+// @media (min-width: 1024px) {
+//   .nav-main__link {
+//     font-size: 2.8rem;
+//   }
+// }

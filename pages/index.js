@@ -7,7 +7,7 @@ import Workshops from '../src/components/workshops';
 import Locations from '../src/components/locations';
 import Diversity from '../src/components/diversity';
 import Quote from '../src/components/quote';
-import Welcome from '../src/components/welcome';
+// import Welcome from '../src/components/welcome';
 
 import config from '../src/config';
 
@@ -16,7 +16,7 @@ const { year } = config;
 const PageIndex = ({ schedule }) => {
   return (
     <>
-      <Welcome />
+      {/* <Welcome /> */}
       <Sessions schedule={schedule} />
       <Quote />
       <Workshops />

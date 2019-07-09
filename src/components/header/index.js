@@ -1,17 +1,14 @@
 import Link from 'next/link';
 import moment from 'moment';
 
-import Tickets from '../tickets';
-
 import config from '../../config';
 
-// import './header.scss';
+import './header.scss';
 
-const { dates, year, videos } = config;
+const { dates, year } = config;
 const [date] = dates;
 const momentDate = moment(date);
-const when = `${momentDate.format('Do MMMM')}`;
-const { phase } = config.config;
+const when = `${momentDate.format('dddd D MMM YYYY')}`;
 
 const Logo = () => {
   return (
@@ -31,46 +28,17 @@ const Logo = () => {
   );
 };
 
-const Intro = () => {
-  return (
-    <div className="intro">
-      <p className="intro__text intro__title">#ffconf</p>
-      <p className="intro__text">Repeated Twice</p>
-      <p className="intro__text">{when}</p>
-      <p className="intro__text">
-        Duke of York’s Picturehouse, Brighton,&nbsp;UK
-      </p>
-      <p style={{ marginTop: '10px' }} className="intro__text">
-        Tickets @ £{config.ticketPrice}+VAT
-      </p>
-    </div>
-  );
-};
-
-const VideoButton = () => {
-  if (phase < 4) {
-    return null;
-  }
-
-  if (videos) {
-    return (
-      <a href={videos} target="_blank" rel="noopener" className="">
-        Watch Now
-      </a>
-    );
-  }
-
-  return <span className="">Watch Soon</span>;
-};
-
 const Header = () => {
   return (
     <header className="header" role="banner">
-      <div className="header__top">
-        <Logo />
-        <Intro />
-        <Tickets namespace="button-buy" className={`phase-${phase}`} />
-        <VideoButton />
+      <div className="header__date">{when}</div>
+      <div className="header__location">
+        <span>Duke of York’s Picturehouse,</span> <span>Brighton,&nbsp;UK</span>
+      </div>
+      <Logo />
+      <div className="header__intro">
+        A full day of 8 carefully curated sessions for an audience that cares
+        about the future of the web, and, who want their ideas challenged.
       </div>
     </header>
   );
