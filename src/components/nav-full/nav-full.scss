@@ -4,7 +4,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  margin: 0 var(--outer-gap-horizontal);
   padding: 0 var(--inner-gap-horizontal);
 
   @media (min-width: 768px) {

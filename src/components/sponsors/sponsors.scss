@@ -98,13 +98,16 @@
 }
 
 @media (min-width: 768px) {
+  .sponsors-category {
+    padding-left: var(--outer-gap-horizontal);
+    padding-right: var(--outer-gap-horizontal);
+  }
+
   .sponsors__title {
     text-align: center;
   }
 
   .sponsors-category__list {
-    // padding-left: var(--content-general-padding);
-    // padding-right: var(--content-general-padding);
     background: var(--c-grey2);
     grid-auto-columns: 1fr;
     grid-auto-flow: column;

@@ -1,25 +1,18 @@
 .footer {
   font-family: var(--f-special);
   font-size: 2.4rem;
-  // padding: var(--content-general-padding)
-  //   calc(var(--content-general-padding) - 8px);
   text-align: center;
 }
 
 .footer__content {
-  // margin: 0 0 8px;
   a {
     text-decoration: none;
   }
 
   p {
+    margin-left: var(--outer-gap-horizontal);
+    margin-right: var(--outer-gap-horizontal);
     padding-left: var(--inner-gap-horizontal);
     padding-right: var(--inner-gap-horizontal);
   }
 }
-
-// @media (min-width: 768px) {
-//   .footer {
-//     padding: var(--content-general-padding);
-//   }
-// }

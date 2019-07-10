@@ -1,6 +1,6 @@
 .workshops__item {
   border-bottom: 2px solid var(--c-black);
-  padding: 36px 0 0;
+  padding: 32px 0 0;
 
   &:last-child {
     border-bottom: 0 none;
@@ -20,7 +20,7 @@
   font-weight: 500;
   line-height: 1;
   margin: 0;
-  padding-bottom: 36px;
+  padding-bottom: 32px;
 }
 
 .workshops__tag,
@@ -69,7 +69,7 @@ a.workshops__speaker {
 }
 
 .workshops__intro {
-  padding-bottom: 36px;
+  padding-bottom: 32px;
 }
 
 @media (min-width: 640px) {
@@ -88,6 +88,8 @@ a.workshops__speaker {
     grid-template-areas:
       "wi-pic ."
       "wi-pic .";
+    padding-left: var(--outer-gap-horizontal);
+    padding-right: var(--outer-gap-horizontal);
   }
 
   .workshops__image {

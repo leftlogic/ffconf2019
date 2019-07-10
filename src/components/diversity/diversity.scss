@@ -15,26 +15,35 @@ abbr[title="proudly"] {
   padding-bottom: 0;
   padding-top: 0;
 
-  .section__wrapper:after {
-    background: url("/static/images/style/diversity-small.png") no-repeat bottom;
-    background-size: contain;
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 406'%3E%3C/svg%3E");
-    display: block;
-    margin-top: 36px;
-  }
-
-  @media (min-width: 768px) {
-    & {
-      display: grid;
-      grid-column-gap: 48px;
-      grid-template-columns: 60% auto;
-      padding-right: 0;
+  .section__wrapper {
+    &:after {
+      background: url("/static/images/style/diversity-small.png") no-repeat
+        bottom;
+      background-size: contain;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 406'%3E%3C/svg%3E");
+      display: block;
+      margin-top: 36px;
     }
 
-    .section__wrapper:after {
-      background-image: url("/static/images/style/diversity-big.png");
-      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 920 1006'%3E%3C/svg%3E");
-      margin-top: 0;
+    @media (min-width: 768px) {
+      & {
+        display: grid;
+        grid-template-columns: 60%;
+        padding-right: 0;
+        position: relative;
+      }
+
+      &:after {
+        background-image: url("/static/images/style/diversity-big.png");
+        background-position: center;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 920 1006'%3E%3C/svg%3E");
+        height: 100%;
+        margin-top: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 34%;
+      }
     }
   }
 }

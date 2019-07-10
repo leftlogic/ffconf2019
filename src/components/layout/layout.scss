@@ -2,6 +2,11 @@
   --gap: 16px;
   --border: 2px solid var(--c-white);
   --gap-border: 18px;
+
+  @media (min-width: 768px) {
+    --gap: 32px;
+    --gap-border: 34px;
+  }
 }
 
 .wrapper {
@@ -92,31 +97,3 @@
     max-width: unset;
   }
 }
-
-// @media (min-width: 768px) {
-//   .wrapper {
-//     width: calc(100% - 96px);
-//   }
-
-//   .main {
-//     &::before {
-//       // height: 118px;
-//     }
-
-//     &::after {
-//       background-size: 140% 100%;
-//     }
-//   }
-// }
-
-// @media (min-width: 1024px) {
-//   .wrapper {
-//     width: calc(100% - 128px);
-//   }
-
-//   .main {
-//     &::before {
-//       // height: 158px;
-//     }
-//   }
-// }

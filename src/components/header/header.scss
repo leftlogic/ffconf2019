@@ -28,9 +28,6 @@
   line-height: 1;
 }
 
-// .logo {
-// }
-
 .logo__link {
   display: block;
   margin: 0 auto;
@@ -43,81 +40,6 @@
   width: 100%;
 }
 
-// .header {
-//   padding-top: 40px;
-//   position: relative;
-//   text-align: center;
-//   z-index: 2;
-
-//   &::before {
-//     background: inherit;
-//     bottom: 0;
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     z-index: -1;
-
-//     width: 100vw;
-//     left: 50%;
-//     right: 50%;
-//     margin-left: -50vw;
-//     margin-right: -50vw;
-//   }
-// }
-
-// .logo {
-//   margin: 0 auto 32px;
-//   width: 98px;
-// }
-
-// .intro {
-//   color: var(--c-yellow);
-//   font-family: var(--f-title);
-//   font-size: 2.6rem;
-//   line-height: 3.4rem;
-// }
-
-// .intro__text {
-//   margin: 0;
-// }
-
-// .intro__title {
-//   margin: 0 0 0.4em 0;
-//   font-size: 4.4rem;
-//   line-height: 5rem;
-// }
-
-// .button-buy {
-//   position: relative;
-//   display: none;
-
-//   &.phase-0 {
-//     &::before {
-//       opacity: 0.3;
-//     }
-
-//     strong {
-//       height: auto;
-//       clip: unset;
-//       width: 100%;
-//       position: absolute;
-//       top: 1.2em;
-//       left: 0;
-//       z-index: 1;
-//       font-family: var(--f-title);
-//       color: var(--c-white);
-//       text-shadow: 5px 5px black;
-//       font-size: 3rem;
-//       overflow: initial;
-//       height: auto;
-//       text-align: center;
-//       white-space: inherit;
-//       line-height: 1em;
-//     }
-//   }
-// }
-
 @media (min-width: 768px) {
   .header__date,
   .header__location {
@@ -125,126 +47,19 @@
     line-height: 1;
   }
 
+  .header__location-place,
+  .header__location-city {
+    display: inline;
+  }
+
   .header__intro {
     font-size: 5.6rem;
     line-height: 0.86;
+    padding-left: var(--outer-gap-horizontal);
+    padding-right: var(--outer-gap-horizontal);
   }
 
   .logo__link {
     max-width: 232px;
   }
 }
-//   .header__top {
-//     align-items: center;
-//     display: flex;
-//     justify-content: space-between;
-//   }
-
-//   .logo {
-//     flex: 0 0 auto;
-//     margin-bottom: 0;
-//     margin-left: 0;
-//     margin-right: auto;
-//     width: 160px;
-//   }
-
-//   .intro {
-//     padding: 0 32px;
-//     text-align: left;
-//   }
-
-//   .button-buy {
-//     display: block;
-//     flex: 0 0 auto;
-//     margin-left: auto;
-//     margin-right: 0;
-//     width: 128px;
-//     transition: transform 200ms ease-out;
-
-//     &:hover {
-//       transform: scale(1.2) rotate(1070deg);
-//       filter: saturate(120%);
-//       // transform-origin: 0 0;
-//     }
-
-//     &--enabled {
-//       --bg-photo: url('/static/images/style/button-buy.png');
-//     }
-
-//     &--disabled {
-//       --bg-photo: url('/static/images/style/button-buy-disabled.png');
-//     }
-//   }
-
-//   /* Hide only visually, but have it available for screen readers
-//    * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
-//    */
-//   .button-buy__text {
-//     border: 0;
-//     clip: rect(0 0 0 0);
-//     height: 1px;
-//     margin: -1px;
-//     overflow: hidden;
-//     padding: 0;
-//     position: absolute;
-//     width: 1px;
-//     white-space: nowrap;
-//   }
-// }
-
-// @media (min-width: 1024px) {
-//   .logo {
-//     width: 240px;
-//   }
-
-//   .intro__title {
-//     font-size: 6rem;
-//   }
-
-//   .button-buy {
-//     width: 150px;
-
-//     &.phase-0 {
-//       strong {
-//         font-size: 4rem;
-//         top: 1.3em;
-//       }
-//     }
-//   }
-// }
-
-// .welcome-text {
-//   text-align: left;
-//   // color: var(--c-white);
-//   font-size: 1.4em;
-//   line-height: 1.4em;
-//   font-weight: 600;
-
-//   ul {
-//     display: flex;
-//     padding: 0;
-//     margin: 0;
-//     justify-content: space-between;
-//   }
-
-//   li {
-//     display: block;
-//     width: 22%;
-//     // border: 2px solid var(--c-pink);
-//     padding: 13px 10px;
-//     line-height: 2.8rem;
-//     // border-radius: 4px;
-//     background: rgba(255,255,255,0.5);
-//     text-align: center;
-//     font-size: 105%;
-//     text-shadow: 1px 1px 0px black;
-
-//     &:hover {
-//       color: white;
-//     }
-//   }
-
-//   .button:before {
-//     background: rgb(0, 0, 0) url("/static/images/style/button-bg.png");
-//   }
-// }

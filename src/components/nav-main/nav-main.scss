@@ -1,13 +1,9 @@
 .nav-main {
   font-family: var(--f-special);
-  // padding-bottom: 64px;
-  // padding-top: 24px;
   position: -webkit-sticky; // Safari
   position: sticky;
-  // text-align: center;
   top: 0;
   z-index: 1;
-  // width: 100%;
 }
 
 .nav-main__content {
@@ -129,10 +125,6 @@
       right: 0;
     }
   }
-
-  //   .nav-main-buy {
-  //     display: none;
-  //   }
 
   .🦄 {
     .nav-main__link--button {

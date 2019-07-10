@@ -26,8 +26,15 @@
   --bg-photo-width: 35vw;
 
   --inner-gap-horizontal: 24px;
+  --outer-gap-horizontal: 0;
 
   font-size: 10px;
+
+  @media (min-width: 768px) {
+    --inner-gap-horizontal: 0;
+    // --inner-gap-horizontal: 32px;
+    --outer-gap-horizontal: 32px;
+  }
 }
 
 body {
@@ -69,6 +76,10 @@ a {
 /* === Markdown text from mdx */
 .section--mdx {
   padding: 36px;
+
+  .section__wrapper {
+    padding: 0 32px;
+  }
 
   h1,
   h2,

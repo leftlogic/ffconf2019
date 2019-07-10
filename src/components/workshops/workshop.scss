@@ -1,5 +1,5 @@
 .workshop {
-  padding: 36px 36px 0;
+  padding: 32px 0 0;
 }
 
 .workshop__image {
@@ -109,6 +109,8 @@ a.workshop__speaker {
     grid-template-areas:
       "wi-pic ."
       "wi-pic .";
+    padding-left: var(--outer-gap-horizontal);
+    padding-right: var(--outer-gap-horizontal);
   }
 
   .workshop__image {

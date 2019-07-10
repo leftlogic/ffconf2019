@@ -1,19 +1,13 @@
 .section {
   color: var(--c-black);
-  // padding-top: 96px;
-  // position: relative;
-  // z-index: 0;
-
-  // &:target {
-  //   padding-top: 148px;
-  // }
 }
 
 .section__wrapper {
   background: var(--bg-white);
   padding-left: var(--inner-gap-horizontal);
   padding-right: var(--inner-gap-horizontal);
-  //   padding: var(--content-general-padding) var(--content-general-padding) 48px;
+  margin-left: var(--outer-gap-horizontal);
+  margin-right: var(--outer-gap-horizontal);
 }
 
 .section__title {
