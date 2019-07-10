@@ -2,9 +2,9 @@ import classnames from 'classnames';
 
 import './icon.scss';
 
-import quotes from 'raw-loader!./assets/quotes.svg';
+// import quotes from 'raw-loader!./assets/quotes.svg';
 
-const data = { quotes };
+// const data = { quotes };
 
 const Icon = ({ icon, className }) => {
   const svgClasses = classnames({
@@ -21,7 +21,7 @@ const Icon = ({ icon, className }) => {
     // />
     <div aria-hidden="true" className={svgClasses}>
       <object
-        data="/static/images/style/quotes.svg"
+        data="/static/images/style/quote.svg"
         type="image/svg+xml"
       ></object>
     </div>

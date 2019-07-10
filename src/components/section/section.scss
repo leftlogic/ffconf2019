@@ -11,7 +11,8 @@
 
 .section__wrapper {
   background: var(--bg-white);
-  margin: 16px;
+  padding-left: var(--inner-gap-horizontal);
+  padding-right: var(--inner-gap-horizontal);
   //   padding: var(--content-general-padding) var(--content-general-padding) 48px;
 }
 

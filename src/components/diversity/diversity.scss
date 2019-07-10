@@ -13,10 +13,11 @@ abbr[title="proudly"] {
 
 .section--diversity {
   padding-bottom: 0;
+  padding-top: 0;
 
-  &:after {
-    background: url("/static/images/style/diversity-small.png") no-repeat;
-    background-size: cover;
+  .section__wrapper:after {
+    background: url("/static/images/style/diversity-small.png") no-repeat bottom;
+    background-size: contain;
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 406'%3E%3C/svg%3E");
     display: block;
     margin-top: 36px;
@@ -30,7 +31,7 @@ abbr[title="proudly"] {
       padding-right: 0;
     }
 
-    &:after {
+    .section__wrapper:after {
       background-image: url("/static/images/style/diversity-big.png");
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 920 1006'%3E%3C/svg%3E");
       margin-top: 0;

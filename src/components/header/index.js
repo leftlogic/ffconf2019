@@ -33,7 +33,10 @@ const Header = () => {
     <header className="header" role="banner">
       <div className="header__date">{when}</div>
       <div className="header__location">
-        <span>Duke of York’s Picturehouse,</span> <span>Brighton,&nbsp;UK</span>
+        <span className="header__location-place">
+          Duke of York’s Picturehouse,
+        </span>{' '}
+        <span className="header__location-city">Brighton,&nbsp;UK</span>
       </div>
       <Logo />
       <div className="header__intro">
