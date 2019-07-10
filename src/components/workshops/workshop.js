@@ -15,13 +15,13 @@ const { phase } = config.config;
 
 const WorkshopSpeaker = ({ name, twitter }) => {
   if (!twitter) {
-    return <div className="workshop__speaker">{name}</div>;
+    return <div className="workshop__speaker tag">{name}</div>;
   }
 
   return (
     <a
       href={`https://twitter.com/${twitter}`}
-      className="workshop__speaker"
+      className="workshop__speaker tag"
       target="_blank"
       rel="noopener"
     >
@@ -46,8 +46,8 @@ const WorkshopDetails = ({ date, time }) => {
 
   return (
     <>
-      <div className="workshop__date">{formattedDate}</div>
-      <div className="workshop__time">{time}</div>
+      <div className="workshop__date tag">{formattedDate}</div>
+      <div className="workshop__time tag">{time}</div>
     </>
   );
 };
@@ -146,7 +146,7 @@ const Workshop = ({ selectedSlug }) => {
     <Section id="workshop">
       <section className="workshop">
         <header className="workshop__header">
-          <div className="workshop__tag">Workshop</div>
+          <div className="workshop__tag tag">Workshop</div>
           <WorkshopSpeaker twitter={twitter} name={name} />
           <h3 className="workshop__title" role="heading" aria-level="3">
             {title}

@@ -50,13 +50,13 @@ const SpeakerName = ({ name, twitter }) => {
   }
 
   if (!twitter) {
-    return <div className="speaker__name">{name}</div>;
+    return <div className="speaker__name tag">{name}</div>;
   }
 
   return (
     <a
       href={`https://twitter.com/${twitter}`}
-      className="speaker__name"
+      className="speaker__name tag"
       target="_blank"
       rel="noopener"
     >
@@ -71,7 +71,7 @@ const TalkTime = ({ start, end }) => {
   }
 
   return (
-    <div className="talk__time">
+    <div className="talk__time tag">
       {start} &mdash; {end}
     </div>
   );
@@ -98,6 +98,7 @@ const TalkLink = ({ type, link }) => {
   }
 
   const linkClasses = classnames({
+    tag: true,
     talk__link: true,
     [`talk__link--${type}`]: !!type,
   });

@@ -73,6 +73,27 @@ a {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E");
 }
 
+/* === Tag */
+.tag {
+  background: var(--c-grey1);
+  color: inherit;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 2;
+  padding: 0 1em 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.tag {
+  &:hover,
+  &:focus {
+    background: var(--c-black);
+    color: var(--c-white);
+  }
+}
+
 /* === Markdown text from mdx */
 .section--mdx {
   padding: 36px;

@@ -22,28 +22,12 @@
 .workshop__speaker,
 .workshop__date,
 .workshop__time {
-  background: var(--c-grey1);
-  color: inherit;
-  display: inline-block;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 2;
   margin-bottom: 24px;
-  padding: 0 1em 1px;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 .workshop__tag,
 .workshop__date {
   margin-right: 8px;
-}
-
-a.workshop__speaker {
-  &:hover,
-  &:focus {
-    color: var(--c-red4);
-  }
 }
 
 .workshop__topics-title,

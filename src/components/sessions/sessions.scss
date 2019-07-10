@@ -67,21 +67,6 @@
 
 .speaker__name,
 .talk__time,
-.break__time,
-.talk__link {
-  background: var(--c-grey1);
-  color: inherit;
-  display: inline-block;
-  font-size: 1.2rem;
-  font-weight: 600;
-  line-height: 2;
-  padding: 0 1em 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.speaker__name,
-.talk__time,
 .break__time {
   margin-bottom: 24px;
 }
@@ -90,14 +75,6 @@
 .break__time,
 .talk__link {
   margin-right: 8px;
-}
-
-a.speaker__name,
-.talk__link {
-  &:hover,
-  &:focus {
-    color: var(--c-red4);
-  }
 }
 
 @media (min-width: 768px) {

@@ -20,13 +20,13 @@ const { phase, soldout } = config.config;
 
 const WorkshopsSpeaker = ({ name, twitter }) => {
   if (!twitter) {
-    return <div className="workshops__speaker">{name}</div>;
+    return <div className="workshops__speaker tag">{name}</div>;
   }
 
   return (
     <a
       href={`https://twitter.com/${twitter}`}
-      className="workshops__speaker"
+      className="workshops__speaker tag"
       target="_blank"
       rel="noopener"
     >
@@ -52,7 +52,7 @@ const WorkshopsItem = ({ title, description, speaker, slug }) => {
   return (
     <section className="workshops__item">
       <header className="workshops__header">
-        <div className="workshops__tag">Workshop</div>
+        <div className="workshops__tag tag">Workshop</div>
         <WorkshopsSpeaker twitter={twitter} name={name} />
         <h3 className="workshops__title" role="heading" aria-level="3">
           {title}
