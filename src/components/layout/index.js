@@ -7,7 +7,7 @@ import Sponsors from '../sponsors';
 import Quote from '../quote';
 import QuotesTemplates from '../quote/quotes-templates';
 
-// import './layout.scss';
+import './layout.scss';
 
 const Layout = ({ children }) => (
   <Fragment>

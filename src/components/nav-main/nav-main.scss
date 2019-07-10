@@ -1,5 +1,4 @@
 .nav-main {
-  background: var(--bg-black);
   font-family: var(--f-special);
   // padding-bottom: 64px;
   // padding-top: 24px;
@@ -7,12 +6,12 @@
   position: sticky;
   // text-align: center;
   top: 0;
-  z-index: 2;
+  z-index: 1;
   // width: 100%;
 }
 
 .nav-main__content {
-  align-items: center;
+  background: var(--bg-black);
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
@@ -28,7 +27,8 @@
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 24px 0;
+  padding-bottom: 24px;
+  padding-top: 24px;
   grid-area: list;
 }
 
@@ -52,15 +52,18 @@
 
 .nav-main__button {
   grid-area: ticket;
-}
+  line-height: unset;
 
-// .nav-main-buy__text {
-//   font-weight: normal;
-// }
+  &:hover,
+  &:focus {
+    background: transparent;
+  }
+}
 
 .nav-main__link--button {
   background: transparent;
   border: 0 none;
+  color: inherit;
   cursor: pointer;
   display: none;
   font-family: inherit;
@@ -71,6 +74,7 @@
   &:hover,
   &:focus {
     color: var(--c-red2);
+    outline: 0 none;
   }
 }
 
@@ -86,19 +90,44 @@
 
 @media (min-width: 768px) {
   .nav-main__content {
-    grid-template-columns: auto;
+    grid-template-columns: calc(36px + 314px + 2px) auto;
     grid-template-areas: "ticket list";
   }
 
   .nav-main__list {
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding: 0;
+    align-items: stretch;
+
+    &.nav-main__list.nav-main__list.nav-main__list.nav-main__list {
+      border-bottom: 0 none;
+    }
+  }
+
+  .nav-main__item {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
   }
 
   .nav-main__link {
     font-size: 2.6rem;
     line-height: 1;
+    padding-bottom: 0;
+    border-bottom: 0 none;
+
+    &:hover:after {
+      content: "";
+      border-bottom: 2px solid var(--c-red2);
+      position: absolute;
+      bottom: -2px;
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
   }
 
   //   .nav-main-buy {
@@ -115,9 +144,3 @@
     }
   }
 }
-
-// @media (min-width: 1024px) {
-//   .nav-main__link {
-//     font-size: 2.8rem;
-//   }
-// }

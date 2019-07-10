@@ -19,9 +19,9 @@ const NavMain = () => {
         <button
           id="nav-main-open"
           aria-expanded="false"
-          className="nav-main__link nav-main__link--button js-button-expand"
+          className="nav-main__link--button js-button-expand"
         >
-          Open Menu
+          Menu
         </button>
         <Tickets namespace="nav-main__button" />
         <Videos className="nav-main__button" />

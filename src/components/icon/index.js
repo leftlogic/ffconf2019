@@ -14,11 +14,17 @@ const Icon = ({ icon, className }) => {
   });
 
   return (
-    <div
-      aria-hidden="true"
-      className={svgClasses}
-      dangerouslySetInnerHTML={{ __html: `${data[icon]}` }}
-    />
+    // <div
+    //   aria-hidden="true"
+    //   className={svgClasses}
+    //   dangerouslySetInnerHTML={{ __html: `${data[icon]}` }}
+    // />
+    <div aria-hidden="true" className={svgClasses}>
+      <object
+        data="/static/images/style/quotes.svg"
+        type="image/svg+xml"
+      ></object>
+    </div>
   );
 };
 

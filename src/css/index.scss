@@ -51,14 +51,13 @@ a {
 }
 
 /* === Show dynamic background image as if it was a proper photo */
-.dynamic-image::before,
-.dynamic-image::after {
+.dynamic-image::before {
   background: var(--bg-photo) no-repeat;
   background-size: cover;
   display: block;
   line-height: 0;
-  position: relative;
-  z-index: 1;
+  // position: relative;
+  // z-index: 1;
 }
 
 .dynamic-image--square::before {

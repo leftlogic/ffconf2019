@@ -1,5 +1,4 @@
 .section {
-  background: var(--bg-white);
   color: var(--c-black);
   // padding-top: 96px;
   // position: relative;
@@ -10,9 +9,11 @@
   // }
 }
 
-// .section__wrapper {
-//   padding: var(--content-general-padding) var(--content-general-padding) 48px;
-// }
+.section__wrapper {
+  background: var(--bg-white);
+  margin: 16px;
+  //   padding: var(--content-general-padding) var(--content-general-padding) 48px;
+}
 
 .section__title {
   font-size: 3.2rem;
