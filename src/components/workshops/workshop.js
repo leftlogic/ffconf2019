@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import Markdown from '../markdown';
 import Section from '../section';
 import Button from '../button';
+import { WorkshopImage, WorkshopHeader } from './common';
 
 import config from '../../config';
 import data from './data';
@@ -12,23 +13,6 @@ import './workshop.scss';
 
 const { onSaleDate } = config;
 const { phase } = config.config;
-
-const WorkshopSpeaker = ({ name, twitter }) => {
-  if (!twitter) {
-    return <div className="workshop__speaker tag">{name}</div>;
-  }
-
-  return (
-    <a
-      href={`https://twitter.com/${twitter}`}
-      className="workshop__speaker tag"
-      target="_blank"
-      rel="noopener"
-    >
-      {name}
-    </a>
-  );
-};
 
 const WorkshopTopic = ({ title, description }) => {
   return (
@@ -49,17 +33,6 @@ const WorkshopDetails = ({ date, time }) => {
       <div className="workshop__date tag">{formattedDate}</div>
       <div className="workshop__time tag">{time}</div>
     </>
-  );
-};
-
-const WorkshopImage = ({ photo }) => {
-  return (
-    <div
-      className="workshop__image dynamic-image dynamic-image--square"
-      style={{
-        '--bg-photo': `url(/static/images/workshops/2x-${photo})`,
-      }}
-    />
   );
 };
 
@@ -144,14 +117,8 @@ const Workshop = ({ selectedSlug }) => {
 
   return (
     <Section id="workshop">
-      <section className="workshop">
-        <header className="workshop__header">
-          <div className="workshop__tag tag">Workshop</div>
-          <WorkshopSpeaker twitter={twitter} name={name} />
-          <h3 className="workshop__title" role="heading" aria-level="3">
-            {title}
-          </h3>
-
+      <section className="workshop workshop-wrapper">
+        <WorkshopHeader twitter={twitter} name={name} title={title}>
           <WorkshopDetails date={date} time={time} />
 
           <p className="workshop__intro">
@@ -161,7 +128,7 @@ const Workshop = ({ selectedSlug }) => {
           <WorkshopBuy slug={slug} url={url}>
             Buy tickets @ £{config.workshopPrice}+VAT
           </WorkshopBuy>
-        </header>
+        </WorkshopHeader>
 
         <div className="workshop__content">
           <WorkshopTopics topics={topics} />

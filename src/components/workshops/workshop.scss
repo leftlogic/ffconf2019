@@ -1,31 +1,8 @@
-.workshop {
-  padding: 32px 0 0;
-}
-
-.workshop__image {
-  display: none;
-}
-
-.workshop__header {
-  font-size: 0;
-}
-
-.workshop__title {
-  font-size: 3.2rem;
-  font-weight: 500;
-  line-height: 1;
-  margin: 0;
-  padding-bottom: 36px;
-}
-
-.workshop__tag,
-.workshop__speaker,
 .workshop__date,
 .workshop__time {
   margin-bottom: 24px;
 }
 
-.workshop__tag,
 .workshop__date {
   margin-right: 8px;
 }
@@ -81,26 +58,5 @@
 @media (min-width: 640px) {
   .workshop__buy {
     width: auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .workshop {
-    display: grid;
-    grid-column-gap: 48px;
-    grid-template-columns: max-content auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "wi-pic ."
-      "wi-pic .";
-    padding-left: var(--outer-gap-horizontal);
-    padding-right: var(--outer-gap-horizontal);
-  }
-
-  .workshop__image {
-    grid-area: wi-pic;
-    display: block;
-    max-width: var(--bg-photo-max-width);
-    width: var(--bg-photo-width);
   }
 }

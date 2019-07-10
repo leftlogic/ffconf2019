@@ -2,6 +2,7 @@
 
 import Section from '../section';
 import Button from '../button';
+import { WorkshopImage, WorkshopHeader } from './common';
 
 import config from '../../config';
 import data from './data';
@@ -18,46 +19,13 @@ const { phase, soldout } = config.config;
 // const dateWorkshops = moment(generalWorkshop.details.date).format('D MMMM');
 // const dateConference = moment(date).format('D MMMM');
 
-const WorkshopsSpeaker = ({ name, twitter }) => {
-  if (!twitter) {
-    return <div className="workshops__speaker tag">{name}</div>;
-  }
-
-  return (
-    <a
-      href={`https://twitter.com/${twitter}`}
-      className="workshops__speaker tag"
-      target="_blank"
-      rel="noopener"
-    >
-      {name}
-    </a>
-  );
-};
-
-const WorkshopsImage = ({ photo }) => {
-  return (
-    <div
-      className="workshops__image dynamic-image dynamic-image--square"
-      style={{
-        '--bg-photo': `url(/static/images/workshops/2x-${photo})`,
-      }}
-    />
-  );
-};
-
 const WorkshopsItem = ({ title, description, speaker, slug }) => {
   const { name, twitter, photo } = speaker;
 
   return (
-    <section className="workshops__item">
-      <header className="workshops__header">
-        <div className="workshops__tag tag">Workshop</div>
-        <WorkshopsSpeaker twitter={twitter} name={name} />
-        <h3 className="workshops__title" role="heading" aria-level="3">
-          {title}
-        </h3>
-      </header>
+    <section className="workshops__item workshop-wrapper">
+      <WorkshopHeader twitter={twitter} name={name} title={title} />
+
       <div className="workshops__info">
         <p className="workshops__description">{description}</p>
 
@@ -80,7 +48,7 @@ const WorkshopsItem = ({ title, description, speaker, slug }) => {
           Friday.
         </p>
       </div>
-      <WorkshopsImage photo={photo} />
+      <WorkshopImage photo={photo} />
     </section>
   );
 };
