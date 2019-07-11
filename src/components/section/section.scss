@@ -4,8 +4,7 @@
 
 .section__wrapper {
   background: var(--bg-white);
-  padding-left: var(--inner-gap-horizontal);
-  padding-right: var(--inner-gap-horizontal);
+  padding: var(--inner-gap-vertical) var(--inner-gap-horizontal) 0;
   margin-left: var(--outer-gap-horizontal);
   margin-right: var(--outer-gap-horizontal);
 }
@@ -14,7 +13,7 @@
   font-size: 3.2rem;
   font-weight: 500;
   line-height: 1;
-  margin: 0 0 36px;
+  margin: 0 0 var(--inner-gap-vertical);
   text-transform: lowercase;
 
   @media (min-width: 768px) {

@@ -1,8 +1,10 @@
 .workshops__item {
   border-bottom: 2px solid var(--c-black);
+  margin-bottom: 32px;
 
   &:last-child {
     border-bottom: 0 none;
+    margin-bottom: 0;
   }
 }
 

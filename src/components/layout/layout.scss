@@ -29,6 +29,12 @@
   padding-right: var(--gap-border);
 }
 
+.section,
+.footer__content {
+  padding-bottom: var(--outer-gap-vertical);
+  padding-top: var(--outer-gap-vertical);
+}
+
 .nav-main {
   border-top: var(--border);
 }
@@ -95,5 +101,9 @@
 
   .logo {
     max-width: unset;
+  }
+
+  .section--locations .section__wrapper {
+    padding-top: 0;
   }
 }

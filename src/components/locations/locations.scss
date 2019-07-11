@@ -26,13 +26,19 @@
     width: 42px;
   }
 
-  &:last-child:after {
-    border-bottom-color: var(--c-black);
-    margin-top: 36px;
-    width: 100%;
+  &:last-child {
+    &:after {
+      border-bottom-color: var(--c-black);
+      margin-top: 32px;
+      width: 100%;
+    }
 
     .locations__category:last-child & {
-      border-bottom-color: transparent;
+      margin-bottom: 0;
+
+      &:after {
+        border-bottom-color: transparent;
+      }
     }
   }
 }
@@ -65,7 +71,7 @@
 
   .locations__category {
     background: var(--bg-white);
-    padding: 0 var(--outer-gap-horizontal);
+    padding: var(--outer-gap-vertical) var(--outer-gap-horizontal) 0;
   }
 
   .locations-category__title {

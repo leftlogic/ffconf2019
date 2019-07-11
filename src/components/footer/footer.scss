@@ -5,14 +5,19 @@
 }
 
 .footer__content {
+  padding-bottom: calc(var(--inner-gap-vertical) * 2);
+  padding-top: calc(var(--inner-gap-vertical) * 2);
+
   a {
     text-decoration: none;
   }
 
   p {
-    margin-left: var(--outer-gap-horizontal);
-    margin-right: var(--outer-gap-horizontal);
-    padding-left: var(--inner-gap-horizontal);
-    padding-right: var(--inner-gap-horizontal);
+    margin: 0 var(--outer-gap-horizontal) 1em;
+    padding: 0 var(--inner-gap-horizontal);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

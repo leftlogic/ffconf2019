@@ -28,12 +28,18 @@
   --inner-gap-horizontal: 24px;
   --outer-gap-horizontal: 0;
 
+  --inner-gap-vertical: 24px;
+  --outer-gap-vertical: 0;
+
   font-size: 10px;
 
   @media (min-width: 768px) {
     --inner-gap-horizontal: 0;
     // --inner-gap-horizontal: 32px;
     --outer-gap-horizontal: 32px;
+
+    --inner-gap-vertical: 32px;
+    --outer-gap-vertical: 32px;
   }
 }
 
@@ -96,10 +102,13 @@ a.tag {
 
 /* === Markdown text from mdx */
 .section--mdx {
-  padding: 36px;
-
   .section__wrapper {
-    padding: 0 32px;
+    padding-bottom: var(--inner-gap-vertical);
+
+    @media (min-width: 768px) {
+      padding-left: var(--outer-gap-horizontal);
+      padding-right: var(--outer-gap-horizontal);
+    }
   }
 
   h1,
@@ -115,7 +124,7 @@ a.tag {
   h1 {
     font-size: 3.2rem;
     line-height: 1;
-    margin: 0 0 36px;
+    margin: 0 0 32px;
 
     @media (min-width: 768px) {
       font-size: 4rem;
