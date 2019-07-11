@@ -1,5 +1,7 @@
+/*eslint no-unused-vars: ["error", { "varsIgnorePattern": "Hack" }]*/
 import { Fragment } from 'react';
 
+import Hack from '../hack';
 import Header from '../header';
 import NavMain from '../nav-main';
 import Footer from '../footer';

@@ -18,8 +18,6 @@ const Wrapper = ({ pathname, children }) => {
   );
 };
 
-import '../src/css/index.scss';
-
 class FFApp extends App {
   render() {
     const { pathname } = this.props.router;
