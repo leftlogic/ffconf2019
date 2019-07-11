@@ -8,7 +8,7 @@
 - [ ] svg icon should use `use`?
 - [ ] sponsor pack link and text (see zeplin comments)
 - [ ] mobile menu toggle (see zeplin comments)
-- [ ] proper margin and paddings
+- [ ] header responsive
 
 ## Howto
 

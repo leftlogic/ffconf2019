@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": ".eleventy.js",
+  "config": {
+    "outputFolder": "build"
+  },
   "scripts": {
-    "build": "NODE_ENV=production next build && next export",
+    "build": "NODE_ENV=production next build && next export -o $npm_package_config_outputFolder",
     "dev": "next",
+    "deploy:now": "cd $npm_package_config_outputFolder && now --public",
+    "deploy:now:full": "npm run export && npm run deploy:now",
+    "export": "rm -rf $npm_package_config_outputFolder && npm run build && cp static/js/sw.js $npm_package_config_outputFolder/ && sed -i -e 's/@VERSION@/'$npm_package_version'/g' $npm_package_config_outputFolder/sw.js && rm -rf $npm_package_config_outputFolder/sw.js-e && cp -r $npm_package_config_outputFolder/_next/static/css $npm_package_config_outputFolder/static/ && cp now.json $npm_package_config_outputFolder/  && rm -rf $npm_package_config_outputFolder/_next",
+    "server-static": "node server-static.js",
     "storybook": "start-storybook -p 3001 --ci",
     "storybook:build": "build-storybook -o .storybook-static",
     "storybook:static": "npm run storybook:build && npx http-server .storybook-static"
@@ -55,6 +62,7 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
+    "express": "^4.17.1",
     "prettier": "^1.18.2",
     "prettier-eslint": "^8.8.2"
   }

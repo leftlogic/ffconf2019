@@ -79,11 +79,11 @@ const Meta = () => {
       <meta name="twitter:label2" value="When? Twice!" />
       <meta name="twitter:data2" value={`${twitterDates} @ £${ticketPrice}`} />
 
-      {process.env.NODE_ENV !== 'production' && (
-        <link rel="stylesheet" href="/_next/static/style.css" />
-      )}
       {process.env.NODE_ENV === 'production' && (
-        <link rel="stylesheet" href={`/static/style.css?${version}`} />
+        <link
+          rel="stylesheet"
+          href={`/static/css/styles.chunk.css?${version}`}
+        />
       )}
 
       <link
