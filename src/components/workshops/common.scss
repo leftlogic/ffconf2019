@@ -13,6 +13,7 @@
   @media (min-width: 768px) {
     grid-area: wi-pic;
     display: block;
+    margin-bottom: 32px;
     max-width: var(--bg-photo-max-width);
     width: var(--bg-photo-width);
   }
