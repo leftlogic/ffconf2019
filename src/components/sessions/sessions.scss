@@ -130,3 +130,9 @@
     padding-bottom: 32px;
   }
 }
+
+@media (min-width: 1440px) {
+  .sessions__item--talk {
+    grid-column-gap: 76px;
+  }
+}

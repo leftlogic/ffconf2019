@@ -12,22 +12,31 @@ const data = [
   { title: 'sponsors', url: '/#sponsors' },
 ];
 
+const NavMainMore = () => (
+  <div className="nav-main-more">
+    <a
+      href="#menu"
+      id="nav-main-open"
+      aria-expanded="false"
+      className="nav-main__menu-button js-button-expand"
+    >
+      Menu
+    </a>
+    <Tickets namespace="nav-main__ticket-button" />
+    <Videos className="nav-main__ticket-button" />
+  </div>
+);
+
 const NavMain = () => {
   return (
-    <nav className="nav-main">
-      <div className="nav-main__content">
-        <button
-          id="nav-main-open"
-          aria-expanded="false"
-          className="nav-main__link--button js-button-expand"
-        >
-          Menu
-        </button>
-        <Tickets namespace="nav-main__button" />
-        <Videos className="nav-main__button" />
-        <Nav data={data} className="nav-main" />
-      </div>
-    </nav>
+    <>
+      <nav className="nav-main" id="menu">
+        <div className="nav-main__content">
+          <Nav data={data} className="nav-main" />
+        </div>
+      </nav>
+      <NavMainMore />
+    </>
   );
 };
 

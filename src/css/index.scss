@@ -31,6 +31,8 @@
   --inner-gap-vertical: 24px;
   --outer-gap-vertical: 0;
 
+  --logo-width: 0;
+
   font-size: 10px;
 
   @media (min-width: 768px) {
@@ -40,6 +42,14 @@
 
     --inner-gap-vertical: 32px;
     --outer-gap-vertical: 32px;
+  }
+
+  @media (min-width: 1024px) {
+    --logo-width: 350px;
+  }
+
+  @media (min-width: 1440px) {
+    --logo-width: 512px;
   }
 }
 
@@ -60,6 +70,10 @@ a {
     color: inherit;
   }
 }
+
+// *:target {
+//   padding-top: 80px !important;
+// }
 
 .cursor-help {
   cursor: help;

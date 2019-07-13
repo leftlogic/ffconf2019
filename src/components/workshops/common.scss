@@ -51,4 +51,8 @@
     padding-left: var(--outer-gap-horizontal);
     padding-right: var(--outer-gap-horizontal);
   }
+
+  @media (min-width: 1440px) {
+    grid-column-gap: 76px;
+  }
 }

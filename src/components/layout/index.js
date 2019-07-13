@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
     <div className="wrapper">
       <Header />
 
-      <div>
+      <div className="wrapper-content">
         <NavMain />
 
         <main className="main">

@@ -52,6 +52,18 @@
 }
 
 @media (min-width: 768px) {
+  .header__location-place,
+  .header__location-city {
+    display: inline;
+  }
+
+  .header__intro {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
   .header__date,
   .header__location {
     font-size: 2.6rem;
@@ -60,12 +72,8 @@
     padding-top: var(--inner-gap-vertical);
   }
 
-  .header__location-place,
-  .header__location-city {
-    display: inline;
-  }
-
   .header__intro {
+    align-self: center;
     font-size: 5.6rem;
     line-height: 0.86;
     padding: var(--inner-gap-vertical) var(--outer-gap-horizontal);
