@@ -21,7 +21,7 @@ const Icon = ({ icon, className }) => {
     // />
     <div aria-hidden="true" className={svgClasses}>
       <object
-        data="/static/images/style/quote.svg"
+        data={`/static/images/style/${icon}.svg`}
         type="image/svg+xml"
       ></object>
     </div>
