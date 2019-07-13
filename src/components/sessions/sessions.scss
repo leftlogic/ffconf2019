@@ -16,7 +16,7 @@
 }
 
 .speaker-image {
-  display: none;
+  width: var(--bg-photo-width);
 }
 
 .talk__header {
@@ -36,6 +36,7 @@
   margin-bottom: 32px;
 }
 
+.speaker-image,
 .talk-content,
 .speaker-bio,
 .talk__material {
@@ -100,7 +101,6 @@
     grid-area: si-pic;
     display: block;
     max-width: var(--bg-photo-max-width);
-    width: var(--bg-photo-width);
   }
 
   .talk__header {
