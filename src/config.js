@@ -11,7 +11,7 @@ module.exports = {
   analytics: 'UA-1656750-55',
   ticketUrl: 'https://www.tickettailor.com/buy-tickets/177188/7469/modal/',
   videos: '',
-  sponsorUrl: 'https://media.ffconf.org/2019/sponsor-pack.pdf',
+  sponsorUrl: 'mailto:events@leftlogic.com?subject=Request sponsorship pack',
   sponsorAvailable: true,
   config: {
     phase: 0,

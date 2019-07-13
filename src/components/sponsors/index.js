@@ -26,7 +26,7 @@ const SponsorsAvailable = () => {
         className="sponsor__link sponsor__link--available"
         href={sponsorUrl}
       >
-        Sponsorship pack
+        Request sponsorship pack
       </Button>
     </section>
   );
@@ -57,7 +57,7 @@ const Sponsor = ({ name, url, img, slug }) => {
   );
 };
 
-const SponsorsCategory = ({ slug, title, list, total }) => {
+const SponsorsCategory = ({ slug, title, list }) => {
   if (!list.length) {
     return null;
   }
