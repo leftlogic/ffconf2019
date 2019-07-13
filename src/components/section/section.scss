@@ -1,5 +1,9 @@
 .section {
   color: var(--c-black);
+
+  &:target {
+    padding-top: 80px;
+  }
 }
 
 .section__wrapper {
