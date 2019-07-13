@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/react';
 
-import Giulia, { __RewireAPI__ as Rewire } from './giulia';
+import Phases, { __RewireAPI__ as Rewire } from './phases';
 
-const stories = storiesOf('Giulia', module);
+const stories = storiesOf('Phases', module);
 
 const Wrapper = ({ phase }) => {
   Rewire.__set__('phase', phase);
-  return <Giulia />;
+  return <Phases />;
 };
 
 stories.add('0', () => <Wrapper phase={0} />);

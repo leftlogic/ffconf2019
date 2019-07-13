@@ -2,7 +2,7 @@ import config from '../../config';
 
 const { phase } = config.config;
 
-const Giulia = () => {
+const Phases = () => {
   let x = '';
 
   switch (phase) {
@@ -35,4 +35,4 @@ const Giulia = () => {
   );
 };
 
-export default Giulia;
+export default Phases;
