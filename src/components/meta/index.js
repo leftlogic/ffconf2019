@@ -86,7 +86,7 @@ const Meta = () => {
       <link
         rel="preload"
         as="script"
-        href="/static/js/ff-fonts.1cfa17b0c8459a8a2b6a9f8d5556edc4.json"
+        href="/static/js/ff-fonts.41365f285ed9977656499daaf24381e2.json"
       />
 
       <link

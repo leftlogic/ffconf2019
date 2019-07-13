@@ -1,5 +1,6 @@
 .nav-main {
   font-family: var(--f-special);
+  text-transform: uppercase;
   // position: -webkit-sticky; // Safari
   // position: sticky;
   // top: 0;
@@ -121,6 +122,7 @@
   padding: 18px 0 17px;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   grid-area: menu;
 
   &:hover,
