@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
             <script
               dangerouslySetInnerHTML={{
                 __html: `
-if (0 && 'serviceWorker' in navigator) {
+if (1 && 'serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js', { scope: '/' });
 }
 `,

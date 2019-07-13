@@ -53,20 +53,6 @@
     });
   })();
 
-  //=== Expand collapse content
-  (function() {
-    const buttons = [...$('.js-button-expand')];
-
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const isExpanded = button.getAttribute('aria-expanded');
-        const newExpanded = isExpanded !== 'false' ? 'false' : 'true';
-
-        button.setAttribute('aria-expanded', newExpanded);
-      });
-    });
-  })();
-
   //=== Scroll to session
   (function() {
     /**

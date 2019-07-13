@@ -25,7 +25,7 @@ module.exports = [
   },
 
   {
-    text: `Third time at #ffconf 🎉🧙👩‍💻 Line up gets better every year! 👩‍🎤🧙🦄`,
+    text: `Third time at #ffconf 🎉👩‍💻 Line up gets better every year! 👩‍🎤🦄`,
     url: 'https://twitter.com/natkuTala/status/928920748961554433',
     author: 'Natalia Waniczek, JS developer and regular ffconf attendee',
   },
