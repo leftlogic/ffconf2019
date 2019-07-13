@@ -11,7 +11,7 @@
     "dev": "next",
     "deploy:now": "cp now.json $npm_package_config_outputFolder/ && cd $npm_package_config_outputFolder && now --public",
     "deploy:now:full": "npm run export && npm run deploy:now",
-    "export": "rm -rf $npm_package_config_outputFolder && npm run build && cp static/js/sw.js $npm_package_config_outputFolder/ && sed -i -e 's/@VERSION@/'$npm_package_version'/g' $npm_package_config_outputFolder/sw.js && rm -rf $npm_package_config_outputFolder/sw.js-e && cp -r $npm_package_config_outputFolder/_next/static/css $npm_package_config_outputFolder/static/",
+    "export": "rm -rf $npm_package_config_outputFolder && npm run build && cp static/js/sw.js $npm_package_config_outputFolder/ && sed -i -e 's/@VERSION@/'$npm_package_version'/g' $npm_package_config_outputFolder/sw.js && rm -rf $npm_package_config_outputFolder/sw.js-e && cp -r $npm_package_config_outputFolder/_next/static/css/styles.*.chunk.css $npm_package_config_outputFolder/static/css/styles.css",
     "server-static": "node server-static.js",
     "storybook": "start-storybook -p 3001 --ci",
     "storybook:build": "build-storybook -o .storybook-static",
