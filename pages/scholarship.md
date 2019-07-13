@@ -2,8 +2,8 @@
 
 This post outlines our diversity scholarships programme. It's entirely possible that this does not apply to you, my dear reader, but you still have an important role to play: please pass on the message and this link to help seek those out who can make use of the scholarships.
 
-<div class="button-box">
-<a class="button" href="https://ffconf.org/scholarship-apply" target="_blank" rel="noopener">Apply now</a>
+<div className="button-box">
+<a className="button" href="https://ffconf.org/scholarship-apply" target="_blank" rel="noopener">Apply now</a>
 </div>
 
 ## What are the scholarships?
@@ -26,8 +26,8 @@ Please note that your application will be treated with the utmost privacy, and w
 
 **Deadline for applications: Second Monday of September, 2018.**
 
-<div class="button-box">
-<a class="button" href="https://ffconf.org/scholarship-apply" target="_blank" rel="noopener">Apply now</a>
+<div className="button-box">
+<a className="button" href="https://ffconf.org/scholarship-apply" target="_blank" rel="noopener">Apply now</a>
 </div>
 
 ## How to Help

@@ -9,7 +9,6 @@ const Diversity = () => {
   return (
     <Section id="diversity" mdx={true}>
       <Data />
-      <Thanks />
     </Section>
   );
 };

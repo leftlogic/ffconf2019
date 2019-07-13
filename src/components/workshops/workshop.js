@@ -122,7 +122,9 @@ const Workshop = ({ selectedSlug }) => {
           <WorkshopDetails date={date} time={time} />
 
           <p className="workshop__intro">
-            <em>All workshop tickets also include a Thursday ffconf pass.</em>
+            <strong>
+              <em>All workshop tickets also include a full day ffconf pass.</em>
+            </strong>
           </p>
 
           <WorkshopBuy slug={slug} url={url}>
