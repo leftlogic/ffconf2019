@@ -8,7 +8,7 @@ module.exports = {
   ticketPrice: '190',
   workshopPrice: '465',
   year: 2019,
-  analytics: 'UA-1656750-55',
+  analytics: 'UA-1656750-37',
   ticketUrl: 'https://buytickets.at/ffconf2019/212465',
   videos: '',
   sponsorUrl: 'mailto:events@leftlogic.com?subject=Request sponsorship pack',
