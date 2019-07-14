@@ -15,6 +15,7 @@ const PageIndex = ({ schedule }) => {
   return (
     <>
       <Introduction />
+      <Quote />
       <Sessions schedule={schedule} />
       <Quote />
       <Workshops />
