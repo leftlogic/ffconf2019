@@ -40,20 +40,6 @@
 //   border-top: var(--border);
 // }
 
-.nav-main__ticket-button {
-  position: relative;
-
-  &:after {
-    border-right: var(--border);
-    content: "";
-    display: block;
-    position: absolute;
-    right: -1px;
-    top: -1px;
-    bottom: -1px;
-  }
-}
-
 // .🦄 {
 //   .nav-main__menu-button[aria-expanded="true"] {
 //     color: var(--c-white1);

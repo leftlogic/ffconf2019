@@ -14,14 +14,6 @@ const data = [
 
 const NavMainMore = () => (
   <div className="nav-main-more">
-    <a
-      href="#menu"
-      id="nav-main-open"
-      aria-expanded="false"
-      className="nav-main__menu-button js-button-expand"
-    >
-      Menu
-    </a>
     <Tickets namespace="nav-main__ticket-button" />
     <Videos className="nav-main__ticket-button" />
   </div>

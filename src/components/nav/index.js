@@ -12,15 +12,14 @@ const NavItem = ({ className, title, url, pathname }) => {
           [`${className}__link--selected`]: pathname === url,
         })}
         target={abs ? '_blank' : null}
-        rel={abs ? 'noopener' : null}
-      >
+        rel={abs ? 'noopener' : null}>
         {title}
       </a>
     </li>
   );
 };
 
-const Nav = ({ router, data, className }) => {
+const Nav = ({ router = {}, data, className }) => {
   const { pathname } = router;
 
   return (
