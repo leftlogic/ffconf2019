@@ -13,13 +13,13 @@ module.exports = {
   videos: '',
   sponsorUrl: 'mailto:events@leftlogic.com?subject=Request sponsorship pack',
   sponsorAvailable: true,
+  fontMd5: '41365f285ed9977656499daaf24381e2',
+  serviceWorker: false,
   config: {
     phase: 0,
     soldout: {
       conference: false,
-      day1: false,
       workshops: false,
-      vue: false,
       next: false,
     },
     comments: {

@@ -1,4 +1,5 @@
 /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "fx" }] */
+/* global md5 */
 function fx(dates) {
   window.confDays = [
     new Date(`${dates[0]}T12:00Z`),
@@ -13,7 +14,6 @@ function fx(dates) {
     document.documentElement.className += ' i-hate-safari (╯°□°)╯︵ ┻━┻';
   }
   //=== Fonts
-  var md5 = '41365f285ed9977656499daaf24381e2'; // IMPORTANT: this is also used in `_meta.js` for prefetch
   var fontUrl = `/static/js/ff-fonts.${md5}.json`;
   var fontMd5 = md5;
   var fontKey = 'fonts';

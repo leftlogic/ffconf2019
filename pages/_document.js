@@ -5,7 +5,7 @@ import config from '../src/config';
 
 export default class MyDocument extends Document {
   render() {
-    const { id, version } = config;
+    const { id, version, serviceWorker } = config;
 
     return (
       <html lang="en" id={id} data-version={version}>
@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
             <script
               dangerouslySetInnerHTML={{
                 __html: `
-if (1 && 'serviceWorker' in navigator) {
+if (${serviceWorker} && 'serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js', { scope: '/' });
 }
 `,

@@ -12,6 +12,7 @@ const {
   analytics,
   version,
   onSaleDate,
+  fontMd5,
 } = config;
 const [date] = dates;
 const momentDate = moment(date);
@@ -86,7 +87,7 @@ const Meta = () => {
       <link
         rel="preload"
         as="script"
-        href="/static/js/ff-fonts.41365f285ed9977656499daaf24381e2.json"
+        href={`/static/js/ff-fonts.${fontMd5}.json`}
       />
 
       <link
@@ -137,6 +138,7 @@ const Meta = () => {
         />
       )}
 
+      <script dangerouslySetInnerHTML={{ __html: `var md5 = '${fontMd5}';` }} />
       <script dangerouslySetInnerHTML={{ __html: `${inlineScript}` }} />
     </Fragment>
   );
