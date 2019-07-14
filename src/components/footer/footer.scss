@@ -3,6 +3,20 @@
   font-size: 2.4rem;
   text-align: center;
   text-transform: uppercase;
+
+  .nav-full__list {
+    flex-direction: row;
+    .nav-full__item {
+      padding: 0 0.4em;
+      a { color: var(--c-white1) ;
+
+      &:hover {
+        color: var(--c-red4);
+      }}
+    }
+
+  }
+
 }
 
 .footer__content {

@@ -46,7 +46,7 @@
 .sponsor--3rd,
 .sponsor--4th,
 .sponsor--5th {
-  width: 95px;
+  width: calc(95px * 2);
 }
 
 .sponsor__link--image {
@@ -137,7 +137,7 @@
 
   .sponsor__link--image {
     margin: auto;
-    width: 95px;
+    width: calc(95px * 3);
 
     .sponsor--1st & {
       width: 233px;
