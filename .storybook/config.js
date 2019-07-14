@@ -1,6 +1,7 @@
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { create } from '@storybook/theming';
 import { withA11y } from '@storybook/addon-a11y';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
 import { name, version } from '../package';
 
@@ -15,7 +16,23 @@ function loadStories() {
   storybookContext.keys().forEach(filename => storybookContext(filename));
 }
 
+const newViewports = {
+  desktop1440: {
+    name: 'Desktop @ 1440',
+    styles: {
+      width: '1440px',
+      height: '798px',
+    },
+  },
+};
+
 addParameters({
+  viewport: {
+    viewports: {
+      ...INITIAL_VIEWPORTS,
+      ...newViewports,
+    },
+  },
   options: {
     theme: create({
       base: 'light',
