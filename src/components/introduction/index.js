@@ -82,7 +82,7 @@ const Introduction = ({ schedule }) => {
               don't announce our speakers right away, but if you would rather
               know you can{' '}
               <a href="mailto:events@leftlogic.com?subject=Please…who are the speakers?">
-                email me and we'll tell you
+                drop us an email and we'll tell you
               </a>
             </small>
           </p>
