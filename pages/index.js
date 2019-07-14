@@ -26,7 +26,6 @@ const PageIndex = ({ schedule }) => {
 
 PageIndex.getInitialProps = async () => {
   const res = await fetch(`https://ffconf.org/api/event/${year}`);
-
   const data = await res.json();
   return { schedule: data };
 };
