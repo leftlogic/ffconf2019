@@ -14,7 +14,7 @@ const { year } = config;
 const PageIndex = ({ schedule }) => {
   return (
     <>
-      <Introduction />
+      <Introduction schedule={schedule} />
       <Quote />
       <Sessions schedule={schedule} />
       <Quote />

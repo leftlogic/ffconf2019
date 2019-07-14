@@ -2,7 +2,7 @@
 
 ## Tickets
 
-Refunds are available until October 1st. Thereafter you will need to transfer your ticket to someone else using the online ticketing software where you can change the ticket details at any time within a week of the event.
+Refunds are available until September 30th. Thereafter you will need to transfer your ticket to someone else using the online ticketing software where you can change the ticket details at any time within a week of the event.
 
 ## Rights
 

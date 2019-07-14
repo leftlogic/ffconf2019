@@ -8,9 +8,11 @@ This post outlines our inclusion scholarships programme. It's entirely possible 
 
 ## What are the scholarships?
 
-Scholarships are available for anyone in an under-represented group in tech. This includes (but is not limited to): people of colour, LGBTQIA+ people, women and disabled people.
+Scholarships are available for anyone in an under-represented group in tech. This includes (but is not limited to): people of colour, LGBTQIA+ people, people who identify as women and people with disabilities.
 
 We have a limited number of scholarships available which includes a ticket to the day ffconf event, travel to Brighton (from your city) and hotel as required.
+
+Please note that we prioritise people who have not received a scholarship from us in previous years.
 
 To maximise our limited budget, we can only offer travel expense applications to those based the UK and Europe.
 
@@ -19,12 +21,12 @@ To maximise our limited budget, we can only offer travel expense applications to
 We ask a few questions, but don't have to explain your personal situation to us (but you can of course, if you want to). We trust you in this point :)
 
 1. Who are you?
-2. Where would you be travelling from (airport and city)?
-3. Why should you get a scholarship?
+2. Why should you get a scholarship?
+3. Where would you be travelling from (airport and city)?
 
-Please note that your application will be treated with the utmost privacy, and we will not publicly announce who the inclusion scholarships go to (though you're welcome to say so yourself).
+Please note that your application will be treated with the utmost privacy and we will not publicly announce who the inclusion scholarships go to (though you're welcome to say so yourself).
 
-**Deadline for applications: Second Monday of September, 2018.**
+**Deadline for applications: 16th September, 2019.**
 
 <div className="button-box">
 <a className="button" href="https://ffconf.org/scholarship-apply" target="_blank" rel="noopener">Apply now</a>

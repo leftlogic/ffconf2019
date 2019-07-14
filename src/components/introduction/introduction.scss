@@ -39,3 +39,24 @@
   grid-area: ii-info;
   padding-bottom: 32px;
 }
+
+.introduction__sessions {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 -0.2em;
+  // font-size: 80%;
+
+  border-bottom: 1px solid var(--c-grey2);
+
+  th {
+    text-align: left;
+  }
+
+  tbody tr:nth-child(2n + 1) {
+    background: var(--c-grey2);
+  }
+
+  td, th {
+    padding: 0.4em 0.2em;
+  }
+}
