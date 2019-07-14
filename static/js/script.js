@@ -41,16 +41,94 @@
 
   //=== Quotes
   (function() {
-    const quotesWrapper = [...$('.js-quote')];
-    const quotesTemplate = [...$('.js-quote-template')];
+    function shuffle(arr) {
+      let array = arr.slice();
+      let currentIndex = array.length;
+      let temporaryValue;
+      let randomIndex;
 
-    quotesWrapper.forEach(item => {
-      const len = quotesTemplate.length;
-      const rnd = Math.floor(Math.random() * len);
-      const q = quotesTemplate.splice(rnd, 1);
+      // While there remain elements to shuffle...
+      while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
 
-      item.innerHTML = q[0].innerHTML;
-    });
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array;
+    }
+
+    let sorted = shuffle(window.quotesData);
+
+    class FFQuoteElement extends HTMLElement {
+      constructor() {
+        super();
+
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+
+        if (!sorted.length) {
+          sorted = shuffle(window.quotesData);
+        }
+
+        const { text, url, author } = sorted.pop() || {};
+
+        shadowRoot.innerHTML = `
+<style>
+.quote__wrapper {
+  margin: 0 var(--outer-gap-horizontal);
+  margin: 0 10%;
+  padding: var(--inner-gap-vertical) var(--inner-gap-horizontal);
+  text-align: center;
+}
+
+.quote__icon {
+  color: var(--c-red3);
+  height: 34px;
+  margin: 0 auto 24px;
+  width: 44px;
+}
+
+.quote__text {
+  font-family: var(--f-special);
+  font-size: 2.4rem;
+  line-height: 1;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.quote__link {
+  color: var(--c-red3);
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .quote__text {
+    font-size: 4rem;
+  }
+}
+</style>
+<blockquote class="quote__wrapper">
+  <div aria-hidden="true" class="icon icon--quote quote__icon">
+    <object data="/static/images/style/quote.svg" type="image/svg+xml"></object>
+  </div>
+  <p class="quote__text">${text}</p>
+  <footer class="quote__footer">
+    <cite class="quote__author">
+      <a href="${url}" target="_blank" rel="noopener" class="quote__link">${author}</a>
+    </cite>
+  </footer>
+</blockquote>
+`;
+      }
+    }
+
+    window.customElements.define('ff-quote', FFQuoteElement);
   })();
 
   //=== Scroll to session
