@@ -9,7 +9,7 @@ module.exports = {
   workshopPrice: '465',
   year: 2019,
   analytics: 'UA-1656750-55',
-  ticketUrl: 'https://www.tickettailor.com/buy-tickets/177188/7469/modal/',
+  ticketUrl: 'https://buytickets.at/ffconf2019/212465',
   videos: '',
   sponsorUrl: 'mailto:events@leftlogic.com?subject=Request sponsorship pack',
   sponsorAvailable: true,

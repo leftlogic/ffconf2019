@@ -5,10 +5,6 @@
 - [ ] google analytics code
 - [ ] web manifest colors
 - [ ] the links in scholarship don't work anymore
-- [ ] svg icon should use `use`?
-- [ ] sponsor pack link and text (see zeplin comments)
-- [ ] mobile menu toggle (see zeplin comments)
-- [ ] header responsive
 
 ## Howto
 

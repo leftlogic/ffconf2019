@@ -3,13 +3,7 @@ module.exports = [
     slug: '1st',
     title: 'platinum',
     total: 2,
-    list: [
-      {
-        name: 'Beamly',
-        url: 'https://www.beamly.com/',
-        img: 'beamly.png',
-      },
-    ],
+    list: [],
   },
   {
     slug: '2nd',
@@ -17,41 +11,26 @@ module.exports = [
     total: 4,
     list: [
       {
-        name: 'American Express',
-        url: 'https://jobs.americanexpress.com/technology',
-        img: 'american-express.svg',
-      },
-      {
-        name: 'Google Chrome',
-        url: 'https://developers.google.com/web/',
-        img: 'chrome.png',
-      },
-      {
-        name: 'Financial Times',
-        url: 'https://github.com/Financial-Times/careers',
-        img: 'financial-times.jpg',
-      },
-      {
         name: 'Mozilla',
         url: 'https://mozilla.com/',
         img: 'mozilla.svg',
+      },
+      {
+        name: 'Legal & General',
+        url: 'https://careers.legalandgeneralgroup.com/digital-careers/',
+        img: 'l-g.svg',
       },
     ],
   },
   {
     slug: '3rd',
     title: 'day',
-    total: 2,
+    total: 3,
     list: [
       {
         name: 'Brandwatch',
         url: 'https://www.brandwatch.com/careers',
         img: 'brandwatch.png',
-      },
-      {
-        name: 'Nexmo',
-        url: 'https://www.nexmo.com/',
-        img: 'nexmo.png',
       },
     ],
   },
@@ -61,9 +40,14 @@ module.exports = [
     total: 2,
     list: [
       {
-        name: 'Zalando',
-        url: 'https://zln.do/2tEtLfo',
-        img: 'zalando.svg',
+        name: 'Nexmo',
+        url: 'https://developer.nexmo.com/',
+        img: 'nexmo.png',
+      },
+      {
+        name: 'ProdPad',
+        url: 'https://www.prodpad.com/',
+        img: 'prodpad.png',
       },
       {
         name: 'Samsung Internet',
@@ -77,11 +61,6 @@ module.exports = [
     title: 'micro',
     total: 2,
     list: [
-      {
-        name: 'ProdPad',
-        url: 'https://www.prodpad.com/',
-        img: 'prodpad.png',
-      },
       {
         name: 'JS Bin',
         url: 'https://jsbin.com/',

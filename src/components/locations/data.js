@@ -21,7 +21,7 @@ module.exports = {
         },
         {
           name: 'Al Campo',
-          detail: "'Lunch with Strangers' and social on Thursday",
+          detail: "'Lunch with Future Friends' and social on Thursday",
           url: 'https://thelounges.co.uk/alcampo/',
         },
         {
@@ -45,12 +45,12 @@ module.exports = {
           url:
             'https://www.accorhotels.com/gb/hotel-6444-ibis-brighton-city-centre-station/index.shtml',
           extra: 'directly outside the front of the station',
-          detail: 'from £75',
+          detail: 'from £61',
         },
         {
-          name: 'Travellodge',
+          name: 'Travelodge',
           url: 'https://www.travelodge.co.uk/hotels/18/Brighton-hotel',
-          detail: 'from £28',
+          detail: 'from £52',
         },
         {
           name: 'My Hotel',
