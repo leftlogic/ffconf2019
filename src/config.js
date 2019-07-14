@@ -5,7 +5,7 @@ module.exports = {
   dates: ['2019-11-08'],
   onSaleDate: '2019-07-16 10:00:00', // need the time as well
   startTime: '09:00',
-  ticketPrice: '190',
+  ticketPrice: '200',
   workshopPrice: '465',
   year: 2019,
   analytics: 'UA-1656750-37',

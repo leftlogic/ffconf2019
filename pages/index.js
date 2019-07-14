@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-unfetch';
 
+import Introduction from '../src/components/introduction';
 import Sessions from '../src/components/sessions';
 import Workshops from '../src/components/workshops';
 import Locations from '../src/components/locations';
@@ -13,6 +14,7 @@ const { year } = config;
 const PageIndex = ({ schedule }) => {
   return (
     <>
+      <Introduction />
       <Sessions schedule={schedule} />
       <Quote />
       <Workshops />
