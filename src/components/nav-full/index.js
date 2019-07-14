@@ -12,7 +12,7 @@ const data = [
     title: 'sponsorship',
     url: sponsorUrl,
   },
-  { title: 'diversity initiative', url: '/#diversity' },
+  { title: 'inclusion initiative', url: '/#diversity' },
   { title: 'code of conduct', url: '/code-of-conduct' },
   { title: 'terms', url: '/terms' },
   { title: 'privacy', url: '/privacy' },
