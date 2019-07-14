@@ -123,7 +123,7 @@
   .sponsor {
     background: var(--c-white);
     margin: 0;
-    padding: 12px 0;
+    padding: 12px;
     width: 100%;
   }
 
@@ -137,7 +137,7 @@
 
   .sponsor__link--image {
     margin: auto;
-    width: calc(95px * 3);
+    max-width: calc(95px * 3);
 
     .sponsor--1st & {
       width: 233px;
