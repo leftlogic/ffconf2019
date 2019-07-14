@@ -16,7 +16,7 @@ module.exports = [
     speaker: {
       name: 'Remy Sharp',
       twitter: 'rem',
-      photo: 'remy.jpg',
+      photo: 'remy.png',
     },
 
     topics: [

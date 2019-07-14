@@ -2,13 +2,19 @@ $colors-list: #f00 #ff7f00 #ff0 #0f0 #0ff #00f #e45dff;
 
 abbr[title="proudly"] {
   text-decoration: none;
+  font-weight: 900;
 
-  @each $current-color in $colors-list {
-    $i: index($colors-list, $current-color);
-    span:nth-child(#{$i}) {
-      color: $current-color;
-    }
-  }
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+  // @each $current-color in $colors-list {
+  //   $i: index($colors-list, $current-color);
+  //   span:nth-child(#{$i}) {
+  //     color: $current-color;
+  //   }
+  // }
 }
 
 .section--diversity {

@@ -19,13 +19,11 @@ const SponsorsAvailable = () => {
     <section className="sponsors-category sponsors-category--available">
       <p className="sponsor__intro">
         To become a sponsor please contact Remy & Julie at{' '}
-        <a href="mailto:events@leftlogic.com">events@leftlogic.com</a> or call{' '}
-        <a href="tel:+441273557744">+44 (0)1273 557744</a>
+        <a href="mailto:events@leftlogic.com">events@leftlogic.com</a>
       </p>
       <Button
         className="sponsor__link sponsor__link--available"
-        href={sponsorUrl}
-      >
+        href={sponsorUrl}>
         Request sponsorship pack
       </Button>
     </section>
@@ -45,8 +43,7 @@ const Sponsor = ({ name, url, img, slug }) => {
         href={url}
         target="_blank"
         rel="noopener"
-        title={name}
-      >
+        title={name}>
         <img
           className="sponsor__image"
           src={`/static/images/sponsors/${img}`}
@@ -87,8 +84,7 @@ const Sponsors = () => {
       <h2
         className="sponsors__title section__title"
         role="heading"
-        aria-level="2"
-      >
+        aria-level="2">
         Our sponsors
       </h2>
       <SponsorsAvailable />

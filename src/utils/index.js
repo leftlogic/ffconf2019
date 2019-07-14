@@ -13,15 +13,19 @@ const idify = (s = '') => {
 const formatTalksById = api => {
   const [first] = api;
   const { order } = first;
-  const isItOrdered = order !== 0 ? true : false;
+  const isItOrdered = typeof order === 'number' ? true : false;
 
-  return api.reduce((acc, talk, index) => {
+  const res = api.reduce((acc, talk, index) => {
     const { order } = talk;
     const key = isItOrdered ? order : index + 1;
     acc[key] = { ...talk };
 
     return acc;
   }, {});
+
+  console.log('>>>>>>>>>>>>>>', res);
+
+  return res;
 };
 
 const formatSessions = ({ data, api }) => {

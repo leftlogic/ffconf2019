@@ -12,7 +12,7 @@ const { phase, soldout } = config.config;
 const SpeakerImage = ({ name, photo, slug = 'soon-0' }) => {
   const title = phase >= 3 ? name : 'Speakers revealed soon!';
   const url =
-    phase >= 3 ? `/static${photo}` : `/static/images/speakers/mod/${slug}.gif`;
+    phase >= 3 ? `/static${photo}` : `/static/images/speakers/mod/${slug}.png`;
   const imgClasses = classnames({
     'speaker-image': true,
     'dynamic-image': true,
@@ -58,8 +58,7 @@ const SpeakerName = ({ name, twitter }) => {
       href={`https://twitter.com/${twitter}`}
       className="speaker__name tag"
       target="_blank"
-      rel="noopener"
-    >
+      rel="noopener">
       {name}
     </a>
   );
@@ -129,7 +128,7 @@ const Talk = ({ talk, start, end, date }) => {
     slug,
     title = 'To be announced soon!',
     speaker,
-    description,
+    description = 'This talk is yet to be finalised. We have an [open CFP](https://ffconf.org/articles/cfp/) which you can apply to, perhaps this is your time?',
     slides,
     audio,
     video,
