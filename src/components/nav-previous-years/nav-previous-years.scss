@@ -1,0 +1,29 @@
+.nav-previous-years__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0 var(--outer-gap-horizontal);
+  padding: var(--inner-gap-vertical) var(--inner-gap-horizontal);
+}
+
+.nav-previous-years__item {
+  padding: 0.4em;
+  width: 50%;
+
+  @media (min-width: 640px) {
+    padding: 0.6em;
+    width: auto;
+  }
+}
+
+.nav-previous-years__link {
+  color: var(--c-white1);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--c-red4);
+  }
+}

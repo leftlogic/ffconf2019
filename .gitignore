@@ -1,2 +1,7 @@
 _site
 node_modules
+.next
+build
+assets
+.storybook-static
+out

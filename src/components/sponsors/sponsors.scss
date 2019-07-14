@@ -1,0 +1,146 @@
+.sponsors-category__list {
+  display: grid;
+}
+
+.sponsors-category__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 2;
+  margin: 0 0 32px;
+  overflow: hidden;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:before,
+  &:after {
+    background-color: var(--c-grey1);
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  &:before {
+    right: 1em;
+    margin-left: -50%;
+  }
+
+  &:after {
+    left: 1em;
+    margin-right: -50%;
+  }
+}
+
+.sponsor {
+  flex: 0 0 auto;
+  margin: 0 auto 48px;
+}
+
+.sponsor--1st {
+  width: 175px;
+}
+
+.sponsor--2nd,
+.sponsor--3rd,
+.sponsor--4th,
+.sponsor--5th {
+  width: calc(95px * 2);
+}
+
+.sponsor__link--image {
+  display: block;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.sponsor__image {
+  border: 0 none;
+  max-height: 100%;
+  max-width: 100%;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &::after {
+    align-items: center;
+    background: var(--c-white);
+    bottom: 0;
+    content: attr(alt);
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.sponsor__intro {
+  margin-bottom: 32px;
+}
+
+.sponsors-category--available {
+  margin-bottom: 48px;
+}
+
+.sponsor__link--available {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .sponsors-category {
+    padding-bottom: 0.1px;
+    padding-left: var(--outer-gap-horizontal);
+    padding-right: var(--outer-gap-horizontal);
+  }
+
+  .sponsors__title {
+    text-align: center;
+  }
+
+  .sponsors-category__list {
+    background: var(--c-grey2);
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    grid-column-gap: 2px;
+    margin: 48px;
+  }
+
+  .sponsors-category__title {
+    margin-bottom: 48px;
+  }
+
+  .sponsor {
+    background: var(--c-white);
+    margin: 0;
+    padding: 12px;
+    width: 100%;
+  }
+
+  .sponsors-category--available {
+    text-align: center;
+  }
+
+  .sponsor__link--available {
+    width: auto;
+  }
+
+  .sponsor__link--image {
+    margin: auto;
+    max-width: calc(95px * 3);
+
+    .sponsor--1st & {
+      width: 233px;
+    }
+  }
+}

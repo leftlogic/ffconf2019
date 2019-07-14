@@ -1,0 +1,33 @@
+.button {
+  --button-color-main: var(--c-red);
+  --button-color-secondary: var(--c-white);
+  --button-color-hover: var(--c-black);
+
+  background: var(--button-color-main);
+  border: 1px solid var(--button-color-main);
+  color: var(--button-color-secondary);
+  display: inline-block;
+  font-family: var(--f-special);
+  font-size: 2.6rem;
+  line-height: 2.1rem;
+  padding: 18px 31px 17px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    --button-color-main: var(--button-color-hover);
+    color: var(--button-color-secondary);
+  }
+}
+
+.button--outline {
+  background: var(--button-color-secondary);
+  color: var(--button-color-main);
+
+  &:hover,
+  &:focus {
+    color: var(--button-color-hover);
+  }
+}

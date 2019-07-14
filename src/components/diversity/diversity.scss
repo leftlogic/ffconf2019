@@ -1,0 +1,55 @@
+$colors-list: #f00 #ff7f00 #ff0 #0f0 #0ff #00f #e45dff;
+
+abbr[title="proudly"] {
+  text-decoration: none;
+  font-weight: 900;
+
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+  // @each $current-color in $colors-list {
+  //   $i: index($colors-list, $current-color);
+  //   span:nth-child(#{$i}) {
+  //     color: $current-color;
+  //   }
+  // }
+}
+
+.section--diversity {
+  padding-bottom: 0;
+  padding-top: 0;
+
+  .section__wrapper {
+    &:after {
+      background: url("/static/images/style/diversity-small.png") no-repeat
+        bottom;
+      background-size: contain;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 406'%3E%3C/svg%3E");
+      display: block;
+      margin-top: 32px;
+    }
+
+    @media (min-width: 768px) {
+      & {
+        display: grid;
+        grid-template-columns: 60%;
+        padding-right: 0;
+        position: relative;
+      }
+
+      &:after {
+        background-image: url("/static/images/style/diversity-big.png");
+        background-position: center;
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 920 1006'%3E%3C/svg%3E");
+        height: 100%;
+        margin-top: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 34%;
+      }
+    }
+  }
+}

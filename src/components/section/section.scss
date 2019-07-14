@@ -1,0 +1,26 @@
+.section {
+  color: var(--c-black);
+
+  &:target {
+    padding-top: 73px;
+  }
+}
+
+.section__wrapper {
+  background: var(--bg-white);
+  padding: var(--inner-gap-vertical) var(--inner-gap-horizontal) 0;
+  margin-left: var(--outer-gap-horizontal);
+  margin-right: var(--outer-gap-horizontal);
+}
+
+.section__title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0 0 var(--inner-gap-vertical);
+  text-transform: lowercase;
+
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
+}

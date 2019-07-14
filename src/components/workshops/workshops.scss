@@ -1,0 +1,40 @@
+.workshops__item {
+  border-bottom: 2px solid var(--c-black);
+  margin-bottom: 32px;
+
+  &:last-child {
+    border-bottom: 0 none;
+    margin-bottom: 0;
+  }
+}
+
+.workshops__link,
+.workshops__buy {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.workshops__link {
+  margin-right: 16px;
+}
+
+.workshops__description,
+.workshops__intro {
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.workshops__description {
+  padding: 0 0 24px;
+}
+
+.workshops__intro {
+  padding-bottom: 32px;
+}
+
+@media (min-width: 640px) {
+  .workshops__link,
+  .workshops__buy {
+    width: auto;
+  }
+}

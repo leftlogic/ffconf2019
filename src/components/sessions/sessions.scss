@@ -1,0 +1,138 @@
+.sessions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sessions__item {
+  border-bottom: 2px solid var(--c-black);
+  margin-bottom: 32px;
+  padding: 0;
+
+  &:last-child {
+    border-bottom: 0 none;
+    margin-bottom: 0;
+  }
+}
+
+.speaker-image {
+  width: var(--bg-photo-width);
+}
+
+.talk__header {
+  font-size: 0;
+}
+
+.break__title,
+.talk__title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+  padding-bottom: 32px;
+}
+
+.talk__buy {
+  margin-bottom: 32px;
+}
+
+.speaker-image,
+.talk-content,
+.speaker-bio,
+.talk__material {
+  padding-bottom: 24px;
+
+  &:last-child {
+    padding-bottom: 32px;
+  }
+}
+
+.talk-content__title,
+.speaker-bio__title {
+  font-weight: 600;
+  margin: 0;
+}
+
+.talk-content__text {
+  p {
+    margin: 0;
+    padding-bottom: 24px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.speaker-bio__text {
+  margin: 0;
+}
+
+.speaker__name,
+.talk__time,
+.break__time {
+  margin-bottom: 24px;
+}
+
+.talk__time,
+.break__time,
+.talk__link {
+  margin-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .sessions__item {
+    padding-left: var(--outer-gap-horizontal);
+    padding-right: var(--outer-gap-horizontal);
+  }
+
+  .sessions__item--talk {
+    display: grid;
+    grid-column-gap: 48px;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "si-pic si-header"
+      "si-pic si-info"
+      "si-pic si-material";
+  }
+
+  .speaker-image {
+    grid-area: si-pic;
+    display: block;
+    max-width: var(--bg-photo-max-width);
+  }
+
+  .talk__header {
+    grid-area: si-header;
+  }
+
+  .talk__info {
+    grid-area: si-info;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    grid-column-gap: 32px;
+  }
+
+  .talk_material {
+    grid-area: si-material;
+  }
+
+  .break__title,
+  .talk__title {
+    font-size: 4rem;
+  }
+
+  .speaker-image,
+  .talk-content,
+  .speaker-bio {
+    padding-bottom: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sessions__item--talk {
+    grid-column-gap: 76px;
+  }
+}

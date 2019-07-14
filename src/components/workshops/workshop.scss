@@ -1,0 +1,62 @@
+.workshop__date,
+.workshop__time {
+  margin-bottom: 24px;
+}
+
+.workshop__date {
+  margin-right: 8px;
+}
+
+.workshop__topics-title,
+.workshop__description-title {
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+.workshop__topics-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.workshop__topic {
+  padding-bottom: 24px;
+}
+
+.workshop__topic-title,
+.workshop__extended-description strong {
+  font-weight: 600;
+  margin: 0;
+}
+
+.workshop__description {
+  p {
+    margin-top: 0;
+  }
+}
+
+.workshop__extended-description {
+  margin-bottom: 32px;
+
+  ul {
+    margin: 0;
+  }
+}
+
+.workshop__buy {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.workshop__intro {
+  font-size: 1.7rem;
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+@media (min-width: 640px) {
+  .workshop__buy {
+    width: auto;
+  }
+}
