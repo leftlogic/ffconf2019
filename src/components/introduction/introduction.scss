@@ -2,23 +2,31 @@
   grid-area: ii-pic;
   padding-bottom: 24px;
   width: var(--bg-photo-width);
+  width: auto;
+  display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     padding-bottom: 32px;
+    width: 386px;
+    display: block;
   }
 }
 
 .introduction__item {
   @media (min-width: 768px) {
+    padding-left: var(--outer-gap-horizontal);
+    padding-right: var(--outer-gap-horizontal);
+  }
+
+  @media (min-width: 1024px) {
     display: grid;
     grid-column-gap: 48px;
-    grid-template-columns: max-content auto;
-    grid-template-rows: min-content 1fr;
+    grid-template-columns: max-content;
+    grid-template-rows: min-content;
     grid-template-areas:
       "ii-pic ii-header"
       "ii-pic ii-info";
-    padding-left: var(--outer-gap-horizontal);
-    padding-right: var(--outer-gap-horizontal);
+
   }
 }
 

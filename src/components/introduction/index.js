@@ -17,7 +17,7 @@ const Introduction = ({ schedule }) => {
           className={imgClasses}
           style={{
             '--bg-photo': `url(/static/images/venue.png)`,
-            width: '386px',
+            maxWidth: '386px',
           }}
           title="Our venue"
         />
@@ -42,7 +42,9 @@ const Introduction = ({ schedule }) => {
           <p>
             Also see our{' '}
             <strong>
-              <a href="https://ffconf.org">complete archive</a>
+              <a target="_blank" href="https://ffconf.org">
+                historical archive
+              </a>
             </strong>{' '}
             of videos, audio and slides.
           </p>
