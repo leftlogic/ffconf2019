@@ -20,7 +20,7 @@ const Tickets = ({ className, namespace }) => {
       buttonText = 'Sold Out';
     } else {
       buy = true;
-      buttonText = 'Tickets';
+      buttonText = 'Buy Tickets Now';
     }
   }
 

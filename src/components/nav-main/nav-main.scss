@@ -138,7 +138,8 @@
 
   &:hover,
   &:focus {
-    background: var(--bg-black);
+    background: var(--c-red4);
+    --button-color-main: var(--c-red4);
   }
 }
 
