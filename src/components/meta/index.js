@@ -77,7 +77,7 @@ const Meta = () => {
         value="Tickets available - set your alarms!"
       />
       <meta name="twitter:data1" value={twitterOnSaleDate} />
-      <meta name="twitter:label2" value="When? Twice!" />
+      <meta name="twitter:label2" value="When?" />
       <meta name="twitter:data2" value={`${twitterDates} @ £${ticketPrice}`} />
 
       {process.env.NODE_ENV === 'production' && (
