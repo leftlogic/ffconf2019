@@ -3,8 +3,9 @@ module.exports = [
     title: 'Modern Universal React dev with Next.js',
     slug: 'next',
     ticket: {
-      url: 'https://www.tickettailor.com/buy-tickets/177188/7469/modal/',
-      price: '465',
+      url:
+        'https://www.tickettailor.com/checkout/view-event/id/212465/chk/62ee/?modal_widget=true&widget=true',
+      price: '495',
     },
 
     details: {
