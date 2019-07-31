@@ -54,6 +54,11 @@ module.exports = [
         url: 'https://samsunginter.net/',
         img: 'samsung.svg',
       },
+      {
+        name: 'Unmade',
+        url: 'https://www.unmade.com/',
+        img: 'unmade.svg',
+      },
     ],
   },
   {
