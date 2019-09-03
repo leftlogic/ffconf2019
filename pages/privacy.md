@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This policy sets out how we collect, process and hold your personal data if you visit our event ticket shop or otherwise provide personal data to us. We are Left Logic of 44 Burstead Close. We are the data controller of your personal data.
+This policy sets out how we collect, process and hold your personal data if you visit our event ticket shop or otherwise provide personal data to us. We are Left Logic of The Old Casino, 28 Fourth Avenue, Brighton & Hove. We are the data controller of your personal data.
 
 This policy affects your legal rights and obligations so please read it carefully. If you have any questions, please contact us at events@leftlogic.com.
 
