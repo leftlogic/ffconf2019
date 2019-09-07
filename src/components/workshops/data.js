@@ -5,7 +5,7 @@ module.exports = [
     ticket: {
       url:
         'https://www.tickettailor.com/checkout/view-event/id/212465/chk/62ee/?modal_widget=true&widget=true',
-      price: '495',
+      price: '449',
     },
 
     details: {
