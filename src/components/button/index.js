@@ -6,7 +6,7 @@ import './button.scss';
 
 const pattern = /^((http|https):\/\/)/;
 
-const Button = ({ href, as, children, className, outline }) => {
+const Button = ({ href, as, children, className, style, outline }) => {
   const buttonClasses = classnames({
     button: true,
     [`button--outline`]: !!outline,
@@ -28,7 +28,7 @@ const Button = ({ href, as, children, className, outline }) => {
   }
 
   return (
-    <a className={buttonClasses} href={href} target="_blank" rel="noopener">
+    <a className={buttonClasses} href={href} style={style} target="_blank" rel="noopener">
       {children}
     </a>
   );
@@ -40,6 +40,7 @@ Button.propTypes = {
   className: PropTypes.string,
   href: PropTypes.string,
   outline: PropTypes.bool,
+  style: PropTypes.object,
 };
 
 export default Button;

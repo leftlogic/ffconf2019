@@ -65,7 +65,7 @@ const WorkshopDescription = ({ description, extendedDescription }) => {
   );
 };
 
-const WorkshopBuy = ({ slug, url, children }) => {
+const WorkshopBuy = ({ slug, url, children, style }) => {
   const soldout = config.config.soldout[slug];
   const formattedDate = moment(onSaleDate).format('D MMMM');
 
@@ -82,7 +82,7 @@ const WorkshopBuy = ({ slug, url, children }) => {
   }
 
   return (
-    <Button className="workshop__buy" href={url}>
+    <Button className="workshop__buy" style={style} href={url}>
       {children}
     </Button>
   );
@@ -123,12 +123,16 @@ const Workshop = ({ selectedSlug }) => {
 
           <p className="workshop__intro">
             <strong>
-              <em>All workshop tickets also include a full day ffconf pass.</em>
+              <em>Full workshop tickets also include a full day ffconf pass.</em>
             </strong>
           </p>
 
           <WorkshopBuy slug={slug} url={url}>
-            Buy tickets @ £{config.workshopPrice}+VAT
+            Full workshop @ £{config.workshopPrice}+VAT
+          </WorkshopBuy>
+
+          <WorkshopBuy style={{ marginLeft: '20px' }} slug={slug} url={url}>
+            Standalone workshop @ £299+VAT
           </WorkshopBuy>
         </WorkshopHeader>
 
