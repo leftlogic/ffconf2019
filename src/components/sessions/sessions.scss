@@ -80,6 +80,19 @@
   margin-right: 8px;
 }
 
+.break__info {
+  margin-top: -12px;
+  padding-bottom: 32px;
+
+  a {
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .sessions__item {
     padding-left: var(--outer-gap-horizontal);

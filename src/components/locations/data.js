@@ -21,7 +21,7 @@ module.exports = {
         },
         {
           name: 'Al Campo',
-          detail: "'Lunch with Future Friends' and social on Thursday",
+          detail: '"Lunch with Future Friends" and social on Thursday',
           url: 'https://thelounges.co.uk/alcampo/',
         },
         {

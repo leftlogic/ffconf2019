@@ -40,16 +40,25 @@ const formatSessions = ({ data, api }) => {
   const talksById = formatTalksById(api);
 
   const properData = data.map(session => {
-    const { id, duration, isBreak, title, slug = idify(title) } = session;
+    const {
+      id,
+      duration,
+      isBreak,
+      title,
+      slug = idify(title),
+      end: staticEnd,
+      start: staticStart,
+    } = session;
 
     const start = startTime.format('HH:mm');
     startTime.add(duration, 'minutes');
-    const end = startTime.format('HH:mm');
+    const endText = staticEnd || startTime.format('HH:mm');
+    const startText = staticStart || start;
 
     const newSession = {
       ...session,
-      start,
-      end,
+      start: startText,
+      end: endText,
       date: `${date}T${start}Z`,
       talk: id ? { ...talksById[id] } : undefined,
       slug: isBreak ? slug : undefined,

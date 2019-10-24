@@ -1,10 +1,11 @@
 import Session from './session';
+import Markdown from '../markdown';
 
 import config from '../../config';
 
 const { phase } = config.config;
 
-const Break = ({ title, start, end, date, slug }) => {
+const Break = ({ title, description, start, end, date, slug }) => {
   if (phase !== 3) {
     return null;
   }
@@ -18,6 +19,9 @@ const Break = ({ title, start, end, date, slug }) => {
         <h3 className="break__title" role="heading" aria-level="3">
           {title}
         </h3>
+        {!!description && (
+          <Markdown className="break__info">{description}</Markdown>
+        )}
       </header>
     </Session>
   );

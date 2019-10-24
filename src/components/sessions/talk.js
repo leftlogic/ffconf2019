@@ -9,10 +9,9 @@ import config from '../../config';
 const { ticketUrl, ticketPrice } = config;
 const { phase, soldout } = config.config;
 
-const SpeakerImage = ({ name, photo, slug = 'soon-0' }) => {
+const SpeakerImage = ({ name, slug = 'soon-0' }) => {
   const title = phase >= 3 ? name : 'Speakers revealed soon!';
-  const url =
-    phase >= 3 ? `/static${photo}` : `/static/images/speakers/${slug}.png`;
+  const url = `/static/images/speakers/${slug}.png`;
   const imgClasses = classnames({
     'speaker-image': true,
     'dynamic-image': true,
@@ -58,7 +57,8 @@ const SpeakerName = ({ name, twitter }) => {
       href={`https://twitter.com/${twitter}`}
       className="speaker__name tag"
       target="_blank"
-      rel="noopener">
+      rel="noopener"
+    >
       {name}
     </a>
   );
