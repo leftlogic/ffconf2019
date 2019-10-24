@@ -59,7 +59,7 @@ module.exports = [
   {
     isBreak: true,
     duration: 25,
-    title: 'Cake break (25 mins)',
+    title: 'Ice cream break (25 mins)',
     icon: 'donut',
   },
 
