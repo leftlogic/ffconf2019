@@ -6,12 +6,14 @@
 
 .sessions__item {
   border-bottom: 2px solid var(--c-black);
-  margin-bottom: 32px;
-  padding: 0;
+  padding: 32px 0 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
 
   &:last-child {
     border-bottom: 0 none;
-    margin-bottom: 0;
   }
 }
 
