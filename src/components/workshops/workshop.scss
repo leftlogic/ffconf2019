@@ -60,3 +60,9 @@
     width: auto;
   }
 }
+
+@media (min-width: 1024px) {
+  .workshop__buy:first-child {
+    margin-right: 16px;
+  }
+}
