@@ -32,6 +32,11 @@ module.exports = [
         url: 'https://www.brandwatch.com/careers',
         img: 'brandwatch.png',
       },
+      {
+        name: 'JAMstack.training',
+        url: 'https://jamstack.training/',
+        img: 'jamstack.png',
+      },
     ],
   },
   {
