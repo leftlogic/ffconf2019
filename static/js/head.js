@@ -3,13 +3,6 @@
 function fx(dates) {
   window.confDays = [new Date(`${dates[0]}T12:00Z`)];
   document.documentElement.className += ' 🦄';
-  //=== Safari 8
-  if (
-    /constructor/i.test(window.HTMLElement) &&
-    !('flexWrap' in document.documentElement.style)
-  ) {
-    document.documentElement.className += ' i-hate-safari (╯°□°)╯︵ ┻━┻';
-  }
   //=== Fonts
   var fontUrl = `/static/js/ff-fonts.${md5}.json`;
   var fontMd5 = md5;
