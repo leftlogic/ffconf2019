@@ -79,8 +79,9 @@
 a.speaker__twitter.speaker__name.tag {
   background: var(--c-black);
   color: var(--c-white);
+  margin-left: 8px;
   
-  :hover {
+  &:hover {
     color: var(--c-black);
     background: var(--c-white);    
   }
