@@ -18,7 +18,7 @@ module.exports = {
   config: {
     phase: 3,
     soldout: {
-      conference: false,
+      conference: true,
       workshops: false,
       next: false,
     },
