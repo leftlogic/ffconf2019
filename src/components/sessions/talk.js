@@ -57,7 +57,7 @@ const SpeakerName = ({ name, twitter }) => {
       <div className="speaker__name tag">{name}</div>
       <a
         href={`https://twitter.com/${twitter}`}
-        className="speaker__name tag speaker__twitter"
+        className="speaker__twitter tag"
         target="_blank"
         rel="noopener"
       >

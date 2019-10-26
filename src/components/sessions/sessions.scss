@@ -71,24 +71,24 @@
 }
 
 .speaker__name,
+.speaker__twitter,
 .talk__time,
 .break__time {
   margin-bottom: 24px;
 }
 
-a.speaker__twitter.speaker__name.tag {
+a.speaker__twitter {
   background: var(--c-black);
   color: var(--c-white);
-  margin-left: 8px;
-  
+
   &:hover {
-    color: var(--c-white);
-    background: var(--c-red);    
+    background: var(--c-red);
   }
 }
 
 .talk__time,
 .break__time,
+.speaker__name,
 .talk__link {
   margin-right: 8px;
 }
