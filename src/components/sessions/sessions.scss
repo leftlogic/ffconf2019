@@ -6,12 +6,14 @@
 
 .sessions__item {
   border-bottom: 2px solid var(--c-black);
-  margin-bottom: 32px;
-  padding: 0;
+  padding: 32px 0 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
 
   &:last-child {
     border-bottom: 0 none;
-    margin-bottom: 0;
   }
 }
 
@@ -78,6 +80,19 @@
 .break__time,
 .talk__link {
   margin-right: 8px;
+}
+
+.break__info {
+  margin-top: -12px;
+  padding-bottom: 32px;
+
+  a {
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+  }
 }
 
 @media (min-width: 768px) {

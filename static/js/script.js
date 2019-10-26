@@ -93,7 +93,7 @@
       // Set the starting time 5 minutes earlier to consider the break
       // between each slot
       const next = slots.reduce((acc, slot) => {
-        const slotAttr = slot.getAttribute(`data-date${whichConfDay}`);
+        const slotAttr = slot.getAttribute('data-date');
         const slotDate = new Date(`${slotAttr}`);
         const slotTimestamp = slotDate.getTime();
         const todayTimestamp = today.getTime();
@@ -126,11 +126,9 @@
       const date = new Date();
 
       // sticky element height
-      const header = $$('main.main');
+      const header = $$('#js-scroll-sticky');
       // https://davidwalsh.name/pseudo-element
-      const height = window
-        .getComputedStyle(header, ':before')
-        .getPropertyValue('height');
+      const height = window.getComputedStyle(header).getPropertyValue('height');
       const headerHeight = header ? parseInt(height, 10) : 0;
 
       const slot = getCurrentSlot(date, window.confDays);

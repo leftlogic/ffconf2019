@@ -123,17 +123,21 @@ const Workshop = ({ selectedSlug }) => {
 
           <p className="workshop__intro">
             <strong>
-              <em>Full workshop tickets also include a full day ffconf pass.</em>
+              <em>
+                Full workshop tickets also include a full day ffconf pass.
+              </em>
             </strong>
           </p>
 
-          <WorkshopBuy slug={slug} url={url}>
-            Full workshop @ £{config.workshopPrice}+VAT
-          </WorkshopBuy>
+          <div>
+            <WorkshopBuy slug={slug} url={url}>
+              Full workshop @ £{config.workshopPrice}+VAT
+            </WorkshopBuy>
 
-          <WorkshopBuy style={{ marginLeft: '20px' }} slug={slug} url={url}>
-            Standalone workshop @ £299+VAT
-          </WorkshopBuy>
+            <WorkshopBuy slug={slug} url={url}>
+              Standalone workshop @ £299+VAT
+            </WorkshopBuy>
+          </div>
         </WorkshopHeader>
 
         <div className="workshop__content">

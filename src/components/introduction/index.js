@@ -42,7 +42,7 @@ const Introduction = ({ schedule }) => {
           <p>
             Also see our{' '}
             <strong>
-              <a target="_blank" href="https://ffconf.org">
+              <a target="_blank" href="https://ffconf.org" rel="noopener">
                 historical archive
               </a>
             </strong>{' '}
