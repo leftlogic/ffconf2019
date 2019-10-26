@@ -53,14 +53,17 @@ const SpeakerName = ({ name, twitter }) => {
   }
 
   return (
-    <a
-      href={`https://twitter.com/${twitter}`}
-      className="speaker__name tag"
-      target="_blank"
-      rel="noopener"
-    >
-      {name}
-    </a>
+    <>
+      <div className="speaker__name tag">{name}</div>
+      <a
+        href={`https://twitter.com/${twitter}`}
+        className="speaker__name tag speaker__twitter"
+        target="_blank"
+        rel="noopener"
+      >
+        @{twitter}
+      </a>
+    </>
   );
 };
 

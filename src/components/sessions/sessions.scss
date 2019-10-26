@@ -76,6 +76,17 @@
   margin-bottom: 24px;
 }
 
+a.speaker__twitter.speaker__name.tag {
+  background: var(--c-black);
+  color: var(--c-white);
+  margin-left: 8px;
+  
+  &:hover {
+    color: var(--c-white);
+    background: var(--c-red);    
+  }
+}
+
 .talk__time,
 .break__time,
 .talk__link {
