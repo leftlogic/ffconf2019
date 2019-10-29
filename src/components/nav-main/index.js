@@ -13,7 +13,7 @@ const data = [
 ];
 
 const NavMainMore = () => (
-  <div className="nav-main-more">
+  <div className="nav-main-more" id="js-scroll-sticky">
     <Tickets namespace="nav-main__ticket-button" />
     <Videos className="nav-main__ticket-button" />
   </div>

@@ -16,9 +16,9 @@ module.exports = {
   fontMd5: '41365f285ed9977656499daaf24381e2',
   serviceWorker: false,
   config: {
-    phase: 1,
+    phase: 3,
     soldout: {
-      conference: false,
+      conference: true,
       workshops: false,
       next: false,
     },
