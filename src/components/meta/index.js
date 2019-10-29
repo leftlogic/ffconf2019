@@ -2,7 +2,7 @@ import moment from 'moment';
 import { Fragment } from 'react';
 
 import config from '../../config';
-import script from 'raw-loader!../../../static/js/head.js';
+import script from 'raw-loader!../../../public/static/js/head.js';
 
 const {
   themeColor,
