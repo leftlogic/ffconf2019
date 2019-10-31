@@ -29,7 +29,7 @@ const Introduction = ({ schedule }) => {
         <div className="introduction__info">
           <p>
             ffconf is held at the historic Duke of Yorks picturehouse in
-            Brighton, UK. The event is in it's 11th year, and is lovingly
+            Brighton, UK. The event is in its 11th year, and is lovingly
             curated and run by Remy &amp; Julie Sharp.
           </p>
 
