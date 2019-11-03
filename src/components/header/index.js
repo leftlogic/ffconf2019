@@ -16,6 +16,7 @@ const Logo = () => {
       <Link href="/">
         <a className="logo__link" aria-label="f f conf">
           <img
+            width="232"
             className="logo__image"
             src="/static/images/logo-small.png"
             alt={`ffconf ${year}`}

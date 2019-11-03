@@ -1,4 +1,4 @@
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Layout from '../src/components/layout';
 import Section from '../src/components/section';
 
@@ -24,13 +24,11 @@ class FFApp extends App {
 
     const { Component, pageProps } = this.props;
     return (
-      <Container>
-        <Layout>
-          <Wrapper pathname={pathname}>
-            <Component {...pageProps} />
-          </Wrapper>
-        </Layout>
-      </Container>
+      <Layout>
+        <Wrapper pathname={pathname}>
+          <Component {...pageProps} />
+        </Wrapper>
+      </Layout>
     );
   }
 }

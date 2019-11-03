@@ -2,8 +2,15 @@ module.exports = [
   {
     slug: '1st',
     title: 'platinum',
-    total: 2,
-    list: [],
+    total: 1,
+    list: [
+      {
+        name: 'Mozilla',
+        url: 'https://mozilla.com/',
+        img: 'mozilla.svg',
+        width: 300,
+      },
+    ],
   },
   {
     slug: '2nd',
@@ -11,14 +18,10 @@ module.exports = [
     total: 4,
     list: [
       {
-        name: 'Mozilla',
-        url: 'https://mozilla.com/',
-        img: 'mozilla.svg',
-      },
-      {
         name: 'Legal & General',
         url: 'https://careers.legalandgeneralgroup.com/digital-careers/',
         img: 'l-g.svg',
+        width: 205,
       },
     ],
   },
@@ -31,11 +34,13 @@ module.exports = [
         name: 'Brandwatch',
         url: 'https://www.brandwatch.com/careers',
         img: 'brandwatch.png',
+        width: 285,
       },
       {
         name: 'JAMstack.training',
         url: 'https://jamstack.training/',
         img: 'jamstack.png',
+        width: 205,
       },
     ],
   },
@@ -75,6 +80,7 @@ module.exports = [
         name: 'JS Bin',
         url: 'https://jsbin.com/',
         img: 'jsbin.png',
+        width: 190,
       },
     ],
   },

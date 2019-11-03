@@ -23,14 +23,15 @@ const SponsorsAvailable = () => {
       </p>
       <Button
         className="sponsor__link sponsor__link--available"
-        href={sponsorUrl}>
+        href={sponsorUrl}
+      >
         Request sponsorship pack
       </Button>
     </section>
   );
 };
 
-const Sponsor = ({ name, url, img, slug }) => {
+const Sponsor = ({ name, url, img, width = 190, slug }) => {
   const wrapperClasses = classnames({
     sponsor: true,
     [`sponsor--${slug}`]: !!slug,
@@ -43,8 +44,11 @@ const Sponsor = ({ name, url, img, slug }) => {
         href={url}
         target="_blank"
         rel="noopener"
-        title={name}>
+        title={name}
+      >
         <img
+          loading="lazy"
+          width={width}
           className="sponsor__image"
           src={`/static/images/sponsors/${img}`}
           alt={name}
@@ -67,7 +71,7 @@ const SponsorsCategory = ({ slug, title, list }) => {
   return (
     <section className={wrapperClasses}>
       <h3 className="sponsors-category__title" role="heading" aria-level="3">
-        {title} sponsors
+        {title} sponsor{list.length === 1 ? '' : 's'}
       </h3>
       <div className="sponsors-category__list">
         {list.map(sponsor => (
@@ -84,7 +88,8 @@ const Sponsors = () => {
       <h2
         className="sponsors__title section__title"
         role="heading"
-        aria-level="2">
+        aria-level="2"
+      >
         Our sponsors
       </h2>
       <SponsorsAvailable />

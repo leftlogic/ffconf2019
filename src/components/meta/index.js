@@ -125,7 +125,7 @@ const Meta = () => {
         content="/static/images/favicons/browserconfig.xml"
       />
 
-      {process.env.NODE_ENV === 'production' && (
+      {process.env.NODE_ENV === '_____DISABLED____production' && (
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

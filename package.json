@@ -3,6 +3,10 @@
   "version": "2.0.0",
   "description": "",
   "main": ".eleventy.js",
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "config": {
     "outputFolder": "build"
   },
