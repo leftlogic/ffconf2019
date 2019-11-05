@@ -14,7 +14,7 @@ module.exports = {
   sponsorUrl: 'mailto:events@leftlogic.com?subject=Request sponsorship pack',
   sponsorAvailable: true,
   fontMd5: '41365f285ed9977656499daaf24381e2',
-  serviceWorker: false,
+  serviceWorker: true,
   config: {
     phase: 3,
     soldout: {

@@ -19,6 +19,7 @@ module.exports = withSass(
     sassLoaderOptions: {
       outputStyle: 'expanded',
     },
+    exportTrailingSlash: true,
     exportPathMap: async defaultPathMap => {
       return {
         ...defaultPathMap,
