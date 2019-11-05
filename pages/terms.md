@@ -22,7 +22,7 @@ We take your privacy very seriously and will not sell or share your personal inf
 
 ## Code of Conduct
 
-Every attendee, sponsor and speaker, by virtue of purchasing a ticket or attending, agrees to comply in full with our conference <a href="/code-of-conduct">code of conduct</a>.
+Every attendee, sponsor and speaker, by virtue of purchasing a ticket or attending, agrees to comply in full with our conference <a href="/code-of-conduct/">code of conduct</a>.
 
 ## Contact
 

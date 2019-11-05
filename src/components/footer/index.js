@@ -33,7 +33,7 @@ const Footer = () => {
         <p>
           By attending any of our events (workshops & conference & fringe
           events) you are agreeing to our{' '}
-          <Link href="/code-of-conduct">
+          <Link href="/code-of-conduct/">
             <a>code of conduct</a>
           </Link>
           .
