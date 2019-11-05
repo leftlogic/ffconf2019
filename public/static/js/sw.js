@@ -16,17 +16,11 @@ $$('a, link, img, script') // get all linkable items
 
 const urls = `
 /
-/code-of-conduct
 /code-of-conduct/
-/privacy
 /privacy/
-/scholarship
 /scholarship/
-/terms
 /terms/
-/workshop
 /workshop/
-/workshop/next
 /workshop/next/
 /static/css/styles.css
 /static/images/favicons/apple-touch-icon.png
