@@ -2,9 +2,24 @@
 
 ## Todo
 
+- [ ] use web components for the quotes
+- [ ] speakers pics as img not as css bg (even if Remy will say he doesn't want to show them on mobile, he will eventually change his mind)
+- [ ] check the font-display values
+- [ ] move the `public/static` just to `public`
+- [ ] check which other changes were introduced in Next 9
+- [ ] check what is different between netlify and now servers, because the sw was working differently
+- [ ] do the querystring stripping in the sw
+- [ ] do I want to try storybook for the different phases?
+- [ ] add as a script into this repo the script to convert the fonts into JSON
+- [ ] add script to extrapolate only certain characters from the font, to reduce its size
+- [ ] use next js dynamic routing `[slug]` for the workshop pages
+- [ ] make a script for the whole favicon / manifest generation?
+- [ ] robots.txt content
+
+## Content to change
+
 - [ ] google analytics code
 - [ ] web manifest colors
-- [ ] the links in scholarship don't work anymore
 
 ## Howto
 
