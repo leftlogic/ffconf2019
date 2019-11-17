@@ -86,7 +86,8 @@ const Meta = () => {
 
       <link
         rel="preload"
-        as="script"
+        as="fetch"
+        crossOrigin="anonymous"
         href={`/js/ff-fonts.${fontMd5}.json`}
       />
 
