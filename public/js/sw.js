@@ -53,6 +53,7 @@ const urls = `
 /images/logo-small.png
 /images/venue.png
 /js/script.js
+/js/quotes.js
 /site.webmanifest
 
 `

@@ -1,5 +1,6 @@
 import Document, { Head, NextScript, Main } from '../src/components/NoNext';
 import Meta from '../src/components/meta';
+import QuotesTemplates from '../src/components/quote/quotes-templates';
 
 import config from '../src/config';
 
@@ -16,6 +17,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
           <script src="/js/script.js" />
+          <QuotesTemplates />
           {process.env.NODE_ENV === 'production' && (
             <script
               dangerouslySetInnerHTML={{

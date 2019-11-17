@@ -1,11 +1,3 @@
-import data from './data';
-
-const QuotesTemplates = () => (
-  <script
-    dangerouslySetInnerHTML={{
-      __html: `window.quotesData = ${JSON.stringify(data)};`,
-    }}
-  />
-);
+const QuotesTemplates = () => <script src="/js/quotes.js" />;
 
 export default QuotesTemplates;

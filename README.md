@@ -2,7 +2,7 @@
 
 ## Todo
 
-- [ ] use web components for the quotes
+- [x] use web components for the quotes
 - [ ] speakers pics as img not as css bg (even if Remy will say he doesn't want to show them on mobile, he will eventually change his mind)
 - [ ] check the font-display values
 - [x] move the `public/static` just to `public`
