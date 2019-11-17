@@ -14,18 +14,10 @@ const SpeakerImage = ({ name, slug = 'soon-0' }) => {
   const url = `/images/speakers/${slug}.png`;
   const imgClasses = classnames({
     'speaker-image': true,
-    'dynamic-image': true,
-    'dynamic-image--square': true,
     'cursor-help': phase < 3,
   });
 
-  return (
-    <div
-      className={imgClasses}
-      style={{ '--bg-photo': `url(${url})` }}
-      title={title}
-    />
-  );
+  return <img className={imgClasses} src={url} alt={title} title={title} />;
 };
 
 const SpeakerBio = ({ bio }) => {

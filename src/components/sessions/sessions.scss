@@ -18,6 +18,7 @@
 }
 
 .speaker-image {
+  display: block;
   width: var(--bg-photo-width);
 }
 
@@ -125,7 +126,6 @@ a.speaker__twitter {
 
   .speaker-image {
     grid-area: si-pic;
-    display: block;
     max-width: var(--bg-photo-max-width);
   }
 
