@@ -128,7 +128,7 @@
   }
   </style>
   <blockquote class="quote__wrapper">
-    <img class="quote__icon" src="/images/style/quote.svg" />
+    <img class="quote__icon" src="/images/style/quote.svg" alt="" />
     <p class="quote__text">${text}</p>
     <footer class="quote__footer">
       <cite class="quote__author">

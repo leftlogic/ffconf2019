@@ -15,7 +15,7 @@
 - [ ] add script to extrapolate only certain characters from the font, to reduce its size
 - [ ] use next js dynamic routing `[slug]` for the workshop pages
 - [ ] make a script for the whole favicon / manifest generation?
-- [ ] robots.txt content
+- [x] robots.txt content
 
 ## Content to change
 
