@@ -23,7 +23,7 @@ abbr[title="proudly"] {
 
   .section__wrapper {
     &:after {
-      background: url("/static/images/style/diversity-small.png") no-repeat
+      background: url("/images/style/diversity-small.png") no-repeat
         bottom;
       background-size: contain;
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 406'%3E%3C/svg%3E");
@@ -40,7 +40,7 @@ abbr[title="proudly"] {
       }
 
       &:after {
-        background-image: url("/static/images/style/diversity-big.png");
+        background-image: url("/images/style/diversity-big.png");
         background-position: center;
         content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 920 1006'%3E%3C/svg%3E");
         height: 100%;

@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <script src="/static/js/script.js" />
+          <script src="/js/script.js" />
           {process.env.NODE_ENV === 'production' && (
             <script
               dangerouslySetInnerHTML={{

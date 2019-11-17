@@ -2,7 +2,7 @@ import moment from 'moment';
 import { Fragment } from 'react';
 
 import config from '../../config';
-import script from 'raw-loader!../../../public/static/js/head.js';
+import script from 'raw-loader!../../../public/js/head.js';
 
 const {
   themeColor,
@@ -53,7 +53,7 @@ const Meta = () => {
       />
       <meta
         property="og:image"
-        content={`https://${year}.ffconf.org/static/images/twitter-card.png`}
+        content={`https://${year}.ffconf.org/images/twitter-card.png`}
       />
 
       {/* twitter card tags additive with the og: tags */}
@@ -69,7 +69,7 @@ const Meta = () => {
       />
       <meta
         name="twitter:image"
-        content={`https://${year}.ffconf.org/static/images/twitter-card.png`}
+        content={`https://${year}.ffconf.org/images/twitter-card.png`}
       />
       <meta name="twitter:url" value={`https://${year}.ffconf.org`} />
       <meta
@@ -81,48 +81,48 @@ const Meta = () => {
       <meta name="twitter:data2" value={`${twitterDates} @ £${ticketPrice}`} />
 
       {process.env.NODE_ENV === 'production' && (
-        <link rel="stylesheet" href={`/static/css/styles.css?${version}`} />
+        <link rel="stylesheet" href={`/css/styles.css?${version}`} />
       )}
 
       <link
         rel="preload"
         as="script"
-        href={`/static/js/ff-fonts.${fontMd5}.json`}
+        href={`/js/ff-fonts.${fontMd5}.json`}
       />
 
       <link
         rel="all-the-source"
         href={`https://github.com/leftlogic/ffconf${year}`}
       />
-      <link rel="author" href="/static/humans.txt" />
-      <link rel="manifest" href="/static/site.webmanifest" />
+      <link rel="author" href="/humans.txt" />
+      <link rel="manifest" href="/site.webmanifest" />
 
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/static/images/favicons/apple-touch-icon.png"
+        href="/images/favicons/apple-touch-icon.png"
       />
       <link
         rel="icon"
         type="image/png"
-        href="/static/images/favicons/favicon-32x32.png"
+        href="/images/favicons/favicon-32x32.png"
         sizes="32x32"
       />
       <link
         rel="icon"
         type="image/png"
-        href="/static/images/favicons/favicon-16x16.png"
+        href="/images/favicons/favicon-16x16.png"
         sizes="16x16"
       />
       <link
         rel="mask-icon"
-        href="/static/images/favicons/safari-pinned-tab.svg"
+        href="/images/favicons/safari-pinned-tab.svg"
         color="#111111"
       />
-      <link rel="shortcut icon" href="/static/images/favicons/favicon.ico" />
+      <link rel="shortcut icon" href="/images/favicons/favicon.ico" />
       <meta
         name="msapplication-config"
-        content="/static/images/favicons/browserconfig.xml"
+        content="/images/favicons/browserconfig.xml"
       />
 
       {process.env.NODE_ENV === '_____DISABLED____production' && (

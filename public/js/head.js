@@ -4,7 +4,7 @@ function fx(dates) {
   window.confDays = [new Date(`${dates[0]}T12:00Z`)];
   document.documentElement.className += ' 🦄';
   //=== Fonts
-  var fontUrl = `/static/js/ff-fonts.${md5}.json`;
+  var fontUrl = `/js/ff-fonts.${md5}.json`;
   var fontMd5 = md5;
   var fontKey = 'fonts';
   var fontCache = null;

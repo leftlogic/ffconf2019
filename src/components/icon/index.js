@@ -20,7 +20,7 @@ const Icon = ({ icon, className }) => {
     //   dangerouslySetInnerHTML={{ __html: `${data[icon]}` }}
     // />
     <div aria-hidden="true" className={svgClasses}>
-      <img src={`/static/images/style/${icon}.svg`} />
+      <img src={`/images/style/${icon}.svg`} />
     </div>
   );
 };

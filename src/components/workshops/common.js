@@ -24,7 +24,7 @@ const WorkshopImage = ({ photo }) => {
     <div
       className="workshop__image dynamic-image dynamic-image--square"
       style={{
-        '--bg-photo': `url(/static/images/workshops/2x-${photo})`,
+        '--bg-photo': `url(/images/workshops/2x-${photo})`,
       }}
     />
   );

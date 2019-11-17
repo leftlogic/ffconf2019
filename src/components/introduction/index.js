@@ -16,7 +16,7 @@ const Introduction = ({ schedule }) => {
         <div
           className={imgClasses}
           style={{
-            '--bg-photo': `url(/static/images/venue.png)`,
+            '--bg-photo': `url(/images/venue.png)`,
             maxWidth: '386px',
           }}
           title="Our venue"

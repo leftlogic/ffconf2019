@@ -18,9 +18,9 @@ const Logo = () => {
           <img
             width="232"
             className="logo__image"
-            src="/static/images/logo-small.png"
+            src="/images/logo-small.png"
             alt={`ffconf ${year}`}
-            srcSet="/static/images/logo-small.png 160w, /static/images/logo-big.png 300w"
+            srcSet="/images/logo-small.png 160w, /images/logo-big.png 300w"
             sizes="(min-width: 1024px) 300px, 100px"
           />
         </a>

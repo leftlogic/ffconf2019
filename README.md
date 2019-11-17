@@ -5,7 +5,7 @@
 - [ ] use web components for the quotes
 - [ ] speakers pics as img not as css bg (even if Remy will say he doesn't want to show them on mobile, he will eventually change his mind)
 - [ ] check the font-display values
-- [ ] move the `public/static` just to `public`
+- [x] move the `public/static` just to `public`
 - [ ] check which other changes were introduced in Next 9
 - [ ] check what is different between netlify and now servers, because the sw was working differently
 - [ ] do the querystring stripping in the sw
@@ -65,7 +65,7 @@ Use https://realfavicongenerator.net
 - Safari Pinned Tab: turn your picture into a monochrom icon, threshold as default
 - Touch Bar: theme color #111111
 - Favicon Generator Options:
-  - path: `/static/images/favicons`
+  - path: `/images/favicons`
   - app name: `ffconf 2019`
 
 Delete the generated `manifest.json`, we already have our own, just check to reference the images correctly.  

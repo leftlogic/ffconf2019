@@ -50,7 +50,7 @@ const Sponsor = ({ name, url, img, width = 190, slug }) => {
           loading="lazy"
           width={width}
           className="sponsor__image"
-          src={`/static/images/sponsors/${img}`}
+          src={`/images/sponsors/${img}`}
           alt={name}
         />
       </a>

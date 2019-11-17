@@ -38,8 +38,8 @@ module.exports = async ({ config }) => {
       // https://github.com/storybookjs/storybook/issues/714#issuecomment-500219893
       new CopyWebpackPlugin([
         {
-          from: path.resolve(__dirname, '../static'),
-          to: './static',
+          from: path.resolve(__dirname, '../public'),
+          to: './public',
         },
       ]),
     ],
