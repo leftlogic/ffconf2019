@@ -1,11 +1,7 @@
 import './quote.scss';
 
 const Quote = () => {
-  return (
-    <div className="quote">
-      <blockquote className="quote__wrapper js-quote" />
-    </div>
-  );
+  return <ff-quote class="quote"></ff-quote>;
 };
 
 export default Quote;
