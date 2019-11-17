@@ -40,6 +40,7 @@ const urls = `
 /images/logo-big.png
 /images/logo-small.png
 /images/venue.png
+/js/ff-fonts.41365f285ed9977656499daaf24381e2.json
 /js/script.js
 /js/quotes.js
 /site.webmanifest
