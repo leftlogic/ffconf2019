@@ -1,13 +1,15 @@
-$colors-list: #f00 #ff7f00 #ff0 #0f0 #0ff #00f #e45dff;
+$colors-list: red, orange, yellow, green, blue, indigo, violet;
 
-abbr[title="proudly"] {
+.proudly {
   text-decoration: none;
   font-weight: 900;
 
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  @supports (-webkit-text-fill-color: transparent) {
+    background-image: linear-gradient(to right, $colors-list);
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+  }
 
   // @each $current-color in $colors-list {
   //   $i: index($colors-list, $current-color);
