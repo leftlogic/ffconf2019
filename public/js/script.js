@@ -156,4 +156,97 @@
 
     window.addEventListener('load', onPageLoad);
   })();
+
+  //===
+  'use strict';
+
+  var DOMContentLoad = new Promise(function (resolve) {
+    document.addEventListener("DOMContentLoaded", resolve);
+  });
+
+  navigator.serviceWorker.getRegistration().then(function (registration) {
+    if (!registration) {
+      console.warn('`networkIdleCallback` was called before a service worker was registered. `networkIdleCallback` is ineffective without a working service worker');
+    }
+  });
+
+  function networkIdleCallback(fn) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { timeout: 0 };
+
+    // Call the function immediately if required features are absent
+    if (!'MessageChannel' in window || !'serviceWorker' in navigator || !navigator.serviceWorker.controller) {
+      DOMContentLoad.then(function () {
+        return fn({ didTimeout: false });
+      });
+      return;
+    }
+
+    var messageChannel = new MessageChannel();
+    navigator.serviceWorker.controller.postMessage('NETWORK_IDLE_ENQUIRY', [messageChannel.port2]);
+
+    var timeoutId = setTimeout(function () {
+      var cbToPop = networkIdleCallback.__callbacks__.find(function (cb) {
+        return cb.id === timeoutId;
+      });
+
+      networkIdleCallback.__popCallback__(cbToPop, true);
+    }, options.timeout);
+
+    networkIdleCallback.__callbacks__.push({
+      id: timeoutId,
+      fn: fn,
+      timeout: options.timeout
+    });
+
+    messageChannel.port1.addEventListener('message', handleMessage);
+    messageChannel.port1.start();
+  }
+
+  function cancelNetworkIdleCallback(callbackId) {
+    clearTimeout(callbackId);
+
+    networkIdleCallback.__callbacks__ = networkIdleCallback.__callbacks__.find(function (cb) {
+      return cb.id === callbackId;
+    });
+  }
+
+  networkIdleCallback.__popCallback__ = function (callback, didTimeout) {
+    DOMContentLoad.then(function () {
+      var cbToPop = networkIdleCallback.__callbacks__.find(function (cb) {
+        return cb.id === callback.id;
+      });
+
+      if (cbToPop) {
+        cbToPop.fn({ didTimeout: didTimeout });
+        clearTimeout(cbToPop.id);
+        networkIdleCallback.__callbacks__ = networkIdleCallback.__callbacks__.filter(function (cb) {
+          return cb.id !== callback.id;
+        });
+      }
+    });
+  };
+
+  networkIdleCallback.__callbacks__ = [];
+
+  if ('serviceWorker' in navigator) navigator.serviceWorker.addEventListener('message', handleMessage);
+
+  function handleMessage(event) {
+    if (!event.data) return;
+
+    switch (event.data) {
+      case 'NETWORK_IDLE_ENQUIRY_RESULT_IDLE':
+      case 'NETWORK_IDLE_CALLBACK':
+        networkIdleCallback.__callbacks__.forEach(function (callback) {
+          networkIdleCallback.__popCallback__(callback, false);
+        });
+        break;
+    }
+  }
+
+  networkIdleCallback(
+    () => {
+      console.log('Execute low network priority tasks here.');
+    },
+    { timeout: 20000 }
+  );
 })();
