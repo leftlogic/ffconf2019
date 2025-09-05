@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
           <div class="event_status" role="region" aria-label="Event status">
             <span>This event has been and gone, <a href="https://ffconf.org/latest">click here to see the latest
                 FFConf</a></span>
-            <style>
+            <style>{`
               .event_status {
                 position: sticky;
                 top: 0;
@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
                   color: inherit;
                   text-decoration: underline;
                 }
-              }
+              }`}
             </style>
           </div>
         
